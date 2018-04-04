@@ -8,19 +8,17 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body',
 });
 
-const BundleAnalyzerPluginConfig = new BundleAnalyzerPlugin();
-
 module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'development',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
-        // enforce: pre -> to make sure that the code won't be transpiled by babel
-        // before loaded by eslint
         enforce: 'pre',
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -52,9 +50,7 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  plugins: [HTMLWebpackPluginConfig, BundleAnalyzerPluginConfig],
+  mode: 'development',
+  plugins: [HTMLWebpackPluginConfig, new BundleAnalyzerPlugin()],
   devtool: 'cheap-module-source-map',
 };

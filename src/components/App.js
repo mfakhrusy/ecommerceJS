@@ -1,9 +1,10 @@
 import React from 'react';
+import Homepage from 'components/homepage/Homepage';
 
 const App = () => (
-  <div>
-      hello World
-  </div>
+  <React.Fragment>
+    <Homepage />
+  </React.Fragment>
 );
 
 export default App;
