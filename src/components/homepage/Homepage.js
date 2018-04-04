@@ -1,14 +1,9 @@
 import React from 'react';
-import NavigationDrawer from 'react-md/lib/NavigationDrawers';
+import NavigationBar from 'components/homepage/NavigationBar';
 
 const Homepage = () => (
   <React.Fragment>
-    <NavigationDrawer
-      drawerTitle="react-md with webpack"
-      toolbarTitle="Welcome to react-md"
-      tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-      desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    />
+    <NavigationBar />
   </React.Fragment>
 );
 

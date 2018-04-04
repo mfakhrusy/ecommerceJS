@@ -1,0 +1,7 @@
+@import "~react-md/src/scss/react-md";
+
+// Variable overrides
+$md-primary-color: $md-light-green-500;
+$md-secondary-color: $md-lime-a-200;
+
+@include react-md-everything;

@@ -1,6 +1,4 @@
-@import "~react-md/src/scss/react-md";
 @import "utils/all";
 @import "base/all";
 @import "components/all";
-
-@include react-md-everything;
+@import "reactmd";
