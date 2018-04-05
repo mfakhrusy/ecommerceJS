@@ -1,3 +1,1 @@
-export default {
-  SHOW_SIDEBAR: 'SHOW_SIDEBAR',
-};
+export const SHOW_SIDEBAR = 'SHOW_SIDEBAR';

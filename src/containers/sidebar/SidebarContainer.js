@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import MenuButton from 'components/homepage/MenuButton';
+import Sidebar from 'components/sidebar/Sidebar';
 import { showSidebar } from 'actions/homepageActions';
 
 const mapStateToProps = state => ({
@@ -12,9 +12,9 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-const MenuButtonContainer = connect(
+const SidebarContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(MenuButton);
+)(Sidebar);
 
-export default MenuButtonContainer;
+export default SidebarContainer;

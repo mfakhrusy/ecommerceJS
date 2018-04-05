@@ -12,8 +12,10 @@
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
       "react/no-array-index-key": 0,
+      "react/prefer-stateless-function": 0,
       "import/prefer-default-export": 0,
-      "no-restricted-syntax": 0
+      "no-restricted-syntax": 0,
+      "function-paren-newline": ["error", "consistent"]
     },
     "settings": {
       "import/resolver": {
