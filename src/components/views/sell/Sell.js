@@ -1,18 +1,20 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import ViewsContainer from 'containers/views/ViewsContainer';
 
 class Sell extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <ViewsContainer pathname={this.props.location.pathname}>
         <p>Sell</p>
-      </React.Fragment>
+      </ViewsContainer>
     );
   }
 }
 
-// Sell.propTypes = {
+Sell.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
-// };
-
-export default Sell;
+export default withRouter(Sell);

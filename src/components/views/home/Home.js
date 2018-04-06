@@ -1,10 +1,10 @@
 import React from 'react';
-import NavigationBar from 'components/mainpage/NavigationBar';
+import MainNavbar from 'components/mainpage/MainNavbar';
 import SidebarContainer from 'containers/sidebar/SidebarContainer';
 
 const Home = () => (
   <React.Fragment>
-    <NavigationBar />
+    <MainNavbar />
     <SidebarContainer />
   </React.Fragment>
 );

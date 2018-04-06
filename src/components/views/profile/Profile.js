@@ -1,18 +1,20 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import ViewsContainer from 'containers/views/ViewsContainer';
 
 class Profile extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <ViewsContainer pathname={this.props.location.pathname}>
         <p>Profile</p>
-      </React.Fragment>
+      </ViewsContainer>
     );
   }
 }
 
-// Profile.propTypes = {
+Profile.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
-// };
-
-export default Profile;
+export default withRouter(Profile);

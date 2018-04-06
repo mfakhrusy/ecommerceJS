@@ -4,7 +4,7 @@ import {
   CATEGORIES_FETCH_DATA_SUCCESS,
 } from 'constants/actionTypes';
 
-export const categoriesHasErrored = (state = [], action) => {
+export const categoriesHasErrored = (state = false, action) => {
   switch (action.type) {
     case CATEGORIES_HAS_ERRORED:
       return action.categoriesHasErrored;
@@ -13,7 +13,7 @@ export const categoriesHasErrored = (state = [], action) => {
   }
 };
 
-export const categoriesIsLoading = (state = [], action) => {
+export const categoriesIsLoading = (state = false, action) => {
   switch (action.type) {
     case CATEGORIES_IS_LOADING:
       return action.categoriesIsLoading;

@@ -4,7 +4,8 @@ import Home from 'components/views/home/Home';
 import Sell from 'components/views/sell/Sell';
 import Chat from 'components/views/chat/Chat';
 import Notifications from 'components/views/notifications/Notifications';
-import Categories from 'components/views/categories/Categories';
+// import Categories from 'components/views/categories/Categories';
+import CategoriesContainer from 'containers/views/categories/CategoriesContainer';
 import Profile from 'components/views/profile/Profile';
 import Help from 'components/views/help/Help';
 
@@ -14,7 +15,7 @@ const Mainpage = () => (
     <Route path="/sell" component={Sell} />
     <Route path="/chat" component={Chat} />
     <Route path="/notifications" component={Notifications} />
-    <Route path="/categories" component={Categories} />
+    <Route path="/categories" component={CategoriesContainer} />
     <Route path="/profile" component={Profile} />
     <Route path="/help" component={Help} />
   </Switch>

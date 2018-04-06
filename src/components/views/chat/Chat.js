@@ -1,18 +1,20 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import ViewsContainer from 'containers/views/ViewsContainer';
 
 class Chat extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <ViewsContainer pathname={this.props.location.pathname}>
         <p>Chat</p>
-      </React.Fragment>
+      </ViewsContainer>
     );
   }
 }
 
-// Chat.propTypes = {
+Chat.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
-// };
-
-export default Chat;
+export default withRouter(Chat);

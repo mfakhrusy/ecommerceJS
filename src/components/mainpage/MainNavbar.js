@@ -4,7 +4,7 @@ import MenuButtonContainer from 'containers/mainpage/MenuButtonContainer';
 import FilterButton from 'components/mainpage/FilterButton';
 import Search from 'components/mainpage/Search';
 
-const NavigationBar = () => (
+const MainNavbar = () => (
   <React.Fragment>
     <Toolbar
       fixed
@@ -15,4 +15,4 @@ const NavigationBar = () => (
   </React.Fragment>
 );
 
-export default NavigationBar;
+export default MainNavbar;

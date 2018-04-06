@@ -1,18 +1,20 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import ViewsContainer from 'containers/views/ViewsContainer';
 
 class Help extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <ViewsContainer pathname={this.props.location.pathname}>
         <p>Help</p>
-      </React.Fragment>
+      </ViewsContainer>
     );
   }
 }
 
-// Help.propTypes = {
+Help.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
-// };
-
-export default Help;
+export default withRouter(Help);
