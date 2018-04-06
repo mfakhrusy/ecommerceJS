@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List } from 'react-md';
 import MenuItem from 'components/sidebar/MenuItem';
 import menuItems from 'assets/js/menuItems';
@@ -19,6 +20,7 @@ class Sidemenu extends React.Component {
         label={item.label}
         mdIcon={item.mdIcon}
         route={item.route}
+        onClickBrowse={this.props.onClickBrowse}
       />
     ));
     return (
@@ -28,5 +30,9 @@ class Sidemenu extends React.Component {
     );
   }
 }
+
+Sidemenu.propTypes = {
+  onClickBrowse: PropTypes.func.isRequired,
+};
 
 export default Sidemenu;

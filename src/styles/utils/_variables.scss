@@ -1,15 +1,3 @@
-$color-black-basic: #000000;
-
-$board-width: 45rem;
-$board-height: 45rem;
-$board-color: #F0B487;
-
-$board-inner-width: 36rem;
-$board-inner-height: 36rem;
-$board-inner-color: rgb(10, 126, 10);
-
-$board-mode-selection-hover-color: lighten($board-inner-color, 10%);
-
-$board-game-tiles-border-color: #999999;
-
-$board-fontcolor: #211d1d;
+$sidebar-header-height: 10rem;
+$view-header-height: 5.6rem;
+$view-header-total-height: $view-header-height + 0.8rem + 0.8rem; // 0.8 rem is the margin

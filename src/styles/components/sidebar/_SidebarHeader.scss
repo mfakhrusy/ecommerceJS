@@ -1,5 +1,5 @@
 .SidebarHeader#sidebar-header {
-  min-height: 10rem;
+  min-height: $sidebar-header-height;
   display: flex;
   align-items: center;
   padding-left: 1rem;

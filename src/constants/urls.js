@@ -5,4 +5,7 @@ export default {
   categories: {
     url: 'https://5ac586c8a79a110014ce6778.mockapi.io/ejs/categories',
   },
+  ownUser: {
+    url: 'https://5ac586c8a79a110014ce6778.mockapi.io/ejs/ownUser',
+  },
 };

@@ -1,16 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Toolbar } from 'react-md';
-import UserAvatar from 'components/utils/UserAvatar';
+import UserAvatarContainer from 'containers/utils/UserAvatarContainer';
 
-const SidebarHeader = () => (
+const SidebarHeader = ({ ownuser }) => (
   <Toolbar
     id="sidebar-header"
     className="SidebarHeader"
     colored
     fixed
-    nav={<UserAvatar />}
-    title="Hello, User"
+    nav={<UserAvatarContainer />}
+    title={`Hello, ${ownuser.name}`}
   />
 );
+
+SidebarHeader.propTypes = {
+  ownuser: PropTypes.object.isRequired,
+};
 
 export default SidebarHeader;

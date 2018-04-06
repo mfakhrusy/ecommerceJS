@@ -2,7 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import urls from 'constants/urls';
-// import ViewsContainer from 'components/viewsContainer/ViewsContainer';
+import CategoryContent from 'components/views/categories/CategoryContent';
+import BackButton from 'components/views/BackButton';
 import ViewsContainer from 'containers/views/ViewsContainer';
 
 class Categories extends React.Component {
@@ -11,16 +12,20 @@ class Categories extends React.Component {
   }
 
   render() {
-    console.log(this.props.categories);
     if (this.props.categoriesHasErrored) {
       return (
-        <h1>Error!</h1>
+        <h1>Categories Display Error!</h1>
       );
     }
 
     return (
-      <ViewsContainer pathname={this.props.location.pathname}>
-        <p>Categories</p>
+      <ViewsContainer
+        pathname={this.props.location.pathname}
+        inset
+        className="Categories"
+        nav={<BackButton />}
+      >
+        <CategoryContent categories={this.props.categories} />
       </ViewsContainer>
     );
   }

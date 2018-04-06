@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Drawer } from 'react-md';
-import SidebarHeader from 'components/sidebar/SidebarHeader';
+import SidebarHeaderContainer from 'containers/sidebar/SidebarHeaderContainer';
 import Sidemenu from 'components/sidebar/Sidemenu';
 
 class Sidebar extends React.Component {
   constructor() {
     super();
     this.handleVisibility = this.handleVisibility.bind(this);
+    this.handleClickBrowse = this.handleClickBrowse.bind(this);
   }
 
   handleVisibility() {
     if (this.props.isSidebarShown) {
       this.props.onClick(!this.props.isSidebarShown);
     }
+  }
+
+  handleClickBrowse(callback) {
+    this.props.onClick(!this.props.isSidebarShown, callback());
+    // callback();
   }
 
   render() {
@@ -25,10 +31,10 @@ class Sidebar extends React.Component {
         onVisibilityChange={this.handleVisibility}
         position="left"
         header={
-          <SidebarHeader />
+          <SidebarHeaderContainer />
         }
       >
-        <Sidemenu />
+        <Sidemenu onClickBrowse={this.handleClickBrowse} />
       </Drawer>
     );
   }

@@ -1,9 +1,9 @@
 import React from 'react';
-import Mainpage from 'components/mainpage/Mainpage';
+import MainpageContainer from 'containers/mainpage/MainpageContainer';
 
 const App = () => (
   <React.Fragment>
-    <Mainpage />
+    <MainpageContainer />
   </React.Fragment>
 );
 
