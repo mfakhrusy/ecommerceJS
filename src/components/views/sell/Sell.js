@@ -1,18 +1,18 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-class Categories extends React.Component {
+class Sell extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>Categories</p>
+        <p>Sell</p>
       </React.Fragment>
     );
   }
 }
 
-// Categories.propTypes = {
+// Sell.propTypes = {
 
 // };
 
-export default Categories;
+export default Sell;

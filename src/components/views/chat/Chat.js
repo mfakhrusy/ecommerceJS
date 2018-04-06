@@ -1,18 +1,18 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-class Categories extends React.Component {
+class Chat extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>Categories</p>
+        <p>Chat</p>
       </React.Fragment>
     );
   }
 }
 
-// Categories.propTypes = {
+// Chat.propTypes = {
 
 // };
 
-export default Categories;
+export default Chat;

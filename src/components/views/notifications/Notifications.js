@@ -1,18 +1,18 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-class Categories extends React.Component {
+class Notifications extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>Categories</p>
+        <p>Notifications</p>
       </React.Fragment>
     );
   }
 }
 
-// Categories.propTypes = {
+// Notifications.propTypes = {
 
 // };
 
-export default Categories;
+export default Notifications;

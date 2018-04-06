@@ -1,8 +1,8 @@
 import React from 'react';
 import { Toolbar } from 'react-md';
-import MenuButtonContainer from 'containers/homepage/MenuButtonContainer';
-import FilterButton from 'components/homepage/FilterButton';
-import Search from 'components/homepage/Search';
+import MenuButtonContainer from 'containers/mainpage/MenuButtonContainer';
+import FilterButton from 'components/mainpage/FilterButton';
+import Search from 'components/mainpage/Search';
 
 const NavigationBar = () => (
   <React.Fragment>

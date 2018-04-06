@@ -1,7 +1,7 @@
-/* eslint-disable arrow-body-style, arrow-parens */
+/* eslint-disable arrow-body-style */
 import { SHOW_SIDEBAR } from 'constants/actionTypes';
 
-export const showSidebar = bool => {
+export const showSidebar = (bool) => {
   return {
     type: SHOW_SIDEBAR,
     isSidebarShown: bool,

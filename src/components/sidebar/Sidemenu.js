@@ -18,6 +18,7 @@ class Sidemenu extends React.Component {
         key={item.id}
         label={item.label}
         mdIcon={item.mdIcon}
+        route={item.route}
       />
     ));
     return (

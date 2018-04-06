@@ -1,9 +1,9 @@
 import React from 'react';
-import Homepage from 'components/homepage/Homepage';
+import Mainpage from 'components/mainpage/Mainpage';
 
 const App = () => (
   <React.Fragment>
-    <Homepage />
+    <Mainpage />
   </React.Fragment>
 );
 

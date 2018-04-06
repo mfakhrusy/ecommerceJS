@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Sidebar from 'components/sidebar/Sidebar';
-import { showSidebar } from 'actions/homepageActions';
+import { showSidebar } from 'actions/mainpage/mainpageActions';
 
 const mapStateToProps = state => ({
   isSidebarShown: state.isSidebarShown,
