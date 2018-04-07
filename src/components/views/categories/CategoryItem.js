@@ -1,25 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class CategoryContent extends React.Component {
+class CategoryItem extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         {this.props.categories.map(item => (
           <div key={item.id}>
             {item.label}
           </div>
         ))}
-      </div>
+      </React.Fragment>
     );
   }
 }
 
-CategoryContent.propTypes = {
-  // fetchData: PropTypes.func.isRequired,
+CategoryItem.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // location: PropTypes.object.isRequired,
-  // categoriesHasErrored: PropTypes.bool.isRequired,
 };
 
-export default CategoryContent;
+export default CategoryItem;

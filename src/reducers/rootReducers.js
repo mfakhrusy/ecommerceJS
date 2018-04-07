@@ -11,6 +11,16 @@ import {
   ownuser,
   isLogin,
 } from 'reducers/views/login';
+import {
+  notificationsHasErrored,
+  notificationsIsLoading,
+  notifications,
+} from 'reducers/views/notifications';
+import {
+  chatsHasErrored,
+  chatsIsLoading,
+  chats,
+} from 'reducers/views/chats';
 
 export default combineReducers({
   isSidebarShown,
@@ -21,4 +31,10 @@ export default combineReducers({
   ownuserIsLoading,
   ownuser,
   isLogin,
+  notificationsHasErrored,
+  notificationsIsLoading,
+  notifications,
+  chatsHasErrored,
+  chatsIsLoading,
+  chats,
 });

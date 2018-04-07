@@ -2,14 +2,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
-}
 
-.CategoryItemCard#category-item-card {
-  height: 14rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  // nested so this rules will be dominant
+  .CategoryItemCard {
+    height: 14rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      color: $site-primary-fontcolor;
+    }
+  }
 }

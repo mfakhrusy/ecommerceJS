@@ -1,0 +1,74 @@
+.TabList#tab-list {
+  display: flex;
+  flex-direction: column;
+
+  .TabListCard {
+    margin: 1rem 0;
+    padding: 0.7rem;
+    @include display-grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 3rem 1fr 3rem;
+    grid-template-areas: 
+    "image name avatar"
+    "image description avatar"
+    "image date avatar";
+    // grid-column-gap: 0.5rem;
+  }
+
+  .TabListCard-grid-image {
+    grid-area: image;
+    align-self: center;
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    border: 0.1rem solid $md-grey-500;
+    border-radius: 0.3rem;
+
+    img {
+      object-fit: fill;
+      object-position: 50% 50%;
+      height: 6rem;
+    }
+  }
+
+  .TabListCard-grid-name {
+    grid-area: name;
+  }
+
+  .TabListCard-grid-description {
+    grid-area: description;
+    align-self: center;
+  }
+
+  .TabListCard-grid-date {
+    grid-area: date;
+    align-self: end;
+    p {
+      color: $site-primary-fontcolor;
+    }
+  }
+
+  .TabListCard-grid-name,
+  .TabListCard-grid-description,
+  .TabListCard-grid-date {
+    max-width: 19rem;
+    word-wrap: break-word;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }
+
+  .TabListCard-grid-avatar {
+    grid-area: avatar;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .TabListCardAvatar {
+    width: 7rem;
+    height: 7rem;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

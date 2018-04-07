@@ -8,6 +8,7 @@ const MainNavbar = () => (
   <React.Fragment>
     <Toolbar
       fixed
+      inset
       nav={<MenuButtonContainer className="MenuButton" />}
       title={<Search />}
       actions={<FilterButton className="filterButton" />}

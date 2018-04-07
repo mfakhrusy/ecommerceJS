@@ -6,6 +6,8 @@ const mapStateToProps = state => ({
   ownuserHasErrored: state.ownuserHasErrored,
   ownuserIsLoading: state.ownuserIsLoading,
   isLogin: state.isLogin,
+  categoriesHasErrored: state.categoriesHasErrored,
+  categoriesIsLoading: state.categoriesIsLoading,
 });
 
 // withRouter -> so the router will work under redux

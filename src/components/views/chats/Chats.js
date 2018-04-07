@@ -3,37 +3,37 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { CircularProgress } from 'react-md';
 import urls from 'constants/urls';
-import NotificationContent from 'components/views/notifications/NotificationContent';
+import ChatContent from 'components/views/chats/ChatContent';
 import BackButton from 'components/views/BackButton';
 import ViewsContainer from 'containers/views/ViewsContainer';
 
 const accessibilityProps = {
   'aria-busy': true,
-  'aria-describedby': 'notifications-loading-progress',
+  'aria-describedby': 'chats-loading-progress',
 };
 
-class Notifications extends React.Component {
+class Chats extends React.Component {
   componentDidMount() {
-    this.props.fetchData(urls.notifications.url);
+    this.props.fetchData(urls.chats.url);
   }
 
   render() {
     let content = null;
 
-    if (this.props.notificationsHasErrored) {
-      content = <h1>Notifications Display Error!</h1>;
-    } else if (this.props.notificationsIsLoading) {
+    if (this.props.chatsHasErrored) {
+      content = <h1>Chats Display Error!</h1>;
+    } else if (this.props.chatsIsLoading) {
       accessibilityProps['aria-busy'] = false;
       content = <CircularProgress id={accessibilityProps['aria-describedby']} />;
     } else {
-      content = <NotificationContent notifications={this.props.notifications} />;
+      content = <ChatContent chats={this.props.chats} />;
     }
 
     return (
       <ViewsContainer
         pathname={this.props.location.pathname}
         inset
-        className="Notifications"
+        className="Chats"
         nav={<BackButton />}
       >
         {content}
@@ -42,12 +42,12 @@ class Notifications extends React.Component {
   }
 }
 
-Notifications.propTypes = {
+Chats.propTypes = {
   fetchData: PropTypes.func.isRequired,
-  notifications: PropTypes.arrayOf(PropTypes.object).isRequired,
+  chats: PropTypes.arrayOf(PropTypes.object).isRequired,
   location: PropTypes.object.isRequired,
-  notificationsHasErrored: PropTypes.bool.isRequired,
-  notificationsIsLoading: PropTypes.bool.isRequired,
+  chatsHasErrored: PropTypes.bool.isRequired,
+  chatsIsLoading: PropTypes.bool.isRequired,
 };
 
-export default withRouter(Notifications);
+export default withRouter(Chats);

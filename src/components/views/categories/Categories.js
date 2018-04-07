@@ -1,10 +1,16 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { CircularProgress } from 'react-md';
 import urls from 'constants/urls';
 import CategoryContent from 'components/views/categories/CategoryContent';
 import BackButton from 'components/views/BackButton';
 import ViewsContainer from 'containers/views/ViewsContainer';
+
+const accessibilityProps = {
+  'aria-busy': true,
+  'aria-describedby': 'categories-loading-progress',
+};
 
 class Categories extends React.Component {
   componentDidMount() {
@@ -12,10 +18,15 @@ class Categories extends React.Component {
   }
 
   render() {
+    let content = null;
+
     if (this.props.categoriesHasErrored) {
-      return (
-        <h1>Categories Display Error!</h1>
-      );
+      content = <h1>Categories Display Error!</h1>;
+    } else if (this.props.categoriesIsLoading) {
+      accessibilityProps['aria-busy'] = false;
+      content = <CircularProgress id={accessibilityProps['aria-describedby']} />;
+    } else {
+      content = <CategoryContent categories={this.props.categories} />;
     }
 
     return (
@@ -25,7 +36,7 @@ class Categories extends React.Component {
         className="Categories"
         nav={<BackButton />}
       >
-        <CategoryContent categories={this.props.categories} />
+        {content}
       </ViewsContainer>
     );
   }
@@ -36,6 +47,7 @@ Categories.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   location: PropTypes.object.isRequired,
   categoriesHasErrored: PropTypes.bool.isRequired,
+  categoriesIsLoading: PropTypes.bool.isRequired,
 };
 
 export default withRouter(Categories);
