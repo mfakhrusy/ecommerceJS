@@ -1,3 +1,4 @@
 .Profile {
-  position: absolute;
+  height: 100%;
+  background-color: lighten($color: $md-primary-color, $amount: 42%);
 }

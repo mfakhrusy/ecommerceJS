@@ -23,7 +23,7 @@ export const ownuserIsLoading = (state = false, action) => {
   }
 };
 
-export const ownuser = (state = [], action) => {
+export const ownuser = (state = {}, action) => {
   switch (action.type) {
     case OWNUSER_FETCH_DATA_SUCCESS:
       return action.ownuser;

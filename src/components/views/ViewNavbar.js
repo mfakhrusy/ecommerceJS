@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { withRouter } from 'react-router-dom';
 import { Toolbar, Button } from 'react-md';
-// import BackButton from 'components/views/BackButton';
 
 const ViewNavbar = ({
-  // history,
   inset,
   fixed,
   nav,
@@ -18,7 +15,7 @@ const ViewNavbar = ({
     inset={inset}
     fixed={fixed}
     nav={nav}
-    title={title}
+    title={title === '' ? '' : <div className="ViewNavbarTitle">{title}</div>}
     actions={actions}
   />
 );
@@ -32,7 +29,6 @@ ViewNavbar.defaultProps = {
 };
 
 ViewNavbar.propTypes = {
-  // history: PropTypes.object.isRequired,
   inset: PropTypes.bool,
   fixed: PropTypes.bool,
   nav: PropTypes.element,
@@ -40,5 +36,4 @@ ViewNavbar.propTypes = {
   actions: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
 };
 
-// export default withRouter(ViewNavbar);
 export default ViewNavbar;

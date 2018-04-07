@@ -17,9 +17,8 @@ class Sidebar extends React.Component {
     }
   }
 
-  handleClickBrowse(callback) {
-    this.props.onClick(!this.props.isSidebarShown, callback());
-    // callback();
+  handleClickBrowse() {
+    this.props.onClick(!this.props.isSidebarShown);
   }
 
   render() {

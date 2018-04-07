@@ -1,3 +1,10 @@
 .ViewNavbar#view-navbar {
   height: $view-header-height;
 }
+
+.ViewNavbarTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
