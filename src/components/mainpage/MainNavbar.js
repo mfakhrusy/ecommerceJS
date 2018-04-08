@@ -7,7 +7,6 @@ import Search from 'components/mainpage/Search';
 const MainNavbar = () => (
   <React.Fragment>
     <Toolbar
-      fixed
       inset
       nav={<MenuButtonContainer className="MenuButton" />}
       title={<Search />}

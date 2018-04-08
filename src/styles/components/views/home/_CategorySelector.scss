@@ -1,4 +1,12 @@
 .CategorySelector {
   display: flex;
+  align-items: center;
   overflow-x: scroll;
+  height: 8rem;
+}
+
+button.CategorySelectorItem i {
+  height: 5rem;
+  width: 5rem;
+  font-size: 4rem;
 }

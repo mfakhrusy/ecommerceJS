@@ -22,14 +22,16 @@ const accessibilityProps = {
 
 class Mainpage extends React.Component {
   render() {
-    if (this.props.ownuserIsLoading) {
+    // categories related state is here because we need to render
+    // the categories which located on Home, which is basically our first views
+    if (this.props.ownuserIsLoading || this.props.categoriesIsLoading) {
       // for accessibility
       accessibilityProps['aria-busy'] = false;
       return (
         <CircularProgress id={accessibilityProps['aria-describedby']} />
       );
     }
-    if (this.props.ownuserHasErrored) {
+    if (this.props.ownuserHasErrored || this.props.categoriesHasErrored) {
       return (
         <h2>Error</h2>
       );
@@ -57,8 +59,8 @@ Mainpage.propTypes = {
   ownuserIsLoading: PropTypes.bool.isRequired,
   ownuserHasErrored: PropTypes.bool.isRequired,
   isLogin: PropTypes.bool.isRequired,
-  // categoriesIsLoading: PropTypes.bool.isRequired,
-  // categoriesHasErrored: PropTypes.bool.isRequired,
+  categoriesIsLoading: PropTypes.bool.isRequired,
+  categoriesHasErrored: PropTypes.bool.isRequired,
 };
 
 export default Mainpage;

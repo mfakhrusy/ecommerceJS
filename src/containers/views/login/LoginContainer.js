@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Login from 'components/views/login/Login';
 import { ownuserFetchData } from 'actions/views/loginActions';
+import { categoriesFetchData } from 'actions/views/categoriesActions';
 
 // const mapStateToProps = state => ({
 //   ownuser: state.ownuser,
@@ -11,6 +12,9 @@ import { ownuserFetchData } from 'actions/views/loginActions';
 const mapDispatchToProps = dispatch => ({
   fetchData: (url) => {
     dispatch(ownuserFetchData(url));
+  },
+  categoriesfetchData: (url) => {
+    dispatch(categoriesFetchData(url));
   },
 });
 
