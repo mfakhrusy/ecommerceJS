@@ -10,7 +10,7 @@ const TabList = ({ chats }) => {
   return (
     <Grid className="TabList" id="tab-list">
       {chats.map(chat => (
-        <Card className="TabListCard">
+        <Card className="TabListCard" key={chat.id}>
           <div className="TabListCard-grid-image">
             <img src={chat.imageUrl} alt={chat.imageDescription} />
           </div>

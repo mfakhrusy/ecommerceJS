@@ -22,7 +22,6 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    console.log(this.props.isSidebarOpen);
     return (
       <Drawer
         id="page-sidebar"

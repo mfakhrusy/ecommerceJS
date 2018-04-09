@@ -1,0 +1,185 @@
+.HomeModalContentMain {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  @include display-grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
+  grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 2fr 2fr; // total: 16fr on row
+  grid-template-areas:
+  "close-button . button-description button-description button-description . share-button"
+  "image-progress . . . . . love-button"
+  ". . . . . . ." // empty
+  ". . . . . . ." // empty
+  "info-avatar info-avatar info-name info-name info-name . ."
+  "info-avatar info-avatar info-price info-price info-price . ."
+  ". . . . . . ." // empty
+  "text-input text-input text-input . . interested-button interested-button";
+
+  > div {
+    border: 0.1rem solid red;
+  }
+
+  .ModalCloseButton {
+    grid-area: close-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      display: flex !important;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      i {
+        font-size: 2.7rem;
+      }
+    }
+  }
+  
+  .ModalImageProgress {
+    grid-area: image-progress;
+  }
+
+  .ModalDescriptionButton {
+    grid-area: button-description;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+    border-radius: 1rem;
+  }
+
+  .ModalShareButton {
+    grid-area: share-button;
+  }
+
+  .ModalLoveButton {
+    grid-area: love-button;
+  }
+
+  .ModalInfoAvatar {
+    grid-area: info-avatar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+    > div {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .ModalInfoName {
+    grid-area: info-name;
+    display: flex;
+    align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+  }
+
+  .ModalInfoPrice {
+    grid-area: info-price;
+    display: flex;
+    align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+  }
+
+  .ModalTextInput {
+    grid-area: text-input;
+  }
+
+  .ModalInterestedButton {
+    grid-area: interested-button;
+  }
+}
+
+.HomeModalContentDescription {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  @include display-grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
+  grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 2fr 2fr; // total: 16fr on row
+  grid-template-areas:
+  "close-button . button-description button-description button-description . share-button"
+  "image-progress . . . . . love-button"
+  ". . . . . . ." // empty
+  ". . . . . . ." // empty
+  "info-avatar info-avatar info-name info-name info-name . ."
+  "info-avatar info-avatar info-price info-price info-price . ."
+  ". . . . . . ." // empty
+  "text-input text-input text-input . . interested-button interested-button";
+
+  > div {
+    border: 0.1rem solid red;
+  }
+
+  .ModalCloseButton {
+    grid-area: close-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      display: flex !important;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      i {
+        font-size: 2.7rem;
+      }
+    }
+  }
+  
+  .ModalImageProgress {
+    grid-area: image-progress;
+  }
+
+  .ModalDescriptionButton {
+    grid-area: button-description;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bababa;
+  }
+
+  .ModalShareButton {
+    grid-area: share-button;
+  }
+
+  .ModalLoveButton {
+    grid-area: love-button;
+  }
+
+  .ModalInfoAvatar {
+    grid-area: info-avatar;
+  }
+
+  .ModalInfoName {
+    grid-area: info-name;
+  }
+
+  .ModalInfoPrice {
+    grid-area: info-price;
+  }
+
+  .ModalTextInput {
+    grid-area: text-input;
+  }
+
+  .ModalInterestedButton {
+    grid-area: interested-button;
+  }
+}

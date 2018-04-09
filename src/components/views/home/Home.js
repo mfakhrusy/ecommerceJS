@@ -44,22 +44,8 @@ class Home extends React.Component {
       );
     }
 
-    // return (
-    //   <React.Fragment>
-    //     <Drawer
-    //       type={Drawer.DrawerTypes.PERSISTENT}
-    //       defaultVisible
-    //       position="right"
-    //     >
-    //       {content}
-    //     </Drawer>
-    //     <SidebarContainer />
-    //   </React.Fragment>
-    // );
     return (
       <Paper className="Home">
-        {/* <MainNavbar /> */}
-        {/* <CategorySelectorContainer /> */}
         {content}
         <SidebarContainer />
       </Paper>
