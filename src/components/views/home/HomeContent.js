@@ -1,84 +1,44 @@
-/* eslint-disable no-unused-vars, react/jsx-indent, arrow-parens, arrow-body-style, dot-notation */
+/* eslint-disable react/jsx-indent, max-len, arrow-parens */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-component';
-import { Card, DialogContainer } from 'react-md';
+import { Card } from 'react-md';
 
 class HomeContent extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.show = this.show.bind(this);
-    // this.hide = this.hide.bind(this);
-
-    this.state = {};
-    // this.setState({ 'a b c': true });
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  // initialize state in componentDidUpdate
-  // because the homeItems is async
-  // so we need to keep in mind to update the state
-  // whenever the homeItems is finished downloaded
-  // we cannot put in componentDidMount
-  // since it only invoked once (when intial render)
-  // also cnanot on constructor
-  // componentDidUpdate() {
-  // for (const homeItem of this.props.homeItems) {
-  //   this.state[`${homeItem.id}`] = false;
-  // }
-  // console.log(this.state[1]);
-  // for (const obj of this.state) {
-  //   typeof obj;
-  // }
-  // this.setState({ 'a b c': true });
-  // }
-
-  // static getDerivedStateFromProps(n)
-
-  show(id) {
-    this.setState({ [`dialog-visible-${id}`]: true });
-  }
-
-  hide(id) {
-    this.setState({ [`dialog-visible-${id}`]: false });
+  handleClick(id) {
+    this.props.showModal(true);
+    this.props.setHomeModal(id);
   }
 
   render() {
     return (
-      <Masonry
-        className="HomeContent"
-      >
-        {this.props.homeItems.map((homeItem) => {
-          console.log(this.state['a b c']);
-          return (
-          <div
-            key={homeItem.id}
+      <Masonry className="HomeContent">
+        {this.props.homeItems.map((homeItem) => (
+          <Card
             className="HomeContentItem"
+            onClick={() => this.handleClick(homeItem.id)}
+            key={homeItem.id}
+            onKeyPress={() => this.handleClick(homeItem.id)}
+            role="button"
+            tabIndex="0"
           >
-            <Card
-              // className="HomeContentItem"
-              key={homeItem.id}
-              // onClick={this.show(homeItem.id)}
-            >
-              <img src={homeItem.imageUrl} alt={`home-item-${homeItem.id}`} />
-            </Card>
-            <DialogContainer
-              visible={this.state[homeItem.id]}
-              id={`home-dialog-${homeItem.id}`}
-              // onHide={this.hide(homeItem.id)}
-            >
-              <div>
-                yey
-              </div>
-            </DialogContainer>
-          </div>
-          );
-        })}
+            <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
+          </Card>
+        ))}
       </Masonry>
     );
   }
 }
+
 HomeContent.propTypes = {
   homeItems: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setHomeModal: PropTypes.func.isRequired,
+  showModal: PropTypes.func.isRequired,
 };
 
 export default HomeContent;

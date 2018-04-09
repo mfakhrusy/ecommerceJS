@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-md';
 
-// const MenuButton = ({ className, onClick, isSidebarShown }) => {
+// const MenuButton = ({ className, onClick, isSidebarOpen }) => {
 class MenuButton extends React.Component {
   constructor() {
     super();
@@ -10,7 +10,7 @@ class MenuButton extends React.Component {
   }
 
   handleClick() {
-    this.props.onClick(!this.props.isSidebarShown);
+    this.props.onClick(!this.props.isSidebarOpen);
   }
 
   render() {
@@ -29,7 +29,7 @@ class MenuButton extends React.Component {
 MenuButton.propTypes = {
   className: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  isSidebarShown: PropTypes.bool.isRequired,
+  isSidebarOpen: PropTypes.bool.isRequired,
 };
 
 export default MenuButton;

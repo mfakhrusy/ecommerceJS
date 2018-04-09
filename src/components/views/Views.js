@@ -17,7 +17,7 @@ class Views extends React.Component {
     if (this.props.pathname !== undefined) {
       this.setState({ isVisible: true });
       // unmount the sidebar
-      this.props.onClick(!this.props.isSidebarShown);
+      this.props.onClick(!this.props.isSidebarOpen);
     }
   }
 
@@ -61,7 +61,7 @@ Views.defaultProps = {
 };
 
 Views.propTypes = {
-  isSidebarShown: PropTypes.bool.isRequired,
+  isSidebarOpen: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
   children: PropTypes.element.isRequired,
   pathname: PropTypes.string.isRequired,

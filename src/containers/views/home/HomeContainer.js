@@ -6,6 +6,8 @@ const mapStateToProps = state => ({
   homeItems: state.homeItems,
   homeHasErrored: state.homeHasErrored,
   homeIsLoading: state.homeIsLoading,
+  homeModal: state.homeModal,
+  isModalOpen: state.isModalOpen,
 });
 
 const mapDispatchToProps = dispatch => ({

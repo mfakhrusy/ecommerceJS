@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import isSidebarShown from 'reducers/homepage/isSidebarShown';
+import isSidebarOpen from 'reducers/homepage/isSidebarOpen';
 import {
   categoriesHasErrored,
   categoriesIsLoading,
@@ -25,10 +25,12 @@ import {
   homeHasErrored,
   homeIsLoading,
   homeItems,
+  homeModal,
 } from 'reducers/views/home';
+import isModalOpen from 'reducers/isModalOpen';
 
 export default combineReducers({
-  isSidebarShown,
+  isSidebarOpen,
   categoriesHasErrored,
   categoriesIsLoading,
   categories,
@@ -45,4 +47,6 @@ export default combineReducers({
   homeHasErrored,
   homeIsLoading,
   homeItems,
+  homeModal,
+  isModalOpen,
 });

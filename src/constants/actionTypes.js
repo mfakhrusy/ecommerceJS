@@ -21,3 +21,6 @@ export const CHATS_IS_LOADING = 'CHATS_IS_LOADING';
 export const HOME_FETCH_DATA_SUCCESS = 'HOME_FETCH_DATA_SUCCESS';
 export const HOME_HAS_ERRORED = 'HOME_HAS_ERRORED';
 export const HOME_IS_LOADING = 'HOME_IS_LOADING';
+export const SET_HOME_MODAL = 'SET_HOME_MODAL';
+
+export const SHOW_MODAL = 'SHOW_MODAL'; // boolean

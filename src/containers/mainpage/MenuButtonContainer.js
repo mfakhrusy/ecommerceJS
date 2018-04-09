@@ -3,7 +3,7 @@ import MenuButton from 'components/mainpage/MenuButton';
 import { showSidebar } from 'actions/mainpage/mainpageActions';
 
 const mapStateToProps = state => ({
-  isSidebarShown: state.isSidebarShown,
+  isSidebarOpen: state.isSidebarOpen,
 });
 
 const mapDispatchToProps = dispatch => ({

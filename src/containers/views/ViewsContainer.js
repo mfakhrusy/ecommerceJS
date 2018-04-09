@@ -3,7 +3,7 @@ import Views from 'components/views/Views';
 import { showSidebar } from 'actions/mainpage/mainpageActions';
 
 const mapStateToProps = state => ({
-  isSidebarShown: state.isSidebarShown,
+  isSidebarOpen: state.isSidebarOpen,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -12,21 +12,22 @@ class Sidebar extends React.Component {
   }
 
   handleVisibility() {
-    if (this.props.isSidebarShown) {
-      this.props.onClick(!this.props.isSidebarShown);
+    if (this.props.isSidebarOpen) {
+      this.props.onClick(!this.props.isSidebarOpen);
     }
   }
 
   handleClickBrowse() {
-    this.props.onClick(!this.props.isSidebarShown);
+    this.props.onClick(!this.props.isSidebarOpen);
   }
 
   render() {
+    console.log(this.props.isSidebarOpen);
     return (
       <Drawer
         id="page-sidebar"
         type={Drawer.DrawerTypes.TEMPORARY}
-        visible={this.props.isSidebarShown}
+        visible={this.props.isSidebarOpen}
         onVisibilityChange={this.handleVisibility}
         position="left"
         header={
@@ -40,7 +41,7 @@ class Sidebar extends React.Component {
 }
 
 Sidebar.propTypes = {
-  isSidebarShown: PropTypes.bool.isRequired,
+  isSidebarOpen: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
