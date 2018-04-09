@@ -5,6 +5,7 @@ import { showModal } from 'actions/globalActions';
 
 const mapStateToProps = state => ({
   homeModal: state.homeModal,
+  filterCategory: state.filterCategory,
 });
 
 const mapDispatchToProps = dispatch => ({

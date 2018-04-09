@@ -21,7 +21,6 @@ const CategoryContent = ({ categories }) => (
   </Grid>
 );
 
-
 CategoryContent.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

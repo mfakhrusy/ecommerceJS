@@ -11,7 +11,10 @@ class MenuItem extends React.Component {
 
   handleClick() {
     if (this.props.route !== '/') {
-      this.props.history.push(this.props.route);
+      this.props.onClickBrowse();
+      // a little hack, but works for now.
+      // so the sidebar will close first then the route will fire
+      setTimeout(() => { this.props.history.push(this.props.route); }, 350);
     } else {
       this.props.onClickBrowse();
     }

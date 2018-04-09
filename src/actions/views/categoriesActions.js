@@ -3,6 +3,7 @@ import {
   CATEGORIES_HAS_ERRORED,
   CATEGORIES_IS_LOADING,
   CATEGORIES_FETCH_DATA_SUCCESS,
+  SET_FILTER_CATEGORIES,
 } from 'constants/actionTypes';
 
 export const categoriesHasErrored = (bool) => {
@@ -43,5 +44,12 @@ export const categoriesFetchData = (url) => {
       .then(response => response.json())
       .then(categories => dispatch(categoriesFetchDataSuccess(categories)))
       .catch(() => dispatch(categoriesHasErrored(true)));
+  };
+};
+
+export const setFilterCategories = (category) => {
+  return {
+    type: SET_FILTER_CATEGORIES,
+    filterCategory: category,
   };
 };

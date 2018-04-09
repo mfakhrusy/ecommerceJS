@@ -18,7 +18,13 @@ class HomeContent extends React.Component {
   render() {
     return (
       <Masonry className="HomeContent">
-        {this.props.homeItems.map((homeItem) => (
+        {this.props.homeItems.filter((homeItem) => {
+          if (this.props.filterCategory !== '') {
+            return homeItem.type === this.props.filterCategory;
+          }
+          return true;
+        })
+          .map((homeItem) => (
           <Card
             className="HomeContentItem"
             onClick={() => this.handleClick(homeItem.id)}
@@ -39,6 +45,7 @@ HomeContent.propTypes = {
   homeItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   setHomeModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
+  filterCategory: PropTypes.string.isRequired,
 };
 
 export default HomeContent;

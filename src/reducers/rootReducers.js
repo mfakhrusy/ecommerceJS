@@ -4,6 +4,7 @@ import {
   categoriesHasErrored,
   categoriesIsLoading,
   categories,
+  filterCategory,
 } from 'reducers/views/categories';
 import {
   ownuserHasErrored,
@@ -34,6 +35,7 @@ export default combineReducers({
   categoriesHasErrored,
   categoriesIsLoading,
   categories,
+  filterCategory,
   ownuserHasErrored,
   ownuserIsLoading,
   ownuser,
