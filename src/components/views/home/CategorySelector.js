@@ -8,9 +8,8 @@ class CategorySelector extends Component {
       <Button
         icon
         primary
-        forceIconSize="50px"
-        forceIconFontSize
         className="CategorySelectorItem"
+        key={category.id}
       >
         {category.mdIcon}
       </Button>

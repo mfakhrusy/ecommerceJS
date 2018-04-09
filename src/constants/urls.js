@@ -14,4 +14,7 @@ export default {
   chats: {
     url: 'https://5ac586c8a79a110014ce6778.mockapi.io/ejs/chats',
   },
+  home: {
+    url: 'https://5ac586c8a79a110014ce6778.mockapi.io/ejs/home',
+  },
 };

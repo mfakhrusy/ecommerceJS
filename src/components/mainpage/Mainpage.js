@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import { CircularProgress } from 'react-md';
 import LoginContainer from 'containers/views/login/LoginContainer';
-import Home from 'components/views/home/Home';
+import HomeContainer from 'containers/views/home/HomeContainer';
 import Sell from 'components/views/sell/Sell';
 import ChatsContainer from 'containers/views/chats/ChatsContainer';
 import NotificationsContainer from 'containers/views/notifications/NotificationsContainer';
@@ -39,7 +39,7 @@ class Mainpage extends React.Component {
     if (this.props.isLogin) {
       return (
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={HomeContainer} />
           <Route path="/sell" component={Sell} />
           <Route path="/chat" component={ChatsContainer} />
           <Route path="/notifications" component={NotificationsContainer} />

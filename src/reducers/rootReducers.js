@@ -21,6 +21,11 @@ import {
   chatsIsLoading,
   chats,
 } from 'reducers/views/chats';
+import {
+  homeHasErrored,
+  homeIsLoading,
+  homeItems,
+} from 'reducers/views/home';
 
 export default combineReducers({
   isSidebarShown,
@@ -37,4 +42,7 @@ export default combineReducers({
   chatsHasErrored,
   chatsIsLoading,
   chats,
+  homeHasErrored,
+  homeIsLoading,
+  homeItems,
 });

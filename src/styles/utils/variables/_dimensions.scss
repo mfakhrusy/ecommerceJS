@@ -1,3 +1,6 @@
 $sidebar-header-height: 10rem;
 $view-header-height: 5.6rem;
 $view-header-total-height: $view-header-height + 0.8rem + 0.8rem; // 0.8 rem is the margin
+$home-header-height: $view-header-total-height;
+$home-category-selector-height: 8rem;
+$home-header-total-height: $home-header-height + $home-category-selector-height;
