@@ -1,10 +1,10 @@
-/* eslint-disable arrow-body-style, react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
 import HomeModalContent from 'components/views/home/HomeModalContent';
 import HomeModalImageContainer from 'components/views/home/HomeModalImageContainer';
+import Modal from 'components/utils/Modal';
 
-class Modal extends React.Component {
+class ProfileModal extends React.Component {
   constructor() {
     super();
 
@@ -19,25 +19,24 @@ class Modal extends React.Component {
   }
 
   render() {
-    // console.log(this.props.homeItem);
     return (
-      <div className="HomeModal">
+      <Modal className="ProfileModal">
         <HomeModalImageContainer
-          homeItem={this.props.homeItem}
+          homeItem={this.props.favoriteItem}
           descriptionIsOpen={this.state.descriptionIsOpen}
         />
         <HomeModalContent
           showDescription={this.showDescription}
-          homeItem={this.props.homeItem}
+          homeItem={this.props.favoriteItem}
           descriptionIsOpen={this.state.descriptionIsOpen}
         />
-      </div>
+      </Modal>
     );
   }
 }
 
-Modal.propTypes = {
-  homeItem: PropTypes.object.isRequired,
+ProfileModal.propTypes = {
+  favoriteItem: PropTypes.object.isRequired,
 };
 
-export default Modal;
+export default ProfileModal;

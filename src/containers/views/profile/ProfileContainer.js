@@ -3,6 +3,8 @@ import Profile from 'components/views/profile/Profile';
 
 const mapStateToProps = state => ({
   ownuser: state.ownuser,
+  profileModal: state.profileModal,
+  isModalOpen: state.isModalOpen,
 });
 
 const ProfileContainer = connect(

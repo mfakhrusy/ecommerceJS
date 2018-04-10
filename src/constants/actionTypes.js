@@ -24,6 +24,8 @@ export const HOME_HAS_ERRORED = 'HOME_HAS_ERRORED';
 export const HOME_IS_LOADING = 'HOME_IS_LOADING';
 export const SET_HOME_MODAL = 'SET_HOME_MODAL';
 
+export const SET_PROFILE_MODAL = 'SET_PROFILE_MODAL';
+
 export const SHOW_MODAL = 'SHOW_MODAL'; // boolean
 
 export const ADD_FAVORITE_ITEM = 'ADD_FAVORITE_ITEM';

@@ -32,6 +32,7 @@ export const homeItems = (state = [], action) => {
   }
 };
 
+// todo change the state to homeItem object not the id/index
 export const homeModal = (state = '0', action) => {
   switch (action.type) {
     case SET_HOME_MODAL:

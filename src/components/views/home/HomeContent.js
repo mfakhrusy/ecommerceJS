@@ -28,9 +28,9 @@ class HomeContent extends React.Component {
         })
           .map((homeItem) => (
           <Card
+            key={homeItem.id}
             className="HomeContentItem"
             onClick={() => this.handleClick(homeItem.id)}
-            key={homeItem.id}
             onKeyPress={() => this.handleClick(homeItem.id)}
             role="button"
             tabIndex="0"

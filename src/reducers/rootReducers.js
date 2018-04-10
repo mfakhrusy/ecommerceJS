@@ -28,6 +28,7 @@ import {
   homeItems,
   homeModal,
 } from 'reducers/views/home';
+import { profileModal } from 'reducers/views/profile';
 import {
   isModalOpen,
   favoriteItems,
@@ -53,6 +54,7 @@ export default combineReducers({
   homeIsLoading,
   homeItems,
   homeModal,
+  profileModal,
   isModalOpen,
   favoriteItems,
 });

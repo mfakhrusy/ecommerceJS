@@ -6,6 +6,9 @@ class HomeModalImageContainer extends React.Component {
     let content = null;
     if (this.props.descriptionIsOpen) {
       content = '';
+    } else if (Object.keys(this.props.homeItem).length === 0) {
+      // check if this.props.homeItem is empty or not
+      content = '';
     } else {
       content = (
         this.props.homeItem.imageUrl.map((url, index) => (

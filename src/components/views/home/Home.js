@@ -7,7 +7,7 @@ import MainNavbar from 'components/mainpage/MainNavbar';
 import SidebarContainer from 'containers/sidebar/SidebarContainer';
 import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';
 import HomeContentContainer from 'containers/views/home/HomeContentContainer';
-import Modal from 'components/views/home/Modal';
+import HomeModal from 'components/views/home/HomeModal';
 
 const accessibilityProps = {
   'aria-busy': true,
@@ -15,10 +15,6 @@ const accessibilityProps = {
 };
 
 class Home extends React.Component {
-  // componentDidMount() {
-  //   this.props.fetchData(urls.home.url);
-  // }
-
   render() {
     let content = null;
 
@@ -39,7 +35,7 @@ class Home extends React.Component {
           <MainNavbar />
           <CategorySelectorContainer />
           <HomeContentContainer homeItems={this.props.homeItems} />
-          {this.props.isModalOpen ? <Modal homeItem={this.props.homeItems[this.props.homeModal - 1]} /> : ''}
+          {this.props.isModalOpen ? <HomeModal homeItem={this.props.homeItems[this.props.homeModal - 1]} /> : ''}
         </React.Fragment>
       );
     }
@@ -54,7 +50,6 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-  // fetchData: PropTypes.func.isRequired,
   homeItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   homeHasErrored: PropTypes.bool.isRequired,
   homeIsLoading: PropTypes.bool.isRequired,
