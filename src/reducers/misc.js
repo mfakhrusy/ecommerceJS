@@ -19,13 +19,9 @@ export const favoriteItems = (state = [], action) => {
     case ADD_FAVORITE_ITEM:
       return [...state, action.item];
     case DELETE_FAVORITE_ITEM:
-      // get ID of the action
-      // const itemId = action.item.id;
-      // first, copy state with slice(), so we're not mutating the state.
-      // then, delete one element with splice()
-      // splice first param: location of element
-      // splice second param: how many element to be deleted
-      return state.slice().splice(action.item.id, 1);
+      // state.slice() -> copy the array (so it's not mutating)
+      // filter -> filter the array according to action.item.id
+      return state.slice().filter(item => item.id !== action.item.id);
     default:
       return state;
   }
