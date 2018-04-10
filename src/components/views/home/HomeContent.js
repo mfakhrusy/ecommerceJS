@@ -19,6 +19,8 @@ class HomeContent extends React.Component {
     return (
       <Masonry className="HomeContent">
         {this.props.homeItems.filter((homeItem) => {
+          // filterCategory will be an empty string if on initial render
+          // or when user press all filter (first item on filter)
           if (this.props.filterCategory !== '') {
             return homeItem.type === this.props.filterCategory;
           }

@@ -8,16 +8,23 @@ class CategorySelector extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  // componentDidUpdate() {
+  //   console.log(this.props.filterCategory);
+  // }
+
   handleClick(category) {
     this.props.setFilterCategories(category);
   }
+
+
   render() {
     const content = this.props.categories.map(category => (
       <Button
+        key={category.id}
+        className="CategorySelectorItem"
         icon
         primary
-        className="CategorySelectorItem"
-        key={category.id}
+        // disabled={this.props.filterCategory === category}
         onClick={() => { this.handleClick(category.type); }}
       >
         {category.mdIcon}
@@ -35,6 +42,7 @@ class CategorySelector extends Component {
 CategorySelector.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   setFilterCategories: PropTypes.func.isRequired,
+  // filterCategory: PropTypes.string.isRequired,
 };
 
 export default CategorySelector;

@@ -4,6 +4,7 @@ import { setFilterCategories } from 'actions/views/categoriesActions';
 
 const mapStateToProps = state => ({
   categories: state.categories,
+  // filterCategory: state.filterCategory,
 });
 
 const mapDispatchToProps = dispatch => ({

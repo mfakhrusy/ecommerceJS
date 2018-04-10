@@ -30,7 +30,9 @@ class Sidebar extends React.Component {
         onVisibilityChange={this.handleVisibility}
         position="left"
         header={
-          <SidebarHeaderContainer />
+          <SidebarHeaderContainer
+            onClick={this.handleClickBrowse}
+          />
         }
       >
         <Sidemenu onClickBrowse={this.handleClickBrowse} />
