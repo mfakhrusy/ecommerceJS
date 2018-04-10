@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TabsContainer, Tabs, Tab } from 'react-md';
+import TabFavoriteContainer from 'containers/views/profile/TabFavoriteContainer';
 
 const tabMenuItems = ['SELLING', 'SOLD', 'FAVORITES'];
 
@@ -21,7 +22,7 @@ class ProfileTabMenu extends Component {
             <h2>{tabMenuItems[1]}</h2>
           </Tab>
           <Tab label={tabMenuItems[2]}>
-            <h2>{tabMenuItems[2]}</h2>
+            <TabFavoriteContainer />
           </Tab>
         </Tabs>
       </TabsContainer>

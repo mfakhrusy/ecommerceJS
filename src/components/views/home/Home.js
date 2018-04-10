@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Drawer, CircularProgress, Paper } from 'react-md';
-import urls from 'constants/urls';
+// import urls from 'constants/urls';
 import MainNavbar from 'components/mainpage/MainNavbar';
 import SidebarContainer from 'containers/sidebar/SidebarContainer';
 import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';
@@ -15,9 +15,9 @@ const accessibilityProps = {
 };
 
 class Home extends React.Component {
-  componentDidMount() {
-    this.props.fetchData(urls.home.url);
-  }
+  // componentDidMount() {
+  //   this.props.fetchData(urls.home.url);
+  // }
 
   render() {
     let content = null;
@@ -54,7 +54,7 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-  fetchData: PropTypes.func.isRequired,
+  // fetchData: PropTypes.func.isRequired,
   homeItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   homeHasErrored: PropTypes.bool.isRequired,
   homeIsLoading: PropTypes.bool.isRequired,

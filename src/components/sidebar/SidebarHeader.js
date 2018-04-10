@@ -12,7 +12,7 @@ class SidebarHeader extends React.Component {
   }
 
   handleClick() {
-    this.props.onClick();
+    this.props.closeSidebar();
     // a little hack, but works for now.
     // so the sidebar will close first then the route will fire
     setTimeout(() => { this.props.history.push('/profile'); }, 350);
@@ -43,7 +43,7 @@ class SidebarHeader extends React.Component {
 SidebarHeader.propTypes = {
   ownuser: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired,
+  closeSidebar: PropTypes.func.isRequired,
 };
 
 export default withRouter(SidebarHeader);

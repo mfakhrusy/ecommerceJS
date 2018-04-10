@@ -6,7 +6,7 @@ const ModalCloseButton = ({ onClick, isModalOpen }) => (
   <div className="ModalCloseButton">
     <Button
       icon
-      onClick={() => onClick(!isModalOpen)}
+      onClick={() => { onClick(!isModalOpen); }}
     >
       close
     </Button>

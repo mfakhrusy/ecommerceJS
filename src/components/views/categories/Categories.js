@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // import { CircularProgress } from 'react-md';
 // import urls from 'constants/urls';
-import CategoryContent from 'components/views/categories/CategoryContent';
+import CategoryContentContainer from 'containers/views/categories/CategoryContentContainer';
 import BackButton from 'components/views/BackButton';
 import ViewsContainer from 'containers/views/ViewsContainer';
 
@@ -18,7 +18,7 @@ class Categories extends React.Component {
   // }
 
   render() {
-    const content = <CategoryContent categories={this.props.categories} />;
+    const content = <CategoryContentContainer categories={this.props.categories} />;
 
     // if (this.props.categoriesHasErrored) {
     // content = <h1>Categories Display Error!</h1>;

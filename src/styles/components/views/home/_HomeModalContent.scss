@@ -8,8 +8,9 @@
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
   grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 2fr 2fr; // total: 16fr on row
   grid-template-areas:
-  "close-button . button-description button-description button-description . share-button"
-  "image-progress . . . . . love-button"
+  // "close-button . button-description button-description button-description . share-button"
+  "share-button . button-description button-description button-description . close-button"
+  "love-button . . . . . image-progress"
   ". . . . . . ." // empty
   ". . . . . . ." // empty
   "info-avatar info-avatar info-name info-name info-name . ."
@@ -111,12 +112,12 @@
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
   grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 2fr 2fr; // total: 16fr on row
   grid-template-areas:
-  "close-button . button-description button-description button-description . share-button"
-  "image-progress . . . . . love-button"
+  "back-button . . . . . close-button"
+  ". . . . . . ."
   ". . . . . . ." // empty
   ". . . . . . ." // empty
-  "info-avatar info-avatar info-name info-name info-name . ."
-  "info-avatar info-avatar info-price info-price info-price . ."
+  ". . . . . . ."
+  ". . . . . . ."
   ". . . . . . ." // empty
   "text-input text-input text-input . . interested-button interested-button";
 
@@ -142,44 +143,48 @@
       }
     }
   }
+
+  .ModalBackButton {
+    grid-area: back-button;
+  }
   
-  .ModalImageProgress {
-    grid-area: image-progress;
-  }
+  // .ModalImageProgress {
+  //   grid-area: image-progress;
+  // }
 
-  .ModalDescriptionButton {
-    grid-area: button-description;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #bababa;
-  }
+  // .ModalDescriptionButton {
+  //   grid-area: button-description;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background-color: #bababa;
+  // }
 
-  .ModalShareButton {
-    grid-area: share-button;
-  }
+  // .ModalShareButton {
+  //   grid-area: share-button;
+  // }
 
-  .ModalLoveButton {
-    grid-area: love-button;
-  }
+  // .ModalLoveButton {
+  //   grid-area: love-button;
+  // }
 
-  .ModalInfoAvatar {
-    grid-area: info-avatar;
-  }
+  // .ModalInfoAvatar {
+  //   grid-area: info-avatar;
+  // }
 
-  .ModalInfoName {
-    grid-area: info-name;
-  }
+  // .ModalInfoName {
+  //   grid-area: info-name;
+  // }
 
-  .ModalInfoPrice {
-    grid-area: info-price;
-  }
+  // .ModalInfoPrice {
+  //   grid-area: info-price;
+  // }
 
-  .ModalTextInput {
-    grid-area: text-input;
-  }
+  // .ModalTextInput {
+  //   grid-area: text-input;
+  // }
 
-  .ModalInterestedButton {
-    grid-area: interested-button;
-  }
+  // .ModalInterestedButton {
+  //   grid-area: interested-button;
+  // }
 }

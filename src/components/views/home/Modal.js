@@ -14,11 +14,12 @@ class Modal extends React.Component {
     this.showDescription = this.showDescription.bind(this);
   }
 
-  showDescription() {
-    this.setState({ descriptionIsOpen: true });
+  showDescription(bool) {
+    this.setState({ descriptionIsOpen: bool });
   }
 
   render() {
+    // console.log(this.props.homeItem);
     return (
       <div className="HomeModal">
         <HomeModalImageContainer

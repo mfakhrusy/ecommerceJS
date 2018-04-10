@@ -10,6 +10,7 @@ import NotificationsContainer from 'containers/views/notifications/Notifications
 import CategoriesContainer from 'containers/views/categories/CategoriesContainer';
 import ProfileContainer from 'containers/views/profile/ProfileContainer';
 import Help from 'components/views/help/Help';
+import urls from 'constants/urls';
 
 // for accessibility,
 // see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
@@ -21,6 +22,10 @@ const accessibilityProps = {
 };
 
 class Mainpage extends React.Component {
+  componentDidMount() {
+    this.props.fetchData(urls.home.url);
+  }
+
   render() {
     // categories related state is here because we need to render
     // the categories which located on Home, which is basically our first views
@@ -56,6 +61,7 @@ class Mainpage extends React.Component {
 }
 
 Mainpage.propTypes = {
+  fetchData: PropTypes.func.isRequired,
   ownuserIsLoading: PropTypes.bool.isRequired,
   ownuserHasErrored: PropTypes.bool.isRequired,
   isLogin: PropTypes.bool.isRequired,

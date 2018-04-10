@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Avatar } from 'react-md';
 import ModalCloseButtonContainer from 'containers/views/home/ModalCloseButtonContainer';
+import ModalLoveButtonContainer from 'containers/views/home/ModalLoveButtonContainer';
 
 class HomeModalContent extends React.Component {
   render() {
@@ -11,6 +12,14 @@ class HomeModalContent extends React.Component {
       content = (
         <div className="HomeModalContentDescription">
           <ModalCloseButtonContainer />
+          <div className="ModalBackButton">
+            <Button
+              icon
+              onClick={() => { this.props.showDescription(false); }}
+            >
+              arrow_back
+            </Button>
+          </div>
         </div>
       );
     } else {
@@ -24,7 +33,7 @@ class HomeModalContent extends React.Component {
             <Button
               flat
               iconChildren="chat_bubble_outline"
-              onClick={this.props.showDescription}
+              onClick={() => { this.props.showDescription(true); }}
             >
               More Info
             </Button>
@@ -32,9 +41,7 @@ class HomeModalContent extends React.Component {
           <div className="ModalShareButton">
             <Button icon>share</Button>
           </div>
-          <div className="ModalLoveButton">
-            <Button icon>favorite</Button>
-          </div>
+          <ModalLoveButtonContainer homeItem={this.props.homeItem} />
           <div className="ModalInfoAvatar">
             <Avatar src={this.props.homeItem.avatarUrl} />
           </div>
@@ -56,43 +63,6 @@ class HomeModalContent extends React.Component {
     return (
       content
     );
-
-    //   <div className="HomeModalContent">
-    //     <ModalCloseButtonContainer />
-    //     <div className="ModalImageProgress">
-    //       i
-    //     </div>
-    //     <div className="ModalDescriptionButton">
-    //       <Button
-    //         flat
-    //         iconChildren="chat_bubble_outline"
-    //         onClick={this.props.showDescription}
-    //       >
-    //         More Info
-    //       </Button>
-    //     </div>
-    //     <div className="ModalShareButton">
-    //       <Button icon>share</Button>
-    //     </div>
-    //     <div className="ModalLoveButton">
-    //       <Button icon>favorite</Button>
-    //     </div>
-    //     <div className="ModalInfoAvatar">
-    //       <Avatar src={this.props.homeItem.avatarUrl} />
-    //     </div>
-    //     <div className="ModalInfoName">
-    //       name
-    //     </div>
-    //     <div className="ModalInfoPrice">
-    //       price
-    //     </div>
-    //     <div className="ModalTextInput">
-    //       text input
-    //     </div>
-    //     <div className="ModalInterestedButton">
-    //       int
-    //     </div>
-    //   </div>
   }
 }
 

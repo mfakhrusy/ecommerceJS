@@ -28,7 +28,10 @@ import {
   homeItems,
   homeModal,
 } from 'reducers/views/home';
-import isModalOpen from 'reducers/isModalOpen';
+import {
+  isModalOpen,
+  favoriteItems,
+} from 'reducers/misc';
 
 export default combineReducers({
   isSidebarOpen,
@@ -51,4 +54,5 @@ export default combineReducers({
   homeItems,
   homeModal,
   isModalOpen,
+  favoriteItems,
 });

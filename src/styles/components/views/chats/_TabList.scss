@@ -3,6 +3,7 @@
   flex-direction: column;
 
   .TabListCard {
+    background-color: $md-primary-color;
     margin: 1rem 0;
     padding: 0.7rem;
     @include display-grid;

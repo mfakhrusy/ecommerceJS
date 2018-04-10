@@ -10,7 +10,8 @@ class MenuButton extends React.Component {
   }
 
   handleClick() {
-    this.props.onClick(!this.props.isSidebarOpen);
+    // this.props.onClick(!this.props.isSidebarOpen);
+    this.props.onClick(true);
   }
 
   render() {
@@ -29,7 +30,7 @@ class MenuButton extends React.Component {
 MenuButton.propTypes = {
   className: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  isSidebarOpen: PropTypes.bool.isRequired,
+  // isSidebarOpen: PropTypes.bool.isRequired,
 };
 
 export default MenuButton;

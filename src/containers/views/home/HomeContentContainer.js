@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import HomeContent from 'components/views/home/HomeContent';
 import { setHomeModal } from 'actions/views/homeActions';
-import { showModal } from 'actions/globalActions';
+import { showModal } from 'actions/miscActions';
 
 const mapStateToProps = state => ({
   homeModal: state.homeModal,

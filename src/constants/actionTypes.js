@@ -25,3 +25,6 @@ export const HOME_IS_LOADING = 'HOME_IS_LOADING';
 export const SET_HOME_MODAL = 'SET_HOME_MODAL';
 
 export const SHOW_MODAL = 'SHOW_MODAL'; // boolean
+
+export const ADD_FAVORITE_ITEM = 'ADD_FAVORITE_ITEM';
+export const DELETE_FAVORITE_ITEM = 'DELETE_FAVORITE_ITEM';

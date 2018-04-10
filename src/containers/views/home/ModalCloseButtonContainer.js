@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ModalCloseButton from 'components/views/home/ModalCloseButton';
-import { showModal } from 'actions/globalActions';
+import { showModal } from 'actions/miscActions';
 
 const mapStateToProps = state => ({
   isModalOpen: state.isModalOpen,

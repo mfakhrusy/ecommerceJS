@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onClick: (bool) => {
+  showSidebar: (bool) => {
     dispatch(showSidebar(bool));
   },
 });

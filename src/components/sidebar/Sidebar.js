@@ -8,17 +8,21 @@ class Sidebar extends React.Component {
   constructor() {
     super();
     this.handleVisibility = this.handleVisibility.bind(this);
-    this.handleClickBrowse = this.handleClickBrowse.bind(this);
+    this.closeSidebar = this.closeSidebar.bind(this);
   }
 
   handleVisibility() {
+    // this will invoke when outside sidebar is clicked
+    // so the sidebar will close/unmount
     if (this.props.isSidebarOpen) {
-      this.props.onClick(!this.props.isSidebarOpen);
+      this.props.showSidebar(!this.props.isSidebarOpen);
     }
   }
 
-  handleClickBrowse() {
-    this.props.onClick(!this.props.isSidebarOpen);
+  closeSidebar() {
+    // this will unmount the sidebar
+    // when one of the side menu item is clicked.
+    this.props.showSidebar(false);
   }
 
   render() {
@@ -31,11 +35,11 @@ class Sidebar extends React.Component {
         position="left"
         header={
           <SidebarHeaderContainer
-            onClick={this.handleClickBrowse}
+            closeSidebar={this.closeSidebar}
           />
         }
       >
-        <Sidemenu onClickBrowse={this.handleClickBrowse} />
+        <Sidemenu onClickBrowse={this.closeSidebar} />
       </Drawer>
     );
   }
@@ -43,7 +47,7 @@ class Sidebar extends React.Component {
 
 Sidebar.propTypes = {
   isSidebarOpen: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
+  showSidebar: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
