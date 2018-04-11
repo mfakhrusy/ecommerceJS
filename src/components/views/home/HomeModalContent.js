@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { Button, Avatar } from 'react-md';
 import ModalCloseButtonContainer from 'containers/views/home/ModalCloseButtonContainer';
 import ModalLoveButtonContainer from 'containers/views/home/ModalLoveButtonContainer';
+import ModalInfoPrice from 'components/views/home/ModalInfoPrice';
+import ModalCommentInput from 'components/views/home/ModalCommentInput';
 
 class HomeModalContent extends React.Component {
   render() {
@@ -48,12 +50,8 @@ class HomeModalContent extends React.Component {
           <div className="ModalInfoName">
             <p>{this.props.homeItem.name}</p>
           </div>
-          <div className="ModalInfoPrice">
-            <p>{this.props.homeItem.price}</p>
-          </div>
-          <div className="ModalTextInput">
-            text input
-          </div>
+          <ModalInfoPrice price={this.props.homeItem.price} />
+          <ModalCommentInput id={this.props.homeItem.id} />
           <div className="ModalInterestedButton">
             int
           </div>

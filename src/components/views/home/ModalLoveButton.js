@@ -31,7 +31,7 @@ class ModalLoveButton extends React.Component {
       <div className="ModalLoveButton">
         <Button
           icon
-          primary={this.state.isLoved}
+          secondary={this.state.isLoved}
           onClick={() => { this.handleClick(this.props.homeItem); }}
         >
         favorite

@@ -2,14 +2,14 @@ import React from 'react';
 import { Toolbar } from 'react-md';
 import MenuButtonContainer from 'containers/mainpage/MenuButtonContainer';
 import FilterButton from 'components/mainpage/FilterButton';
-import Search from 'components/mainpage/Search';
+import SearchContainer from 'containers/mainpage/SearchContainer';
 
 const MainNavbar = () => (
   <React.Fragment>
     <Toolbar
       inset
       nav={<MenuButtonContainer className="MenuButton" />}
-      title={<Search />}
+      title={<SearchContainer />}
       actions={<FilterButton className="filterButton" />}
     />
   </React.Fragment>

@@ -19,6 +19,21 @@ class HomeContent extends React.Component {
     return (
       <Masonry className="HomeContent">
         {this.props.homeItems.filter((homeItem) => {
+          if (this.props.homeSearchText !== '') {
+            // toLowerCase to make sure that when user type lower case string
+            // everything can still be searched accordingly
+            // a.k.a make it case insensitive
+            // we only search from 2 source: name and type.
+            if (homeItem.name.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
+              return true;
+            } else if (homeItem.type.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
+              return true;
+            }
+            return false;
+          }
+          return true;
+        })
+        .filter((homeItem) => {
           // filterCategory will be an empty string if on initial render
           // or when user press all filter (first item on filter)
           if (this.props.filterCategory !== '') {
@@ -48,6 +63,7 @@ HomeContent.propTypes = {
   setHomeModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   filterCategory: PropTypes.string.isRequired,
+  homeSearchText: PropTypes.string.isRequired,
 };
 
 export default HomeContent;

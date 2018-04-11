@@ -3,6 +3,7 @@ import {
   HOME_IS_LOADING,
   HOME_FETCH_DATA_SUCCESS,
   SET_HOME_MODAL,
+  SET_HOME_SEARCH,
 } from 'constants/actionTypes';
 
 export const homeHasErrored = bool => ({
@@ -41,4 +42,9 @@ export const homeFetchData = url => ((dispatch) => {
 export const setHomeModal = id => ({
   type: SET_HOME_MODAL,
   homeModal: id,
+});
+
+export const setHomeSearch = text => ({
+  type: SET_HOME_SEARCH,
+  homeSearchText: text,
 });

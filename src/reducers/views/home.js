@@ -3,6 +3,7 @@ import {
   HOME_IS_LOADING,
   HOME_FETCH_DATA_SUCCESS,
   SET_HOME_MODAL,
+  SET_HOME_SEARCH,
 } from 'constants/actionTypes';
 
 export const homeHasErrored = (state = false, action) => {
@@ -37,6 +38,15 @@ export const homeModal = (state = '0', action) => {
   switch (action.type) {
     case SET_HOME_MODAL:
       return action.homeModal;
+    default:
+      return state;
+  }
+};
+
+export const homeSearchText = (state = '', action) => {
+  switch (action.type) {
+    case SET_HOME_SEARCH:
+      return action.homeSearchText;
     default:
       return state;
   }

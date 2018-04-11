@@ -8,7 +8,6 @@
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
   grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 2fr 2fr; // total: 16fr on row
   grid-template-areas:
-  // "close-button . button-description button-description button-description . share-button"
   "share-button . button-description button-description button-description . close-button"
   "love-button . . . . . image-progress"
   ". . . . . . ." // empty
@@ -16,10 +15,15 @@
   "info-avatar info-avatar info-name info-name info-name . ."
   "info-avatar info-avatar info-price info-price info-price . ."
   ". . . . . . ." // empty
-  "text-input text-input text-input . . interested-button interested-button";
+  "comment-input comment-input comment-input comment-input . interested-button interested-button";
 
   > div {
-    border: 0.1rem solid red;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+
+    &:not(.ModalCommentInput) button {
+      width: 100%;
+      border-radius: 0;
+    }
   }
 
   .ModalCloseButton {
@@ -50,16 +54,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
     border-radius: 1rem;
+    text-align: center;
   }
 
   .ModalShareButton {
     grid-area: share-button;
+    display: flex;
+    justify-content: center;
   }
 
   .ModalLoveButton {
     grid-area: love-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .ModalInfoAvatar {
@@ -67,7 +76,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
     > div {
       width: 8rem;
       height: 8rem;
@@ -83,18 +91,36 @@
     grid-area: info-name;
     display: flex;
     align-items: center;
-    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
   }
 
   .ModalInfoPrice {
     grid-area: info-price;
     display: flex;
     align-items: center;
-    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
   }
 
-  .ModalTextInput {
-    grid-area: text-input;
+  .ModalCommentInput {
+    grid-area: comment-input;
+    @include display-grid;
+    grid-template-columns: 4fr 1fr;
+    height: 80%;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 0.1rem solid black;
+      height: 3rem;
+      align-self: center;
+    }
+    // below mixin for transparent placeholder on focus input
+    @include input-onfocus-placeholder-transparent;
+
+    button {
+      align-self: center;
+    }
   }
 
   .ModalInterestedButton {
@@ -122,7 +148,7 @@
   "text-input text-input text-input . . interested-button interested-button";
 
   > div {
-    border: 0.1rem solid red;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
   }
 
   .ModalCloseButton {
@@ -147,44 +173,4 @@
   .ModalBackButton {
     grid-area: back-button;
   }
-  
-  // .ModalImageProgress {
-  //   grid-area: image-progress;
-  // }
-
-  // .ModalDescriptionButton {
-  //   grid-area: button-description;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   background-color: #bababa;
-  // }
-
-  // .ModalShareButton {
-  //   grid-area: share-button;
-  // }
-
-  // .ModalLoveButton {
-  //   grid-area: love-button;
-  // }
-
-  // .ModalInfoAvatar {
-  //   grid-area: info-avatar;
-  // }
-
-  // .ModalInfoName {
-  //   grid-area: info-name;
-  // }
-
-  // .ModalInfoPrice {
-  //   grid-area: info-price;
-  // }
-
-  // .ModalTextInput {
-  //   grid-area: text-input;
-  // }
-
-  // .ModalInterestedButton {
-  //   grid-area: interested-button;
-  // }
 }

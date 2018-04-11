@@ -6,6 +6,7 @@ import { showModal } from 'actions/miscActions';
 const mapStateToProps = state => ({
   homeModal: state.homeModal,
   filterCategory: state.filterCategory,
+  homeSearchText: state.homeSearchText,
 });
 
 const mapDispatchToProps = dispatch => ({
