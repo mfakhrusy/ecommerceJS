@@ -1,15 +1,21 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from 'react-md';
 
-const FilterButton = ({ className }) => (
-  <Button icon className={className}>
-    sort
+const FilterButton = ({ className, history }) => (
+  <Button
+    icon
+    className={className}
+    onClick={() => { history.push('/filter'); }}
+  >
+    filter_list
   </Button>
 );
 
 FilterButton.propTypes = {
   className: PropTypes.string.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
-export default FilterButton;
+export default withRouter(FilterButton);

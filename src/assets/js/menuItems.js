@@ -48,4 +48,11 @@ export default [
     route: '/help',
     dropdown: false,
   },
+  {
+    id: '8',
+    label: 'Filter',
+    mdIcon: 'filter_list',
+    route: '/filter',
+    dropdown: false,
+  },
 ];

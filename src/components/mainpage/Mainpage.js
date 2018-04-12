@@ -10,6 +10,7 @@ import NotificationsContainer from 'containers/views/notifications/Notifications
 import CategoriesContainer from 'containers/views/categories/CategoriesContainer';
 import ProfileContainer from 'containers/views/profile/ProfileContainer';
 import Help from 'components/views/help/Help';
+import Filter from 'components/views/filter/Filter';
 import urls from 'constants/urls';
 
 // for accessibility,
@@ -51,6 +52,7 @@ class Mainpage extends React.Component {
           <Route path="/categories" component={CategoriesContainer} />
           <Route path="/profile" component={ProfileContainer} />
           <Route path="/help" component={Help} />
+          <Route path="/filter" component={Filter} />
         </Switch>
       );
     }

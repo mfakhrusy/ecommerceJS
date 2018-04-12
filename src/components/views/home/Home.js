@@ -30,6 +30,10 @@ class Home extends React.Component {
         </React.Fragment>
       );
     } else if (this.props.homeItems.length > 0) {
+      // below a little hack because the index is start from one
+      // but array need to start from zero
+      // so we have that this.props.homeModal - 1 for correctly displaying the modal
+      // for each item
       content = (
         <React.Fragment>
           <MainNavbar />
