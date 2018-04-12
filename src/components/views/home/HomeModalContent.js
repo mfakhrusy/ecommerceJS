@@ -51,7 +51,7 @@ class HomeModalContent extends React.Component {
             <p>{this.props.homeItem.name}</p>
           </div>
           <ModalInfoPrice price={this.props.homeItem.price} />
-          <ModalCommentInput id={this.props.homeItem.id} />
+          <ModalCommentInput homeItem={this.props.homeItem} />
           <div className="ModalInterestedButton">
             int
           </div>

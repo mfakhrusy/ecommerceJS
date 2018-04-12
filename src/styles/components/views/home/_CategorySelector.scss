@@ -2,24 +2,23 @@
   display: flex;
   align-items: center;
   overflow-x: scroll;
-  height: $home-category-selector-height;
+  min-height: $home-category-selector-height;
+  justify-content: space-between;
 }
 
-button.CategorySelectorItem {
+button.CategorySelectorItem#category-selector-item {
   width: 5rem;
   height: 5rem;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0.8rem;
 
   i {
     font-size: 4rem;
+    @media screen and (min-width: $md-desktop-min-width) {
+      font-size: 4rem;
+    }
   }
-
 }
-// button.CategorySelectorItem i {
-//   height: 5rem;
-//   width: 5rem;
-//   font-size: 4rem;
-// }

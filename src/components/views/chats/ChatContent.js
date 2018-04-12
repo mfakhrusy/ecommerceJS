@@ -9,13 +9,13 @@ import PropTypes from 'prop-types';
 class ChatContent extends Component {
   render() {
     // filter each type
-    const chatsAll = this.props.chats.filter(item => item.type !== 'block');
+    const chatsAll = this.props.chats.filter(chat => chat.type !== 'block');
     // buy means user want to buy
-    const chatsBuy = this.props.chats.filter(item => item.type === 'buy');
-    // sell means user sell items
-    const chatsSell = this.props.chats.filter(item => item.type === 'sell');
+    const chatsBuy = this.props.chats.filter(chat => chat.type === 'buy');
+    // sell means user sell chat.
+    const chatsSell = this.props.chats.filter(chat => chat.type === 'sell');
     // block means blocked user (from either buy/sell)
-    const chatsBlock = this.props.chats.filter(item => item.type === 'block');
+    const chatsBlock = this.props.chats.filter(chat => chat.type === 'block');
 
     return (
       <TabsContainer

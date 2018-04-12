@@ -5,14 +5,13 @@ import FilterButton from 'components/mainpage/FilterButton';
 import SearchContainer from 'containers/mainpage/SearchContainer';
 
 const MainNavbar = () => (
-  <React.Fragment>
-    <Toolbar
-      inset
-      nav={<MenuButtonContainer className="MenuButton" />}
-      title={<SearchContainer />}
-      actions={<FilterButton className="filterButton" />}
-    />
-  </React.Fragment>
+  <Toolbar
+    className="MainNavbar"
+    inset
+    nav={<MenuButtonContainer className="MenuButton" />}
+    title={<SearchContainer />}
+    actions={<FilterButton className="filterButton" />}
+  />
 );
 
 export default MainNavbar;

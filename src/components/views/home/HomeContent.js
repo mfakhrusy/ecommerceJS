@@ -17,43 +17,49 @@ class HomeContent extends React.Component {
 
   render() {
     return (
-      <Masonry className="HomeContent">
-        {this.props.homeItems.filter((homeItem) => {
-          if (this.props.homeSearchText !== '') {
-            // toLowerCase to make sure that when user type lower case string
-            // everything can still be searched accordingly
-            // a.k.a make it case insensitive
-            // we only search from 2 source: name and type.
-            if (homeItem.name.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
-              return true;
-            } else if (homeItem.type.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
-              return true;
+      <div className="HomeContent">
+        {/* <Masonry className="HomeContent"> */}
+        <Masonry className="HomeContentMasonry">
+          {this.props.homeItems
+          // first filter: search bar
+          .filter((homeItem) => {
+            if (this.props.homeSearchText !== '') {
+              // toLowerCase to make sure that when user type lower case string
+              // everything can still be searched accordingly
+              // a.k.a make it case insensitive
+              // we only search from 2 source: name and type.
+              if (homeItem.name.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
+                return true;
+              } else if (homeItem.type.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
+                return true;
+              }
+              return false;
             }
-            return false;
-          }
-          return true;
-        })
-        .filter((homeItem) => {
-          // filterCategory will be an empty string if on initial render
-          // or when user press all filter (first item on filter)
-          if (this.props.filterCategory !== '') {
-            return homeItem.type === this.props.filterCategory;
-          }
-          return true;
-        })
-          .map((homeItem) => (
-          <Card
-            key={homeItem.id}
-            className="HomeContentItem"
-            onClick={() => this.handleClick(homeItem.id)}
-            onKeyPress={() => this.handleClick(homeItem.id)}
-            role="button"
-            tabIndex="0"
-          >
-            <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
-          </Card>
-        ))}
-      </Masonry>
+            return true;
+          })
+          // second filter: category selector
+          .filter((homeItem) => {
+            // filterCategory will be an empty string if on initial render
+            // or when user press all filter (first item on filter)
+            if (this.props.filterCategory !== '') {
+              return homeItem.type === this.props.filterCategory;
+            }
+            return true;
+          })
+            .map((homeItem) => (
+            <Card
+              key={homeItem.id}
+              className="HomeContentItem"
+              onClick={() => this.handleClick(homeItem.id)}
+              onKeyPress={() => this.handleClick(homeItem.id)}
+              role="button"
+              tabIndex="0"
+            >
+              <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
+            </Card>
+          ))}
+        </Masonry>
+      </div>
     );
   }
 }

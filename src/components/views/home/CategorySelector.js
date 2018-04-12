@@ -17,6 +17,7 @@ class CategorySelector extends Component {
       <Button
         key={category.id}
         className="CategorySelectorItem"
+        id="category-selector-item"
         icon
         primary
         // disabled={this.props.filterCategory === category}

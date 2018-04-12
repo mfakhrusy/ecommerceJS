@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Card, Avatar, Divider } from 'react-md';
@@ -6,16 +5,24 @@ import { Grid, Card, Avatar, Divider } from 'react-md';
 // slice(4) will omit the day
 const dateFormatter = dateString => new Date(dateString).toDateString().slice(4);
 
-const TabList = ({ chats }) => {
-  return (
-    <Grid className="TabList" id="tab-list">
-      {chats.map(chat => (
+const TabList = ({ chats }) => (
+  <Grid className="TabList" id="tab-list">
+    {chats.map((chat) => {
+      let content = null;
+      if (chat.type === 'buy') {
+        content = 'To: ';
+      } else if (chat.type === 'sell') {
+        content = 'From: ';
+      } else if (chat.type === 'block') {
+        content = 'Blocked: ';
+      }
+      return (
         <Card className="TabListCard" key={chat.id}>
           <div className="TabListCard-grid-image">
             <img src={chat.imageUrl} alt={chat.imageDescription} />
           </div>
           <div className="TabListCard-grid-name">
-            <p><strong>{chat.name}</strong></p>
+            <p><strong>{content}{chat.name}</strong></p>
           </div>
           <Divider inset />
           <div className="TabListCard-grid-description">
@@ -28,10 +35,10 @@ const TabList = ({ chats }) => {
             <Avatar src={chat.avatarUrl} className="TabListCardAvatar" />
           </div>
         </Card>
-      ))}
-    </Grid>
-  );
-};
+      );
+    })}
+  </Grid>
+);
 
 TabList.propTypes = {
   chats: PropTypes.arrayOf(PropTypes.object).isRequired,

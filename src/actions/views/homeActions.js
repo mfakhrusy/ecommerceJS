@@ -4,6 +4,7 @@ import {
   HOME_FETCH_DATA_SUCCESS,
   SET_HOME_MODAL,
   SET_HOME_SEARCH,
+  ADD_COMMENT_TO_CHAT,
 } from 'constants/actionTypes';
 
 export const homeHasErrored = bool => ({
@@ -47,4 +48,13 @@ export const setHomeModal = id => ({
 export const setHomeSearch = text => ({
   type: SET_HOME_SEARCH,
   homeSearchText: text,
+});
+
+export const addCommentToChat = (username, createdAt, avatarUrl, imageUrl, comment) => ({
+  type: ADD_COMMENT_TO_CHAT,
+  username,
+  createdAt,
+  avatarUrl,
+  imageUrl,
+  comment,
 });

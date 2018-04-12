@@ -1,0 +1,15 @@
+.MainNavbar {
+  margin: 1rem;
+
+  @media screen and (min-width: $md-tablet-min-width) {
+    height: 10rem;
+    align-items: center;
+  }
+
+  input {
+    @media screen and (min-width: $md-tablet-min-width) {
+      font-size: 20px;
+    }
+  }
+}
+

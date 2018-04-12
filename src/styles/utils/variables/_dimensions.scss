@@ -4,3 +4,7 @@ $view-header-total-height: $view-header-height + 0.8rem + 0.8rem; // 0.8 rem is 
 $home-header-height: $view-header-total-height;
 $home-category-selector-height: 8rem;
 $home-header-total-height: $home-header-height + $home-category-selector-height;
+
+$mobile-min-width: $md-mobile-min-width;
+$tablet-min-width: $md-tablet-min-width;
+$desktop-min-width: $md-desktop-min-width;
