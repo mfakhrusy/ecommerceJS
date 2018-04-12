@@ -1,12 +1,13 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+import { Card } from 'react-md';
 
 class FilterSort extends React.Component {
   render() {
     return (
-      <div className="FilterSort">
-        <h2>Sort</h2>
-      </div>
+      <Card className="FilterSort">
+        <h4>Sort</h4>
+      </Card>
     );
   }
 }

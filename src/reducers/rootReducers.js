@@ -33,6 +33,8 @@ import { profileModal } from 'reducers/views/profile';
 import {
   isModalOpen,
   favoriteItems,
+  filterPrice,
+  // filterSort,
 } from 'reducers/misc';
 
 export default combineReducers({
@@ -59,4 +61,6 @@ export default combineReducers({
   profileModal,
   isModalOpen,
   favoriteItems,
+  filterPrice,
+  // filterSort,
 });

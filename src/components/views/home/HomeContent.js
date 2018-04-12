@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-indent, max-len, arrow-parens */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-component';
@@ -16,37 +15,46 @@ class HomeContent extends React.Component {
   }
 
   render() {
+    const {
+      homeSearchText, homeItems, filterCategory, filterPrice,
+    } = this.props;
     return (
       <div className="HomeContent">
-        {/* <Masonry className="HomeContent"> */}
         <Masonry className="HomeContentMasonry">
-          {this.props.homeItems
-          // first filter: search bar
+          {homeItems
+          // first filter: category selector
           .filter((homeItem) => {
-            if (this.props.homeSearchText !== '') {
+            // filterCategory will be an empty string if on initial render
+            // or when user press all filter (first item on filter)
+            if (filterCategory !== '') {
+              return homeItem.type === filterCategory;
+            }
+            return true;
+          })
+          // second filter, price filter
+          .filter(homeItem => (
+            // have two value, minPrice and maxPrice
+            //   return true;
+            // }
+            homeItem.price >= filterPrice.minPrice && homeItem.price <= filterPrice.maxPrice
+          ))
+          // third filter: search bar
+          .filter((homeItem) => {
+            if (homeSearchText !== '') {
               // toLowerCase to make sure that when user type lower case string
               // everything can still be searched accordingly
               // a.k.a make it case insensitive
               // we only search from 2 source: name and type.
-              if (homeItem.name.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
+              if (homeItem.name.toLowerCase().includes(homeSearchText.toLowerCase())) {
                 return true;
-              } else if (homeItem.type.toLowerCase().includes(this.props.homeSearchText.toLowerCase())) {
+              } else if (homeItem.type.toLowerCase().includes(homeSearchText.toLowerCase())) {
                 return true;
               }
               return false;
             }
             return true;
           })
-          // second filter: category selector
-          .filter((homeItem) => {
-            // filterCategory will be an empty string if on initial render
-            // or when user press all filter (first item on filter)
-            if (this.props.filterCategory !== '') {
-              return homeItem.type === this.props.filterCategory;
-            }
-            return true;
-          })
-            .map((homeItem) => (
+          .map(homeItem => (
             <Card
               key={homeItem.id}
               className="HomeContentItem"
@@ -69,6 +77,7 @@ HomeContent.propTypes = {
   setHomeModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   filterCategory: PropTypes.string.isRequired,
+  filterPrice: PropTypes.object.isRequired,
   homeSearchText: PropTypes.string.isRequired,
 };
 

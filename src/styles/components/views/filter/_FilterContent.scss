@@ -1,3 +1,13 @@
 .FilterContent {
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  // height: calc(100% - 5rem);
+
+  > div {
+    min-height: 20rem;
+    padding: 1rem;
+
+  }
 }

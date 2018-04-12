@@ -36,23 +36,24 @@ export default [
   },
   {
     id: '6',
-    label: 'Profile',
-    mdIcon: 'account_box',
-    route: '/profile',
-    dropdown: false,
-  },
-  {
-    id: '7',
-    label: 'Help',
-    mdIcon: 'help',
-    route: '/help',
-    dropdown: false,
-  },
-  {
-    id: '8',
     label: 'Filter',
     mdIcon: 'filter_list',
     route: '/filter',
     dropdown: false,
   },
+  {
+    id: '7',
+    label: 'Profile',
+    mdIcon: 'account_box',
+    route: '/profile',
+    dropdown: false,
+  },
+  // {
+  //   id: '7',
+  //   label: 'Help',
+  //   mdIcon: 'help',
+  //   route: '/help',
+  //   dropdown: false,
+  // },
+
 ];

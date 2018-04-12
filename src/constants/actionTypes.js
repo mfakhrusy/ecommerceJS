@@ -32,3 +32,6 @@ export const SHOW_MODAL = 'SHOW_MODAL'; // boolean
 
 export const ADD_FAVORITE_ITEM = 'ADD_FAVORITE_ITEM';
 export const DELETE_FAVORITE_ITEM = 'DELETE_FAVORITE_ITEM';
+
+export const SET_FILTER_PRICE = 'SET_FILTER_PRICE';
+// export const SET_FILTER_SORT = 'SET_FILTER_SORT';

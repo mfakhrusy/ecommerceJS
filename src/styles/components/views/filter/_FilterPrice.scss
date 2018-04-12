@@ -1,0 +1,21 @@
+.FilterPriceContent {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    width: 4rem;
+  }
+
+  input {
+    border: none;
+    border-bottom: 0.1rem solid $md-grey-400;
+    height: 4rem;
+    margin-left: 2rem;
+    width: 80%;
+  }
+}

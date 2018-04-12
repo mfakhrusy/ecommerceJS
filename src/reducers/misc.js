@@ -2,7 +2,10 @@ import {
   SHOW_MODAL,
   ADD_FAVORITE_ITEM,
   DELETE_FAVORITE_ITEM,
+  SET_FILTER_PRICE,
+  // SET_FILTER_SORT,
 } from 'constants/actionTypes';
+import { FILTER_PRICE_MIN_PRICE, FILTER_PRICE_MAX_PRICE } from 'constants/constants';
 
 export const isModalOpen = (state = false, action) => {
   switch (action.type) {
@@ -26,3 +29,24 @@ export const favoriteItems = (state = [], action) => {
       return state;
   }
 };
+
+export const filterPrice = (
+  state = { maxPrice: FILTER_PRICE_MAX_PRICE, minPrice: FILTER_PRICE_MIN_PRICE },
+  action,
+) => {
+  switch (action.type) {
+    case SET_FILTER_PRICE:
+      return action.filterPrice;
+    default:
+      return state;
+  }
+};
+
+// export const filterSort = (state = '', action) => {
+//   switch (action.type) {
+//     case SET_FILTER_SORT:
+//       return action.filterSort;
+//     default:
+//       return state;
+//   }
+// };

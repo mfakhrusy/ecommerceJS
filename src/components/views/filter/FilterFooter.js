@@ -10,8 +10,9 @@ class FilterFooter extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(category) {
+  handleClick(category, price) {
     this.props.setFilterCategories(category);
+    this.props.setFilterPrice(price);
     this.props.history.push('/');
   }
 
@@ -28,7 +29,9 @@ class FilterFooter extends React.Component {
           flat
           primary
           swapTheming
-          onClick={() => { this.handleClick(this.props.filter.category); }}
+          onClick={() => {
+            this.handleClick(this.props.filter.category, this.props.filter.price);
+          }}
         >
           Submit
         </Button>
@@ -40,6 +43,7 @@ class FilterFooter extends React.Component {
 FilterFooter.propTypes = {
   filter: PropTypes.object.isRequired,
   setFilterCategories: PropTypes.func.isRequired,
+  setFilterPrice: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
 };
 

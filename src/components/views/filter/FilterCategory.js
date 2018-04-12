@@ -1,16 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, DialogContainer, List, ListItem } from 'react-md';
+import {
+  Button,
+  DialogContainer,
+  List,
+  ListItem,
+  Card,
+  CardTitle,
+} from 'react-md';
 
 class FilterCategory extends React.Component {
   constructor() {
     super();
     this.state = {
       categoryDialogVisible: false,
+      category: {
+        label: 'All',
+      },
     };
 
     this.showCategoryDialog = this.showCategoryDialog.bind(this);
     this.hideCategoryDialog = this.hideCategoryDialog.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   showCategoryDialog() {
@@ -21,17 +32,26 @@ class FilterCategory extends React.Component {
     this.setState({ categoryDialogVisible: false });
   }
 
+  handleClick(category) {
+    this.setState({ category });
+    this.props.setFilterCategory(category.type);
+  }
+
   render() {
     return (
-      <div className="FilterCategory">
-        <h4>Categories</h4>
+      <Card className="FilterCategory">
+        <CardTitle
+          className="FilterCategoryTitle"
+          title="Select Category"
+        />
+        <p>Category: </p>
         <Button
           flat
           primary
           swapTheming
           onClick={this.showCategoryDialog}
         >
-          Categories
+          {this.state.category.label}
         </Button>
         <DialogContainer
           id="filter-category-dialog"
@@ -44,12 +64,12 @@ class FilterCategory extends React.Component {
               <ListItem
                 key={category.id}
                 primaryText={category.label}
-                onClick={() => { this.props.setFilterCategory(category.type); }}
+                onClick={() => { this.handleClick(category); }}
               />
             ))}
           </List>
         </DialogContainer>
-      </div>
+      </Card>
     );
   }
 }

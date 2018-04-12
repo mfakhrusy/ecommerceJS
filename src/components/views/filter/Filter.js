@@ -5,6 +5,7 @@ import ViewsContainer from 'containers/views/ViewsContainer';
 import BackButton from 'components/views/BackButton';
 import FilterContent from 'components/views/filter/FilterContent';
 import FilterFooterContainer from 'containers/views/filter/FilterFooterContainer';
+import { FILTER_PRICE_MIN_PRICE, FILTER_PRICE_MAX_PRICE } from 'constants/constants';
 
 class Filter extends React.Component {
   constructor() {
@@ -13,16 +14,16 @@ class Filter extends React.Component {
       filter: {
         category: '',
         price: {
-          low: null,
-          high: null,
+          maxPrice: FILTER_PRICE_MAX_PRICE,
+          minPrice: FILTER_PRICE_MIN_PRICE,
         },
-        sort: '',
+        // sort: '',
       },
     };
 
     this.setFilterCategory = this.setFilterCategory.bind(this);
     this.setFilterPrice = this.setFilterPrice.bind(this);
-    this.setFilterSort = this.setFilterSort.bind(this);
+    // this.setFilterSort = this.setFilterSort.bind(this);
   }
 
   setFilterCategory(category) {
@@ -43,14 +44,14 @@ class Filter extends React.Component {
     });
   }
 
-  setFilterSort(sort) {
-    this.setState({
-      filter: {
-        ...this.state.filter,
-        sort,
-      },
-    });
-  }
+  // setFilterSort(sort) {
+  //   this.setState({
+  //     filter: {
+  //       ...this.state.filter,
+  //       sort,
+  //     },
+  //   });
+  // }
 
   render() {
     return (
