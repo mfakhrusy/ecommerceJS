@@ -22,13 +22,20 @@
     width: 6rem;
     height: 6rem;
     overflow: hidden;
-    border: 0.1rem solid $md-grey-500;
     border-radius: 0.3rem;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 700px) {
+      width:8rem;
+      height: 8rem;
+    }
 
     img {
       object-fit: fill;
       object-position: 50% 50%;
       height: 6rem;
+      display: block;
     }
   }
 
@@ -61,6 +68,9 @@
     grid-area: avatar;
     justify-self: end;
     align-self: center;
+    @media screen and (min-width: 700px) {
+      justify-self: center;
+    }
   }
 
   .TabListCardAvatar {

@@ -1,0 +1,15 @@
+.MenuItem {
+  @media screen and (min-width: 600px) {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    > div {
+      width: 100%;
+    }
+  }
+  p {
+    @media screen and (min-width: 600px) {
+      font-size: 1.6rem;
+    }
+  }
+}

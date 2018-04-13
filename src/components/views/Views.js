@@ -33,6 +33,7 @@ class Views extends React.Component {
 
     return (
       <Drawer
+        className="Views"
         type={Drawer.DrawerTypes.TEMPORARY}
         defaultVisible
         position="right"

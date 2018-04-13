@@ -1,7 +1,22 @@
 .CategoryContent#category-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 120rem;
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: $md-desktop-min-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
   height: 100%;
+
+  .CategoryItem {
+    max-width: 25rem;
+    @media screen and (min-width: 600px) {
+      width: calc(100% - 16px);
+    }
+  }
 
   // nested so this rules will be dominant
   .CategoryItemCard {
@@ -19,6 +34,12 @@
       margin-top: 1rem;
       padding: 0 1rem;
       text-align: center;
+      @media screen and (min-width: 600px) {
+        margin-top: 3rem;
+      }
+      // @media screen and (min-width: $md-tablet-min-width) {
+      //   margin-top: 3rem;
+      // }
     }
 
     button {
@@ -31,8 +52,20 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
+      @media screen and (min-width: 600px) {
+        padding-bottom: 1rem;
+      }
+      @media screen and (min-width: $md-desktop-min-width) {
+        padding-bottom: 2rem;
+      }
       i {
         font-size: 4rem;
+        @media screen and (min-width: 600px) {
+          font-size: 6rem;
+        }
+        @media screen and (min-width: $md-desktop-min-width) {
+          font-size: 8rem;
+        }
       }
     }
   }

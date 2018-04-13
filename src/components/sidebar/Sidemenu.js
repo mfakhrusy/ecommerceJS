@@ -24,7 +24,7 @@ class Sidemenu extends React.Component {
       />
     ));
     return (
-      <List>
+      <List className="Sidemenu">
         {localMenuItems}
       </List>
     );

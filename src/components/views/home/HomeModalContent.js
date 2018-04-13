@@ -5,7 +5,7 @@ import { Button, Avatar } from 'react-md';
 import ModalCloseButtonContainer from 'containers/views/home/ModalCloseButtonContainer';
 import ModalLoveButtonContainer from 'containers/views/home/ModalLoveButtonContainer';
 import ModalInfoPrice from 'components/views/home/ModalInfoPrice';
-import ModalCommentInput from 'components/views/home/ModalCommentInput';
+import ModalCommentInputContainer from 'containers/views/home/ModalCommentInputContainer';
 
 class HomeModalContent extends React.Component {
   render() {
@@ -28,9 +28,9 @@ class HomeModalContent extends React.Component {
       content = (
         <div className="HomeModalContentMain">
           <ModalCloseButtonContainer />
-          <div className="ModalImageProgress">
+          {/* <div className="ModalImageProgress">
             i
-          </div>
+          </div> */}
           <div className="ModalDescriptionButton">
             <Button
               flat
@@ -51,10 +51,10 @@ class HomeModalContent extends React.Component {
             <p>{this.props.homeItem.name}</p>
           </div>
           <ModalInfoPrice price={this.props.homeItem.price} />
-          <ModalCommentInput homeItem={this.props.homeItem} />
-          <div className="ModalInterestedButton">
+          <ModalCommentInputContainer homeItem={this.props.homeItem} />
+          {/* <div className="ModalInterestedButton">
             int
-          </div>
+          </div> */}
         </div>
       );
     }

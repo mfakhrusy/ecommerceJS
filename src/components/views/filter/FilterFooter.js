@@ -21,7 +21,6 @@ class FilterFooter extends React.Component {
       <div className="FilterFooter">
         <Button
           flat
-          primary
         >
           Reset
         </Button>

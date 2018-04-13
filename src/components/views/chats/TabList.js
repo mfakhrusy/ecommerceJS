@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Card, Avatar, Divider } from 'react-md';
+import { Grid, Card, Avatar } from 'react-md';
 
 // slice(4) will omit the day
 const dateFormatter = dateString => new Date(dateString).toDateString().slice(4);
@@ -24,7 +24,6 @@ const TabList = ({ chats }) => (
           <div className="TabListCard-grid-name">
             <p><strong>{content}{chat.name}</strong></p>
           </div>
-          <Divider inset />
           <div className="TabListCard-grid-description">
             <p>{chat.imageDescription}</p>
           </div>

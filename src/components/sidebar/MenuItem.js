@@ -22,8 +22,9 @@ class MenuItem extends React.Component {
   render() {
     return (
       <ListItem
+        className="MenuItem"
         leftIcon={<FontIcon>{this.props.mdIcon}</FontIcon>}
-        primaryText={this.props.label}
+        primaryText={<p>{this.props.label}</p>}
         onClick={this.handleClick}
       />
     );

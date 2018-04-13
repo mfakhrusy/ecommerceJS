@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import ModalCommentInput from 'components/views/home/ModalCommentInput';
 import { addCommentToChat } from 'actions/views/homeActions';
 
-// const mapStateToProps = state => ({
-//   isModalOpen: state.isModalOpen,
-// });
+const mapStateToProps = state => ({
+  chats: state.chats,
+});
 
 const mapDispatchToProps = dispatch => ({
   addCommentToChat: (url) => {
@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const ModalCommentInputContainer = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(ModalCommentInput);
 

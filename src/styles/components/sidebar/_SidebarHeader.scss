@@ -4,4 +4,10 @@
   align-items: center;
   padding-left: 1rem;
   position: relative;
+
+  > div:first-child {
+    @media screen and (min-width: $md-desktop-min-width) {
+      cursor: pointer;
+    }
+  }
 }

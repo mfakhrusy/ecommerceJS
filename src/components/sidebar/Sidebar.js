@@ -28,6 +28,7 @@ class Sidebar extends React.Component {
   render() {
     return (
       <Drawer
+        className="Sidebar"
         id="page-sidebar"
         type={Drawer.DrawerTypes.TEMPORARY}
         visible={this.props.isSidebarOpen}

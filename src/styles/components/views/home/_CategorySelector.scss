@@ -1,7 +1,8 @@
 .CategorySelector {
   display: flex;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: auto;
+  margin-bottom: 1rem;
   min-height: $home-category-selector-height;
   justify-content: space-between;
 }

@@ -1,13 +1,24 @@
 .FilterContent {
+  position: relative;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   // height: calc(100% - 5rem);
+  @media screen and (min-width: 600px) {
+    position: relative;
+    min-height: 0;
+    max-width: 80rem;
+    width: 100%;
+  }
 
   > div {
     min-height: 20rem;
     padding: 1rem;
+    @media screen and (min-width: 600px) {
+      padding: 3rem;
+    }
+
 
   }
 }
