@@ -50,11 +50,13 @@ export const setHomeSearch = text => ({
   homeSearchText: text,
 });
 
-export const addCommentToChat = (id, username, createdAt, avatarUrl, imageUrl, comment) => ({
-  type: ADD_COMMENT_TO_CHAT,
-  username,
+export const addCommentToChat = (id, name, createdAt, avatarUrl, imageUrl, comment) => ({
+  id,
   createdAt,
+  name,
   avatarUrl,
   imageUrl,
   comment,
+  type: ADD_COMMENT_TO_CHAT,
 });
+

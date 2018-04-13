@@ -34,8 +34,6 @@ class HomeContent extends React.Component {
           // second filter, price filter
           .filter(homeItem => (
             // have two value, minPrice and maxPrice
-            //   return true;
-            // }
             homeItem.price >= filterPrice.minPrice && homeItem.price <= filterPrice.maxPrice
           ))
           // third filter: search bar

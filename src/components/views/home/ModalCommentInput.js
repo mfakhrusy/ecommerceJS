@@ -5,15 +5,16 @@ import { Button } from 'react-md';
 class ModalCommentInput extends Component {
   constructor() {
     super();
-    // this.addCommentToChat = this.addCommentToChat.bind(this);
     this.updateComment = this.updateComment.bind(this);
     this.state = {
       comment: '',
     };
   }
 
-  handleClick(id, username, createdAt, avatarUrl, imageUrl, comment) {
-    this.props.addCommentToChat(id, username, createdAt, avatarUrl, imageUrl, comment);
+  handleClick(id, createdAt, name, avatarUrl, imageUrl, comment) {
+    // TODO add a condition when the data still hasn't been downloaded
+    // but user has already submitted comment
+    this.props.addCommentToChat(id, name, createdAt, avatarUrl, imageUrl, comment);
   }
 
   updateComment(event) {
@@ -23,9 +24,13 @@ class ModalCommentInput extends Component {
   render() {
     const { homeItem, chats } = this.props;
     // get last id of chats
-    // const lastId = chats[chats.length - 1].id + 1;
-    console.log(chats);
-    console.log(homeItem);
+    let lastId = null;
+    // to make sure it's downloaded properly first
+    // TODO change this to a more smart solution
+    if (chats.length > 0) {
+      lastId = Number(chats[chats.length - 1].id) + 1;
+    }
+
     return (
       <div className="ModalCommentInput">
         <input
@@ -39,7 +44,7 @@ class ModalCommentInput extends Component {
           icon
           onClick={() => {
             this.handleClick(
-              // lastId,
+              lastId,
               homeItem.username,
               homeItem.createdAt,
               homeItem.avatarUrl,

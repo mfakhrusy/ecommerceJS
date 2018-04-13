@@ -14,7 +14,12 @@ const accessibilityProps = {
 
 class Chats extends React.Component {
   componentDidMount() {
-    this.props.fetchData(urls.chats.url);
+    // check whether the data has been downloaded
+    // if it has, then we don't download it all over again
+    // if it hasn't, download here.
+    if (!this.props.chatsIsLoading && !(this.props.chats.length > 0)) {
+      this.props.fetchData(urls.chats.url);
+    }
   }
 
   render() {
@@ -43,11 +48,11 @@ class Chats extends React.Component {
 }
 
 Chats.propTypes = {
-  fetchData: PropTypes.func.isRequired,
   chats: PropTypes.arrayOf(PropTypes.object).isRequired,
   location: PropTypes.object.isRequired,
   chatsHasErrored: PropTypes.bool.isRequired,
   chatsIsLoading: PropTypes.bool.isRequired,
+  fetchData: PropTypes.func.isRequired,
 };
 
 export default withRouter(Chats);

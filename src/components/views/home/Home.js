@@ -2,12 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Drawer, CircularProgress, Paper } from 'react-md';
-// import urls from 'constants/urls';
 import MainNavbar from 'components/mainpage/MainNavbar';
 import SidebarContainer from 'containers/sidebar/SidebarContainer';
 import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';
 import HomeContentContainer from 'containers/views/home/HomeContentContainer';
-import HomeModal from 'components/views/home/HomeModal';
+import HomeModalContainer from 'containers/views/home/HomeModalContainer';
+import urls from 'constants/urls';
 
 const accessibilityProps = {
   'aria-busy': true,
@@ -15,6 +15,10 @@ const accessibilityProps = {
 };
 
 class Home extends React.Component {
+  // download chats on home
+  componentDidMount() {
+    this.props.chatsfetchData(urls.chats.url);
+  }
   render() {
     let content = null;
 
@@ -39,7 +43,7 @@ class Home extends React.Component {
           <MainNavbar />
           <CategorySelectorContainer />
           <HomeContentContainer homeItems={this.props.homeItems} />
-          {this.props.isModalOpen ? <HomeModal homeItem={this.props.homeItems[this.props.homeModal - 1]} /> : ''}
+          {this.props.isModalOpen ? <HomeModalContainer homeItem={this.props.homeItems[this.props.homeModal - 1]} /> : ''}
         </React.Fragment>
       );
     }
@@ -59,6 +63,7 @@ Home.propTypes = {
   homeIsLoading: PropTypes.bool.isRequired,
   homeModal: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   isModalOpen: PropTypes.bool.isRequired,
+  chatsfetchData: PropTypes.func.isRequired,
 };
 
 export default Home;

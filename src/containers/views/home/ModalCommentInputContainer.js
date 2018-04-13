@@ -7,8 +7,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addCommentToChat: (url) => {
-    dispatch(addCommentToChat(url));
+  addCommentToChat: (id, name, createdAt, avatarUrl, imageUrl, comment) => {
+    dispatch(addCommentToChat(id, name, createdAt, avatarUrl, imageUrl, comment));
   },
 });
 
