@@ -1,6 +1,11 @@
 .Home {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   width: 100%;
+  padding-top: 6rem;
+  @media screen and (min-width: $tablet-min-width) {
+    padding-top: 10.5rem;
+  }
 }

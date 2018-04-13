@@ -16,7 +16,6 @@ import urls from 'constants/urls';
 // for accessibility,
 // see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 // and https://react-md.mlaursen.com/components/progress/circular
-
 const accessibilityProps = {
   'aria-busy': true,
   'aria-describedby': 'mainpage-loading-progress',

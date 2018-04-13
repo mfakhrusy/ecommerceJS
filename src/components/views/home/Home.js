@@ -7,6 +7,7 @@ import SidebarContainer from 'containers/sidebar/SidebarContainer';
 import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';
 import HomeContentContainer from 'containers/views/home/HomeContentContainer';
 import HomeModalContainer from 'containers/views/home/HomeModalContainer';
+import Footer from 'components/views/Footer';
 import urls from 'constants/urls';
 
 const accessibilityProps = {
@@ -51,6 +52,7 @@ class Home extends React.Component {
     return (
       <Paper className="Home">
         {content}
+        {/* <Footer /> */}
         <SidebarContainer />
       </Paper>
     );

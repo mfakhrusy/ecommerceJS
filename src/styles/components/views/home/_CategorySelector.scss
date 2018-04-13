@@ -5,6 +5,15 @@
   margin-bottom: 1rem;
   min-height: $home-category-selector-height;
   justify-content: space-between;
+  width: 100%;
+
+  // @media screen and (min-width: $desktop-min-width) {
+  //   position: fixed;
+  //   // right: 0;
+  //   z-index: 100;
+  //   flex-direction: row;
+  //   // height: 100%;
+  // }
 }
 
 button.CategorySelectorItem#category-selector-item {

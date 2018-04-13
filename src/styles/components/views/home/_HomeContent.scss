@@ -1,5 +1,7 @@
 .HomeContent {
-  overflow-y: auto;
+  @media screen and (max-width: $tablet-min-width - 1) {
+    // overflow-y: auto;
+  }
   // !important to override masonry inline style
   height: calc(100% - #{$home-header-total-height}) !important;
 

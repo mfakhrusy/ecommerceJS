@@ -7,7 +7,8 @@ import SearchContainer from 'containers/mainpage/SearchContainer';
 const MainNavbar = () => (
   <Toolbar
     className="MainNavbar"
-    inset
+    // inset
+    fixed
     nav={<MenuButtonContainer className="MenuButton" />}
     title={<SearchContainer />}
     actions={<FilterButton className="filterButton" />}
