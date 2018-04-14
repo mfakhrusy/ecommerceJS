@@ -1,22 +1,13 @@
-.HomeModalContentMain {
+@import "HomeModalContentMain";
+@import "HomeModalContentDescription";
+
+.HomeModalContent {
   position: fixed;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   @include display-grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
-  grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 1fr 1fr 2fr; // total: 16fr on row
-  grid-template-areas:
-  "share-button . button-description button-description button-description . close-button"
-  "love-button . . . . . ."
-  ". . . . . . ." // empty
-  ". . . . . . ." // empty
-  ". . . . . . ." // empty
-  "info-avatar info-avatar info-name info-name info-name . ."
-  "info-avatar info-avatar info-price info-price info-price . ."
-  ". . . . . . ." // empty
-  "comment-input comment-input comment-input comment-input . interested-button interested-button";
 
   > div {
     background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
@@ -27,6 +18,7 @@
     }
   }
 
+  // common item
   .ModalCloseButton {
     grid-area: close-button;
     display: flex;
@@ -38,140 +30,12 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      width: 3rem;
-      height: 3rem;
       i {
         font-size: 2.7rem;
+        @media screen and (min-width: $desktop-min-width) {
+          font-size: 4rem;
+        }
       }
     }
-  }
-  
-  // .ModalImageProgress {
-  //   grid-area: image-progress;
-  // }
-
-  .ModalDescriptionButton {
-    grid-area: button-description;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    text-align: center;
-  }
-
-  .ModalShareButton {
-    grid-area: share-button;
-    display: flex;
-    justify-content: center;
-  }
-
-  .ModalLoveButton {
-    grid-area: love-button;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .ModalInfoAvatar {
-    grid-area: info-avatar;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    > div {
-      width: 8rem;
-      height: 8rem;
-    }
-
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  .ModalInfoName {
-    grid-area: info-name;
-    display: flex;
-    align-items: center;
-  }
-
-  .ModalInfoPrice {
-    grid-area: info-price;
-    display: flex;
-    align-items: center;
-  }
-
-  .ModalCommentInput {
-    grid-area: comment-input;
-    @include display-grid;
-    grid-template-columns: 4fr 1fr;
-    height: 80%;
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-radius: 1rem;
-
-    input {
-      background: transparent;
-      border: none;
-      border-bottom: 0.1rem solid black;
-      height: 3rem;
-      align-self: center;
-    }
-    // below mixin for transparent placeholder on focus input
-    @include input-onfocus-placeholder-transparent;
-
-    button {
-      align-self: center;
-    }
-  }
-
-  .ModalInterestedButton {
-    grid-area: interested-button;
-  }
-}
-
-.HomeModalContentDescription {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  @include display-grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
-  grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 2fr 2fr; // total: 16fr on row
-  grid-template-areas:
-  "back-button . . . . . close-button"
-  ". . . . . . ."
-  ". . . . . . ." // empty
-  ". . . . . . ." // empty
-  ". . . . . . ."
-  ". . . . . . ."
-  ". . . . . . ." // empty
-  "text-input text-input text-input . . interested-button interested-button";
-
-  > div {
-    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
-  }
-
-  .ModalCloseButton {
-    grid-area: close-button;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    button {
-      display: flex !important;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      width: 3rem;
-      height: 3rem;
-      i {
-        font-size: 2.7rem;
-      }
-    }
-  }
-
-  .ModalBackButton {
-    grid-area: back-button;
   }
 }

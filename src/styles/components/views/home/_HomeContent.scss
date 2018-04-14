@@ -1,13 +1,16 @@
 .HomeContent {
-  @media screen and (max-width: $tablet-min-width - 1) {
-    // overflow-y: auto;
-  }
   // !important to override masonry inline style
   height: calc(100% - #{$home-header-total-height}) !important;
+  min-height: 64vh;
+
+  @media screen and (min-width: $tablet-min-width) {
+    min-height: 59vh;
+  }
 
   @media screen and (min-width: $desktop-min-width) {
     display: flex;
     justify-content: center;
+    min-height: 60vh;
   }
 }
 

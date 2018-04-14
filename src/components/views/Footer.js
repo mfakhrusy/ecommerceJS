@@ -1,10 +1,32 @@
 import React, { Component } from 'react';
+import { Button, Card } from 'react-md';
+import socialItems from 'assets/js/socialItems';
 
 class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <h2>Footer</h2>
+        <Card className="FooterSocial">
+          {socialItems.map(socialItem => (
+            <div
+              key={socialItem.id}
+              className="FooterSocialItem"
+            >
+              <a
+                href={socialItem.url}
+                target="_blank"
+              >
+                <Button
+                  icon
+                  iconClassName={socialItem.faIcon}
+                />
+              </a>
+            </div>
+          ))}
+        </Card>
+        <Card className="FooterNotice">
+          <p>mfakhrusy - 2018</p>
+        </Card>
       </div>
     );
   }

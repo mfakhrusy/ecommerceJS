@@ -6,13 +6,14 @@ import ModalCloseButtonContainer from 'containers/views/home/ModalCloseButtonCon
 import ModalLoveButtonContainer from 'containers/views/home/ModalLoveButtonContainer';
 import ModalInfoPrice from 'components/views/home/ModalInfoPrice';
 import ModalCommentInputContainer from 'containers/views/home/ModalCommentInputContainer';
+import apiKey from 'constants/apiKey';
 
 class HomeModalContent extends React.Component {
   render() {
     let content = null;
     if (this.props.descriptionIsOpen) {
       content = (
-        <div className="HomeModalContentDescription">
+        <div className="HomeModalContent HomeModalContentDescription">
           <ModalCloseButtonContainer />
           <div className="ModalBackButton">
             <Button
@@ -22,15 +23,21 @@ class HomeModalContent extends React.Component {
               arrow_back
             </Button>
           </div>
+          <div className="ModalLocation">
+            <iframe
+              title="Map"
+              src={`//www.google.com/maps/embed/v1/place?q=${this.props.homeItem.location}&zoom=15&key=${apiKey.googleMapApi.key}`}
+            />
+            <div>
+              <p>{this.props.homeItem.location}</p>
+            </div>
+          </div>
         </div>
       );
     } else {
       content = (
-        <div className="HomeModalContentMain">
+        <div className="HomeModalContent HomeModalContentMain">
           <ModalCloseButtonContainer />
-          {/* <div className="ModalImageProgress">
-            i
-          </div> */}
           <div className="ModalDescriptionButton">
             <Button
               flat
