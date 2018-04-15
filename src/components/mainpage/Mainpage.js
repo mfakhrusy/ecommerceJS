@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
-import { CircularProgress } from 'react-md';
+import CircularProgress from 'react-md/lib/Progress/CircularProgress';
 import LoginContainer from 'containers/views/login/LoginContainer';
 import HomeContainer from 'containers/views/home/HomeContainer';
 import Sell from 'components/views/sell/Sell';

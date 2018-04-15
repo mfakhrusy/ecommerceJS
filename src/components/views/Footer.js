@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Card } from 'react-md';
+// import { Button, Card } from 'react-md';
+import Card from 'react-md/lib/Cards';
+import Button from 'react-md/lib/Buttons';
 import socialItems from 'assets/js/socialItems';
 
 class Footer extends Component {

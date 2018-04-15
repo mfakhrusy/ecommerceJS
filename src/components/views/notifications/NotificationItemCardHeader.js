@@ -1,7 +1,8 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-md';
+// import { Card } from 'react-md';
+import Card from 'react-md/lib/Cards';
 
 const NotificationItemCardHeader = ({ item }) => {
   return (

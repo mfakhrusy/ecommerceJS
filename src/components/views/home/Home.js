@@ -1,7 +1,10 @@
 /* eslint-disable max-len, no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Drawer, CircularProgress, Paper } from 'react-md';
+// import { Drawer, CircularProgress, Paper } from 'react-md';
+import Paper from 'react-md/lib/Papers';
+import CircularProgress from 'react-md/lib/Progress/CircularProgress';
+import Drawer from 'react-md/lib/Drawers';
 import MainNavbar from 'components/mainpage/MainNavbar';
 import SidebarContainer from 'containers/sidebar/SidebarContainer';
 import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';

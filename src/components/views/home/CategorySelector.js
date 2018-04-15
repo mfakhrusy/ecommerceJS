@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Card, Button } from 'react-md';
+// import { Card, Button } from 'react-md';
+import Card from 'react-md/lib/Cards';
+import Button from 'react-md/lib/Buttons';
 
 class CategorySelector extends Component {
   constructor() {

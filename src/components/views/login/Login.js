@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Button } from 'react-md';
+// import { Card, Button } from 'react-md';
+import Button from 'react-md/lib/Buttons';
+import Card from 'react-md/lib/Cards';
 import urls from 'constants/urls';
 
 class Login extends React.Component {

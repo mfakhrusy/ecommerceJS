@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Toolbar, Button } from 'react-md';
+// import { Toolbar, Button } from 'react-md';
+import Button from 'react-md/lib/Buttons';
+import Toolbar from 'react-md/lib/Toolbars/Toolbar';
 
 const ViewNavbar = ({
   inset,

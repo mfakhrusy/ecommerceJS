@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Grid } from 'react-md';
+import Grid from 'react-md/lib/Grids/Grid';
 import CategoryItem from 'components/views/categories/CategoryItem';
 
 class CategoryContent extends React.Component {

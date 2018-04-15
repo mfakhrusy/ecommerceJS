@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Button,
-  DialogContainer,
-  List,
-  ListItem,
-  Card,
-  CardTitle,
-} from 'react-md';
+// import {
+//   Button,
+//   DialogContainer,
+//   List,
+//   ListItem,
+//   Card,
+//   CardTitle,
+// } from 'react-md';
+import { Card, CardTitle } from 'react-md/lib/Cards';
+import Button from 'react-md/lib/Buttons';
+import DialogContainer from 'react-md/lib/Dialogs/DialogContainer';
+import { List, ListItem } from 'react-md/lib/Lists';
 
 class FilterCategory extends React.Component {
   constructor() {

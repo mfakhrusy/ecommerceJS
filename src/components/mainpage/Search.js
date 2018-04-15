@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField } from 'react-md';
+import TextField from 'react-md/lib/TextFields/TextField';
 
 class Search extends React.Component {
   constructor() {

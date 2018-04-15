@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Card,
-  CardTitle,
-} from 'react-md';
+// import {
+//   Card,
+//   CardTitle,
+// } from 'react-md';
+import { Card, CardTitle } from 'react-md/lib/Cards';
 
 class FilterPrice extends React.Component {
   constructor() {

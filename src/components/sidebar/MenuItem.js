@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { ListItem, FontIcon } from 'react-md';
+// import { /* ListItem, */FontIcon } from 'react-md';
+import FontIcon from 'react-md/lib/FontIcons';
+import ListItem from 'react-md/lib/Lists/ListItem';
 import PropTypes from 'prop-types';
 
 class MenuItem extends React.Component {

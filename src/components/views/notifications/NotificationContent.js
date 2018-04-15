@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from 'react-md';
+// import { Grid } from 'react-md';
+import Grid from 'react-md/lib/Grids/Grid';
 import NotificationItem from 'components/views/notifications/NotificationItem';
 
 const NotificationContent = ({ notifications }) => (

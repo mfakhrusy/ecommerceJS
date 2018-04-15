@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Toolbar } from 'react-md';
+// import { Toolbar } from 'react-md';
+import Toolbar from 'react-md/lib/Toolbars/Toolbar';
 import UserAvatarContainer from 'containers/utils/UserAvatarContainer';
 
 class SidebarHeader extends React.Component {

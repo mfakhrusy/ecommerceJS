@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cell, Card, Button } from 'react-md';
+// import { Cell, Card, Button } from 'react-md';
+import Cell from 'react-md/lib/Grids/Cell';
+import Card from 'react-md/lib/Cards/Card';
+import Button from 'react-md/lib/Buttons';
 
 class CategoryItem extends React.Component {
   render() {

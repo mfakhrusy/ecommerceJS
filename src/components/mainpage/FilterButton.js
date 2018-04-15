@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Button } from 'react-md';
+import Button from 'react-md/lib/Buttons/Button';
 
 const FilterButton = ({ className, history }) => (
   <Button

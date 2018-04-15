@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Card, Avatar } from 'react-md';
+// import { Grid, Card, Avatar } from 'react-md';
+import Grid from 'react-md/lib/Grids/Grid';
+import Avatar from 'react-md/lib/Avatars';
+import Card from 'react-md/lib/Cards/Card';
 
 // slice(4) will omit the day
 const dateFormatter = dateString => new Date(dateString).toDateString().slice(4);

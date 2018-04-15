@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { TabsContainer, Tabs, Tab } from 'react-md';
+// import { TabsContainer, Tabs, Tab } from 'react-md';
+import { TabsContainer, Tabs, Tab } from 'react-md/lib/Tabs';
 import TabFavoriteContainer from 'containers/views/profile/TabFavoriteContainer';
 
 const tabMenuItems = ['SELLING', 'SOLD', 'FAVORITES'];

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Drawer } from 'react-md';
+import Drawer from 'react-md/lib/Drawers';
 import SidebarHeaderContainer from 'containers/sidebar/SidebarHeaderContainer';
 import Sidemenu from 'components/sidebar/Sidemenu';
 

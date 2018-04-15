@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Button } from 'react-md';
 import FilterCategoryContainer from 'containers/views/filter/FilterCategoryContainer';
 import FilterPrice from 'components/views/filter/FilterPrice';
 // import FilterSort from 'components/views/filter/FilterSort';

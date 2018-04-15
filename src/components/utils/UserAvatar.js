@@ -1,7 +1,8 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Avatar } from 'react-md';
+// import { Avatar } from 'react-md';
+import Avatar from 'react-md/lib/Avatars';
 
 const UserAvatar = ({ ownuser, className, role }) => {
   return (

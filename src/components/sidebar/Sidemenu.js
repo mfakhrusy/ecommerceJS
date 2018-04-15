@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { List } from 'react-md';
+// import { List } from 'react-md';
+import List from 'react-md/lib/Lists/List';
 import MenuItem from 'components/sidebar/MenuItem';
 import menuItems from 'assets/js/menuItems';
 

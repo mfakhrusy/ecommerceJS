@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-md';
+// import { Card } from 'react-md';
+import Card from 'react-md/lib/Cards';
 import Masonry from 'react-masonry-component';
 
 class TabFavorite extends React.Component {

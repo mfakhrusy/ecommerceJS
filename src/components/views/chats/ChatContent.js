@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { TabsContainer, Tabs, Tab } from 'react-md';
+// import { TabsContainer, Tabs, Tab } from 'react-md';
+import { TabsContainer, Tabs, Tab } from 'react-md/lib/Tabs';
 import TabAll from 'components/views/chats/TabAll';
 import TabBlock from 'components/views/chats/TabBlock';
 import TabBuy from 'components/views/chats/TabBuy';

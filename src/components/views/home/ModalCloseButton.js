@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'react-md';
+// import { Button } from 'react-md';
+import Button from 'react-md/lib/Buttons';
 
 const ModalCloseButton = ({ onClick, isModalOpen }) => (
   <div className="ModalCloseButton">

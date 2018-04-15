@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-component';
-import { Card } from 'react-md';
+// import { Card } from 'react-md';
+import { Card } from 'react-md/lib/Cards';
 import Footer from 'components/views/Footer';
 
 class HomeContent extends React.Component {

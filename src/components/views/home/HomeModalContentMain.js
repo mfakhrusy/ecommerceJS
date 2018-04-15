@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Avatar } from 'react-md';
+// import { Button, Avatar } from 'react-md';
+import Avatar from 'react-md/lib/Avatars';
+import Button from 'react-md/lib/Buttons';
 import ModalCloseButtonContainer from 'containers/views/home/ModalCloseButtonContainer';
 import ModalLoveButtonContainer from 'containers/views/home/ModalLoveButtonContainer';
 import ModalInfoPrice from 'components/views/home/ModalInfoPrice';

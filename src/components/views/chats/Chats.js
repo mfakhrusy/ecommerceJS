@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { CircularProgress } from 'react-md';
+// import { CircularProgress } from 'react-md';
+import CircularProgress from 'react-md/lib/Progress/CircularProgress';
 import urls from 'constants/urls';
 import ChatContent from 'components/views/chats/ChatContent';
 import BackButton from 'components/views/BackButton';

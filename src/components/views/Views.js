@@ -1,7 +1,10 @@
 /* eslint-disable react/no-did-mount-set-state, react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Drawer, Paper, Button } from 'react-md';
+// import { Drawer, Paper, Button } from 'react-md';
+import Drawer from 'react-md/lib/Drawers';
+import Paper from 'react-md/lib/Papers';
+import Button from 'react-md/lib/Buttons';
 import ViewNavbar from 'components/views/ViewNavbar';
 import classNames from 'classnames';
 

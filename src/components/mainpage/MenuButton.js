@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'react-md';
+import Button from 'react-md/lib/Buttons/Button';
 
 // const MenuButton = ({ className, onClick, isSidebarOpen }) => {
 class MenuButton extends React.Component {
