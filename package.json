@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.prod.js",
     "test": "test"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/mfakhrusy/ecommerceJS#readme",
   "dependencies": {
     "classnames": "^2.2.5",
+    "cssnano": "^3.10.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
@@ -44,15 +46,20 @@
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.8.3",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
     "path": "^0.12.7",
     "redux-devtools": "^3.4.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.4.1",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
   }
 }

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HomeModalContent from 'components/views/home/HomeModalContent';
-import HomeModalImageContainer from 'components/views/home/HomeModalImageContainer';
+import HomeModalImage from 'components/views/home/HomeModalImage';
 import Modal from 'components/utils/Modal';
-// import urls from 'constants/urls';
 
 class HomeModal extends React.Component {
   constructor() {
@@ -11,30 +10,34 @@ class HomeModal extends React.Component {
 
     this.state = {
       descriptionIsOpen: false,
+      shareIsOpen: false,
     };
     this.showDescription = this.showDescription.bind(this);
+    this.showShare = this.showShare.bind(this);
   }
-
-  // componentDidMount() {
-  //   this.props.chatsfetchData(urls.chats.url);
-  // }
 
   showDescription(bool) {
     this.setState({ descriptionIsOpen: bool });
   }
 
+  showShare(bool) {
+    this.setState({ shareIsOpen: bool });
+  }
+
   render() {
-    // console.log(this.props.chats)
     return (
       <Modal className="HomeModal">
-        <HomeModalImageContainer
+        <HomeModalImage
           homeItem={this.props.homeItem}
           descriptionIsOpen={this.state.descriptionIsOpen}
+          shareIsOpen={this.state.shareIsOpen}
         />
         <HomeModalContent
-          showDescription={this.showDescription}
           homeItem={this.props.homeItem}
+          showDescription={this.showDescription}
+          showShare={this.showShare}
           descriptionIsOpen={this.state.descriptionIsOpen}
+          shareIsOpen={this.state.shareIsOpen}
         />
       </Modal>
     );
@@ -43,8 +46,6 @@ class HomeModal extends React.Component {
 
 HomeModal.propTypes = {
   homeItem: PropTypes.object.isRequired,
-  // chats: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // chatsfetchData: PropTypes.func.isRequired,
 };
 
 export default HomeModal;
