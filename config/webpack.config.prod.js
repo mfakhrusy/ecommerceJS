@@ -4,6 +4,8 @@ const common = require('./webpack.config.common');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -13,9 +15,6 @@ module.exports = merge(common, {
         test: /\.(scss)$/,
         exclude: /node_modules/,
         use: [
-          // {
-          //   loader: 'style-loader',
-          // },
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -45,6 +44,11 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+    }),
+    // compress in gzip
+    new CompressionPlugin(),
   ],
   devtool: 'source-map',
 });
