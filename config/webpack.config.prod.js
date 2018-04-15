@@ -8,7 +8,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = merge(common, {
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
