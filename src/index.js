@@ -15,3 +15,10 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
+
+// ReactDOM.render(
+//   <Provider>
+//     <h1>tes</h1>
+//   </Provider>,
+//   document.getElementById('root'),
+// );
