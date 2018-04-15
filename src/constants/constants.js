@@ -1,2 +1,0 @@
-export const FILTER_PRICE_MAX_PRICE = 1000000000;
-export const FILTER_PRICE_MIN_PRICE = 0;
