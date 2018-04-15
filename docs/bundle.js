@@ -7443,20 +7443,24 @@ var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_module
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+// import { BrowserRouter } from 'react-router-dom';
+
 
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
   { store: _configureStore2.default },
   _react2.default.createElement(
-    _reactRouterDom.BrowserRouter,
+    _reactRouterDom.HashRouter,
     null,
     _react2.default.createElement(_App2.default, null)
   )
 ), document.getElementById('root'));
 
 // ReactDOM.render(
-//   <Provider>
-//     <h1>tes</h1>
+//   <Provider store={store}>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
 //   </Provider>,
 //   document.getElementById('root'),
 // );
