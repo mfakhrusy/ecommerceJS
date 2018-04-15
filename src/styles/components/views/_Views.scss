@@ -1,0 +1,17 @@
+.Views {
+  left: 0;
+}
+
+.view-paper {
+  overflow-y: auto;
+
+  &.view-inset {
+    height: calc(100% - #{$view-header-total-height});
+  }
+
+  &.view-fixed {
+    height: 100%;
+    position: relative;
+    // top: $view-header-height;
+  }
+}

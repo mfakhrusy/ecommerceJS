@@ -1,0 +1,19 @@
+.MainNavbar {
+  margin: 0;
+  background-color: white;
+  // box-shadow: none;
+
+  @media screen and (min-width: $md-tablet-min-width) {
+    // border-bottom: 0.1rem solid $md-grey-400;
+    height: 10rem;
+    align-items: center;
+    // position: fixed;
+  }
+
+  input {
+    @media screen and (min-width: $md-tablet-min-width) {
+      font-size: 20px;
+    }
+  }
+}
+

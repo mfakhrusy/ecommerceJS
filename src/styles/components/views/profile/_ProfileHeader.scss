@@ -1,0 +1,15 @@
+.ProfileHeader#profile-header {
+  height: 20rem;
+  background-color: $md-primary-color;
+  display: grid;
+  grid-template-rows: 3fr 4fr;
+  grid-template-columns: 100%;
+  grid-template-areas: 
+  "."
+  "avatar";
+}
+
+.ProfileHeaderAvatar {
+  grid-area: avatar;
+  justify-self: center;
+}

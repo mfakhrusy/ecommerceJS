@@ -1,0 +1,83 @@
+.HomeModalContentDescription {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
+  grid-template-rows: 1fr 1fr 1fr 7fr 1fr 1fr 2fr 2fr; // total: 16fr on row
+  grid-template-areas:
+  "back-button . . . . . close-button"
+  ". . . . . . ."
+  ". . . . . . ."
+  "location location location location location location location" // empty
+  ". . . . . . ."
+  ". . . . . . ."
+  ". . . . . . ."
+  ". . . . . . .";
+
+  @media screen and (min-width: $tablet-min-width) {
+    grid-template-areas:
+    "back-button . . . . . close-button"
+    ". . . . . . ."
+    ". . . . . . ."
+    "location location location location location location location" // empty
+    "location location location location location location location" // empty
+    ". . . . . . ."
+    ". . . . . . ."
+    ". . . . . . .";
+  }
+
+  @media screen and (min-width: $desktop-min-width) {
+    grid-template-areas:
+    "back-button . . . . . close-button"
+    ". . . . . . ."
+    ". . . . . . ."
+    "location location location location location location location" // empty
+    "location location location location location location location" // empty
+    "location location location location location location location" // empty
+    ". . . . . . ."
+    ". . . . . . .";
+  }
+  .ModalBackButton {
+    grid-area: back-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      i {
+        @media screen and (min-width: $desktop-min-width) {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  .ModalLocation {
+    max-width: 60rem;
+    width: 100%;
+    grid-area: location;
+    display: grid;
+    grid-template-rows: auto 5rem;
+    grid-template-columns: 1;
+    justify-self: center;
+
+    @media screen and (min-width: $tablet-min-width) {
+      max-width: 80rem;
+    }
+
+    @media screen and (min-width: $desktop-min-width) {
+      max-width: 90rem;
+    }
+ 
+    iframe {
+      justify-self: stretch;
+      align-self: stretch;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+  }
+}
