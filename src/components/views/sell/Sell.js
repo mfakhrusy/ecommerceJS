@@ -9,11 +9,11 @@ class Sell extends React.Component {
     return (
       <ViewsContainer
         pathname={this.props.location.pathname}
-        fixed
+        inset
         className="Sell"
         nav={<BackButton />}
       >
-        <p>Sell</p>
+        <input type="file" accept="image/*;capture=camera" />
       </ViewsContainer>
     );
   }

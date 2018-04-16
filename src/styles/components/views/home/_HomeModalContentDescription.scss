@@ -44,6 +44,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: white;
+      height: auto;
       i {
         @media screen and (min-width: $desktop-min-width) {
           font-size: 4rem;

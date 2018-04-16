@@ -2,8 +2,8 @@
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr; // total 8fr
   grid-template-rows: 1fr 1fr 6fr 2fr 1fr 1fr 1fr 1fr 2fr; // total: 16fr on row
   grid-template-areas:
-  "share-button . button-description button-description button-description . close-button"
-  "love-button . . . . . ."
+  "love-button . button-description button-description button-description . close-button"
+  ". . . . . . ."
   ". . . . . . ." // empty
   ". . . . . . ." // empty
   ". . . . . . ." // empty
@@ -20,11 +20,13 @@
     align-items: center;
     border-radius: 1rem;
     text-align: center;
+    height: 100%;
 
     > button {
       display: flex;
       justify-content: center;
       align-items: center;
+      color: white;
     }
   }
 
@@ -46,7 +48,14 @@
     max-width: 5rem;
     // max-height: 5rem;
     button {
-      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      // color: white;
+      i {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -55,6 +64,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+    margin-left: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     > div {
       width: 8rem;
       height: 8rem;
@@ -70,12 +83,16 @@
     grid-area: info-name;
     display: flex;
     align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+    border-top-right-radius: 1rem;
   }
 
   .ModalInfoPrice {
     grid-area: info-price;
     display: flex;
     align-items: center;
+    background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
+    border-bottom-right-radius: 1rem;
   }
 
   .ModalCommentInput {
@@ -86,7 +103,7 @@
     margin-left: 1rem;
     padding-left: 1rem;
     border-radius: 1rem;
-    background-color: honeydew;
+    background-color: white;
 
     input {
       background: transparent;

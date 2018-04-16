@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+// const WorkboxPlugin = require('workbox-webpack-plugin');
 
 // const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 //   template: './public/index.html',
@@ -43,11 +43,11 @@ module.exports = {
       filename: 'index.html',
       inject: 'body',
     }),
-    new WorkboxPlugin.GenerateSW({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
-      clientsClaim: true,
-      skipWaiting: false,
-    }),
+    // new WorkboxPlugin.GenerateSW({
+    //   // these options encourage the ServiceWorkers to get in there fast
+    //   // and not allow any straggling "old" SWs to hang around
+    //   clientsClaim: true,
+    //   skipWaiting: false,
+    // }),
   ],
 };
