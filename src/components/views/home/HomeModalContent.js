@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HomeModalContentDescription from 'components/views/home/HomeModalContentDescription';
 import HomeModalContentMain from 'components/views/home/HomeModalContentMain';
-import HomeModalShare from './HomeModalShare';
+// import HomeModalShare from './HomeModalShare';
 
 class HomeModalContent extends React.Component {
   render() {
@@ -12,19 +12,9 @@ class HomeModalContent extends React.Component {
         <HomeModalContentDescription
           homeItem={this.props.homeItem}
           showDescription={this.props.showDescription}
-          showShare={this.props.showShare}
+          // showShare={this.props.showShare}
           descriptionIsOpen={this.props.descriptionIsOpen}
-          shareIsOpen={this.props.shareIsOpen}
-        />
-      );
-    } else if (this.props.shareIsOpen) {
-      content = (
-        <HomeModalShare
-          homeItem={this.props.homeItem}
-          showDescription={this.props.showDescription}
-          showShare={this.props.showShare}
-          descriptionIsOpen={this.props.descriptionIsOpen}
-          shareIsOpen={this.props.shareIsOpen}
+          // shareIsOpen={this.props.shareIsOpen}
         />
       );
     } else {
@@ -32,7 +22,7 @@ class HomeModalContent extends React.Component {
         <HomeModalContentMain
           homeItem={this.props.homeItem}
           showDescription={this.props.showDescription}
-          showShare={this.props.showShare}
+          // showShare={this.props.showShare}
         />
       );
     }
@@ -45,9 +35,9 @@ class HomeModalContent extends React.Component {
 HomeModalContent.propTypes = {
   homeItem: PropTypes.object.isRequired,
   showDescription: PropTypes.func.isRequired,
-  showShare: PropTypes.func.isRequired,
+  // showShare: PropTypes.func.isRequired,
   descriptionIsOpen: PropTypes.bool.isRequired,
-  shareIsOpen: PropTypes.bool.isRequired,
+  // shareIsOpen: PropTypes.bool.isRequired,
 };
 
 export default HomeModalContent;

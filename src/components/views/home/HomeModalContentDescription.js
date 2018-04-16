@@ -13,9 +13,9 @@ class HomeModalContentDescription extends React.Component {
         <ModalCloseButtonContainer />
         <ModalBackButton
           showDescription={this.props.showDescription}
-          showShare={this.props.showShare}
+          // showShare={this.props.showShare}
           descriptionIsOpen={this.props.descriptionIsOpen}
-          shareIsOpen={this.props.shareIsOpen}
+          // shareIsOpen={this.props.shareIsOpen}
         />
         <div className="ModalLocation">
           <iframe
@@ -34,9 +34,9 @@ class HomeModalContentDescription extends React.Component {
 HomeModalContentDescription.propTypes = {
   homeItem: PropTypes.object.isRequired,
   showDescription: PropTypes.func.isRequired,
-  showShare: PropTypes.func.isRequired,
+  // showShare: PropTypes.func.isRequired,
   descriptionIsOpen: PropTypes.bool.isRequired,
-  shareIsOpen: PropTypes.bool.isRequired,
+  // shareIsOpen: PropTypes.bool.isRequired,
 };
 
 export default HomeModalContentDescription;

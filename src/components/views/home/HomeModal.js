@@ -10,19 +10,19 @@ class HomeModal extends React.Component {
 
     this.state = {
       descriptionIsOpen: false,
-      shareIsOpen: false,
+      // shareIsOpen: false,
     };
     this.showDescription = this.showDescription.bind(this);
-    this.showShare = this.showShare.bind(this);
+    // this.showShare = this.showShare.bind(this);
   }
 
   showDescription(bool) {
     this.setState({ descriptionIsOpen: bool });
   }
 
-  showShare(bool) {
-    this.setState({ shareIsOpen: bool });
-  }
+  // showShare(bool) {
+  //   this.setState({ shareIsOpen: bool });
+  // }
 
   render() {
     return (
@@ -30,14 +30,14 @@ class HomeModal extends React.Component {
         <HomeModalImage
           homeItem={this.props.homeItem}
           descriptionIsOpen={this.state.descriptionIsOpen}
-          shareIsOpen={this.state.shareIsOpen}
+          // shareIsOpen={this.state.shareIsOpen}
         />
         <HomeModalContent
           homeItem={this.props.homeItem}
           showDescription={this.showDescription}
-          showShare={this.showShare}
+          // showShare={this.showShare}
           descriptionIsOpen={this.state.descriptionIsOpen}
-          shareIsOpen={this.state.shareIsOpen}
+          // shareIsOpen={this.state.shareIsOpen}
         />
       </Modal>
     );

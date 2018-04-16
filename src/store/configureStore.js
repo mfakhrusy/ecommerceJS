@@ -8,6 +8,10 @@ const store = createStore(
   compose(
     applyMiddleware(thunk),
     // for devtools
+    // only works after install redux devtool extension from either chrome or firefox
+    // tested only with chrome
+    // in firefox: if no devtool installed, the page won't load while
+    // giving weird output. Be careful.
     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   ),
 );

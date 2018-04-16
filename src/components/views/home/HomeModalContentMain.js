@@ -24,14 +24,14 @@ class HomeModalContentMain extends React.Component {
             More Info
           </Button>
         </div>
-        <div className="ModalShareButton">
+        {/* <div className="ModalShareButton">
           <Button
             icon
             onClick={() => { this.props.showShare(true); }}
           >
             share
           </Button>
-        </div>
+        </div> */}
         <ModalLoveButtonContainer homeItem={this.props.homeItem} />
         <div className="ModalInfoAvatar">
           <Avatar src={this.props.homeItem.avatarUrl} />
@@ -49,7 +49,7 @@ class HomeModalContentMain extends React.Component {
 HomeModalContentMain.propTypes = {
   homeItem: PropTypes.object.isRequired,
   showDescription: PropTypes.func.isRequired,
-  showShare: PropTypes.func.isRequired,
+  // showShare: PropTypes.func.isRequired,
 };
 
 export default HomeModalContentMain;

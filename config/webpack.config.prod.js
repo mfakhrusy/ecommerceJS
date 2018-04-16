@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 const merge = require('webpack-merge');
 const common = require('./webpack.config.common');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -8,7 +7,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = merge(common, {
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -29,6 +28,7 @@ module.exports = merge(common, {
   optimization: {
     splitChunks: {
       chunks: 'all',
+      name: true,
     },
     minimizer: [
       new UglifyJsPlugin({
@@ -43,9 +43,11 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
+      openAnalyzer: false,
     }),
     // compress in gzip
     new CompressionPlugin(),
