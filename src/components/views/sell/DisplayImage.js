@@ -40,7 +40,7 @@ class DisplayImage extends React.Component {
     // const content = this.state.image.length === 0 ? '' : this.state.image;
     this.displayImage();
     return (
-      <Card>
+      <Card className="DisplayImage">
         {/* {this.state.imageSrc === '' ? '' : <img src={this.state.imageSrc} alt="tes" />} */}
         <img src={this.state.imageSrc} alt="tes" />
       </Card>
