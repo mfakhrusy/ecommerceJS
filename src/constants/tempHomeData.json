@@ -6,12 +6,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/yrur7v4dr/home-item-baby-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/u1a1h24r3/home-item-baby-1.jpg"
+    ],
     "description": "Great baby stroller",
     "price": 100000,
     "type": "baby",
     "username": "Flies",
     "avatarUrl": "https://s25.postimg.cc/nfd25ei0f/bug-avatar-1.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Jalan Setiabudi Bandung Indonesia"
   },
   {
     "id": "2",
@@ -20,12 +23,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/z4m5e1exr/home-item-book-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "An antique books!",
     "price": 5000000,
     "type": "book",
     "username": "Cathy",
     "avatarUrl": "https://s25.postimg.cc/kdcmkgyun/cat-avatar.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Dago Bandung Indonesia"
   },
   {
     "id": "3",
@@ -34,12 +40,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/6rqnnl8n3/home-item-book-2.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/zcoy1s69b/home-item-book-2.jpg"
+    ],
     "description": "Another antique books!",
     "price": 3000000,
     "type": "book",
     "username": "Cathy",
     "avatarUrl": "https://s25.postimg.cc/kdcmkgyun/cat-avatar.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Dago Bandung Indonesia"
   },
   {
     "id": "4",
@@ -48,12 +57,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/itm1hpuq7/home-item-car-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/580hgfglr/home-item-car-1.jpg"
+    ],
     "description": "Luxury and Marvelous Vintage Car, Sale 50%!!",
     "price": 450000000,
     "type": "car",
     "username": "Stings",
     "avatarUrl": "https://s25.postimg.cc/n2lnz7kb3/bug-avatar-2.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Ciwalk Bandung Indonesia"
   },
   {
     "id": "5",
@@ -64,12 +76,17 @@
       "https://s25.postimg.cc/74i1tslrz/home-item-electronics-2.jpg",
       "https://s25.postimg.cc/fmrhy4cv3/home-item-electronics-3.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/qufhxlzsf/home-item-electronics-1.jpg"
+      "https://s25.postimg.cc/a6nzv4cqn/home-item-electronics-2.jpg",
+      "https://s25.postimg.cc/94dtcl9cv/home-item-electronics-3.jpg"
+    ],
     "description": "Make your brain smarter with a Smart Phone",
     "price": 2000000,
     "type": "electronics",
     "username": "Antsy",
     "avatarUrl": "https://s25.postimg.cc/uikxkzkv3/bug-avatar-3.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Jakarta Indonesia"
   },
   {
     "id": "6",
@@ -78,12 +95,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/6rqnnlvsf/home-item-electronics-4.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/4ihp48g3z/home-item-electronics-4.jpg"
+    ],
     "description": "Phone who doesn't like modernism",
     "price": 4000000,
     "type": "electronics",
     "username": "Firebug",
     "avatarUrl": "https://s25.postimg.cc/6eu5wpx9b/bug-avatar-4.png",
-    "location": "Bandung Indonesia"
+    "location": "Istana Bogor Indonesia"
   },
   {
     "id": "7",
@@ -93,12 +113,16 @@
       "https://s25.postimg.cc/i4395f727/home-item-fashion-1.jpg",
       "https://s25.postimg.cc/4n6amjhb3/home-item-fashion-2.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/m8jdpa94f/home-item-fashion-1.jpg",
+      "https://s25.postimg.cc/6aanz5mm7/home-item-fashion-2.jpg"
+    ],
     "description": "A knitting package for all of your knitting needs. Bonus: Knitting needle!",
     "price": 350000,
     "type": "fashion",
     "username": "Tripode",
     "avatarUrl": "https://s25.postimg.cc/3kr0j9fnj/bug-avatar-5.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Samarinda Indonesia"
   },
   {
     "id": "8",
@@ -107,12 +131,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/abcldfdxr/home-item-fashion-3.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/ajfe1afkv/home-item-fashion-3.jpg"
+    ],
     "description": "Ready blue blazer size S/M/L/XL/XXL/Costum. For men only.",
     "price": 1500000,
     "type": "fashion",
     "username": "Greeny",
     "avatarUrl": "https://s25.postimg.cc/t3jcw9rhr/bug-avatar-6.jpg",
-    "location": "Bandung Indonesia"
+    "location": " Kuta Bali Indonesia"
   },
   {
     "id": "9",
@@ -121,12 +148,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/ex8plt21r/home-item-free-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "I have too much, like some tons of it. So anyone can have some. Just pm me.",
     "price": 0,
     "type": "free",
     "username": "Flies",
     "avatarUrl": "https://s25.postimg.cc/nfd25ei0f/bug-avatar-1.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Jalan Setiabudi Bandung Indonesia"
   },
   {
     "id": "10",
@@ -135,12 +165,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/t3ogh1573/home-item-free-2.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Need some drums? I'm giving you some, but be careful of radiation. ",
     "price": 0,
     "type": "free",
     "username": "Cathy",
     "avatarUrl": "https://s25.postimg.cc/kdcmkgyun/cat-avatar.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Dago Bandung Indonesia"
   },
   {
     "id": "11",
@@ -149,12 +182,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/jvw80bipb/home-item-free-3.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Pick up by yourself. Just giving you the location.",
     "price": 0,
     "type": "free",
     "username": "Stings",
     "avatarUrl": "https://s25.postimg.cc/n2lnz7kb3/bug-avatar-2.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Ciwalk Bandung Indonesia"
   },
   {
     "id": "12",
@@ -163,12 +199,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/gcaaakl5b/home-item-home-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Fresh orange, buy per kg.",
     "price": 20000,
     "type": "home",
     "username": "Antsy",
     "avatarUrl": "https://s25.postimg.cc/uikxkzkv3/bug-avatar-3.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Jakarta Indonesia"
   },
   {
     "id": "13",
@@ -177,12 +216,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/h1t2mxten/home-item-home-2.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "A one kilogram of red apple.",
     "price": 40000,
     "type": "home",
     "username": "Firebug",
     "avatarUrl": "https://s25.postimg.cc/6eu5wpx9b/bug-avatar-4.png",
-    "location": "Bandung Indonesia"
+    "location": "Istana Bogor Indonesia"
   },
   {
     "id": "14",
@@ -192,12 +234,15 @@
       "https://s25.postimg.cc/6ez9hj8en/home-item-home-3.jpg",
       "https://s25.postimg.cc/s1e9yi9j3/home-item-home-4.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Used. Not really old. Still good and kicking.",
     "price": 1250000,
     "type": "home",
     "username": "Tripode",
     "avatarUrl": "https://s25.postimg.cc/3kr0j9fnj/bug-avatar-5.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Samarinda Indonesia"
   },
   {
     "id": "15",
@@ -206,12 +251,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/itm1htpm7/home-item-leisures-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Tired of modern computer? Buy this.",
     "price": 525000,
     "type": "leisures",
     "username": "Greeny",
     "avatarUrl": "https://s25.postimg.cc/t3jcw9rhr/bug-avatar-6.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Kuta Bali Indonesia"
   },
   {
     "id": "16",
@@ -220,12 +268,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/3xnia8lxb/home-item-leisures-2.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "A good and old thing to sew your clothes.",
     "price": 4000000,
     "type": "leisures",
     "username": "Greeny",
     "avatarUrl": "https://s25.postimg.cc/t3jcw9rhr/bug-avatar-6.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Kuta Bali Indonesia"
   },
   {
     "id": "17",
@@ -234,12 +285,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/ky6eiwbtb/home-item-leisures-3.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Brand new soft ball. Sell because I need Hard ball. This one too soft.",
     "price": 1000000,
     "type": "leisures",
     "username": "Tripode",
     "avatarUrl": "https://s25.postimg.cc/3kr0j9fnj/bug-avatar-5.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Samarinda Indonesia"
   },
   {
     "id": "18",
@@ -248,12 +302,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/gcaaajxzz/home-item-leisures-4.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Colorful balls for your baby. Can be bought for a package of 100. Each cost 1000",
     "price": 1000000,
     "type": "leisures",
     "username": "Firebug",
     "avatarUrl": "https://s25.postimg.cc/6eu5wpx9b/bug-avatar-4.png",
-    "location": "Bandung Indonesia"
+    "location": "Istana Bogor Indonesia"
   },
   {
     "id": "19",
@@ -262,12 +319,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/5pgh542pb/home-item-utilities-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "5000 per piece, a pack of 15.",
     "price": 75000,
     "type": "utilities",
     "username": "Antsy",
     "avatarUrl": "https://s25.postimg.cc/uikxkzkv3/bug-avatar-3.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Jakarta Indonesia"
   },
   {
     "id": "20",
@@ -276,12 +336,15 @@
     "imageUrl": [
       "https://s25.postimg.cc/4n6amm9m7/home-item-vehicle-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "I want to buy costum themed bicycle, pls buy this asap.",
     "price": 1500000,
     "type": "vehicle",
     "username": "Stings",
     "avatarUrl": "https://s25.postimg.cc/n2lnz7kb3/bug-avatar-2.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Ciwalk Bandung Indonesia"
   },
   {
     "id": "21",
@@ -290,11 +353,14 @@
     "imageUrl": [
       "https://s25.postimg.cc/uvhfc01fj/home-item-vehicle-2.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cb8cvz1fz/home-item-book-1.jpg"
+    ],
     "description": "Costum themed bicycle. Grab it fast!",
     "price": 250000,
     "type": "vehicle",
     "username": "Tripode",
     "avatarUrl": "https://s25.postimg.cc/3kr0j9fnj/bug-avatar-5.jpg",
-    "location": "Bandung Indonesia"
+    "location": "Samarinda Indonesia"
   }
 ]

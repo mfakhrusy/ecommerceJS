@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 // import { Button } from 'react-md';
 import Button from 'react-md/lib/Buttons';
 
-class ModalCommentInput extends Component {
+class ModalCommentInput extends React.Component {
   constructor() {
     super();
     this.updateComment = this.updateComment.bind(this);

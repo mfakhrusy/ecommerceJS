@@ -8,6 +8,9 @@
   top: 0;
   left: 0;
   @include display-grid;
+  p {
+    font-size: 1.6rem;
+  }
 
   > div {
     // background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);

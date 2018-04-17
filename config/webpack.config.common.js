@@ -2,12 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const WorkboxPlugin = require('workbox-webpack-plugin');
 
-// const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-//   template: './public/index.html',
-//   filename: 'index.html',
-//   inject: 'body',
-// });
-
 module.exports = {
   output: {
     filename: 'bundle.js',
@@ -32,6 +26,13 @@ module.exports = {
           'babel-loader',
         ],
       },
+      {
+        test: /\.(png|jpg|jpeg)$/,
+        exclude: /node_modules/,
+        use: [
+          'file-loader',
+        ]
+      }
     ],
   },
   resolve: {
