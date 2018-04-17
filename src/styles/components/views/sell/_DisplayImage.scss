@@ -1,10 +1,7 @@
 .DisplayImage {
   padding: 1rem;
+  margin: 1rem;
   background-color: $md-grey-200;
-  // max-height: 80vh;
-  // max-width: 90vw;
-  // height: auto;
-  // width:
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,8 +9,6 @@
     display: block;
     max-height: 80vh;
     max-width: 90vw;
-    // max-width: 100%;
-    // max-height: 100%;
     height: auto;
     width: auto;
   }

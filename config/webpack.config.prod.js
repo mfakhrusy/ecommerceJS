@@ -29,6 +29,14 @@ module.exports = merge(common, {
     splitChunks: {
       chunks: 'all',
       name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          enforce: true,
+          chunks: 'initial', 
+        }
+      }
     },
     minimizer: [
       new UglifyJsPlugin({
