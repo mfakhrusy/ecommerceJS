@@ -21,11 +21,12 @@ class HomeModalImage extends React.Component {
         //     <img src={url} alt={`home-modal-${index}`} />
         //   </div>
         // ))
-        <picture className="HomeModalImageItem">
-          <source media="(min-width: 768px)" srcSet={homeItem.imageUrl[0]} />
-          <source media="(min-width: 320px)" srcSet={homeItem.mobileImageUrl[0]} />
-          <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
-        </picture>
+        // <picture className="HomeModalImageItem">
+        //   <source media="(min-width: 768px)" srcSet={homeItem.imageUrl[0]} />
+        //   <source media="(min-width: 320px)" srcSet={homeItem.mobileImageUrl[0]} />
+        //   <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
+        // </picture>
+        <img src={homeItem.imageUrl[0]} alt={`modal-${homeItem.id}`} />
       );
     }
 

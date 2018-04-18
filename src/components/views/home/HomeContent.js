@@ -64,11 +64,12 @@ class HomeContent extends React.Component {
                 role="button"
                 tabIndex="0"
               >
-                <picture>
+                <img src={homeItem.mobileImageUrl[0]} alt={`home-content-${homeItem.id}`} />
+                {/* <picture>
                   <source media="(min-width: 768px)" srcSet={homeItem.imageUrl[0]} />
                   <source media="(min-width: 320px)" srcSet={homeItem.mobileImageUrl[0]} />
                   <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
-                </picture>
+                </picture> */}
               </Card>
             ))}
           </Masonry>
