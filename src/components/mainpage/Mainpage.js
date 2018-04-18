@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import CircularProgress from 'react-md/lib/Progress/CircularProgress';
+import MainNavbar from 'components/mainpage/MainNavbar';
+import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';
 // import LoginContainer from 'containers/views/login/LoginContainer';
 import HomeContainer from 'containers/views/home/HomeContainer';
 import Sell from 'components/views/sell/Sell';
@@ -35,7 +37,11 @@ class Mainpage extends React.Component {
       // for accessibility
       accessibilityProps['aria-busy'] = false;
       return (
-        <CircularProgress id={accessibilityProps['aria-describedby']} />
+        <React.Fragment>
+          <MainNavbar />
+          <CategorySelectorContainer />
+          <CircularProgress id={accessibilityProps['aria-describedby']} />
+        </React.Fragment>
       );
     }
     if (this.props.ownuserHasErrored || this.props.categoriesHasErrored) {
