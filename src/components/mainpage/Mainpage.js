@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import CircularProgress from 'react-md/lib/Progress/CircularProgress';
-import LoginContainer from 'containers/views/login/LoginContainer';
+// import LoginContainer from 'containers/views/login/LoginContainer';
 import HomeContainer from 'containers/views/home/HomeContainer';
 import Sell from 'components/views/sell/Sell';
 import ChatsContainer from 'containers/views/chats/ChatsContainer';
@@ -23,7 +23,9 @@ const accessibilityProps = {
 
 class Mainpage extends React.Component {
   componentDidMount() {
-    this.props.fetchData(urls.home.url);
+    this.props.homeFetchData(urls.home.url);
+    this.props.ownuserFetchData(urls.ownUser.url);
+    this.props.categoriesFetchData(urls.categories.url);
   }
 
   render() {
@@ -41,31 +43,45 @@ class Mainpage extends React.Component {
         <h2>Error</h2>
       );
     }
-    if (this.props.isLogin) {
-      return (
-        <Switch>
-          <Route exact path="/" component={HomeContainer} />
-          <Route path="/sell" component={Sell} />
-          <Route path="/chat" component={ChatsContainer} />
-          <Route path="/notifications" component={NotificationsContainer} />
-          <Route path="/categories" component={CategoriesContainer} />
-          <Route path="/profile" component={ProfileContainer} />
-          <Route path="/help" component={Help} />
-          <Route path="/filter" component={Filter} />
-        </Switch>
-      );
-    }
+    // if (this.props.isLogin) {
+    //   return (
+    //     <Switch>
+    //       <Route exact path="/" component={HomeContainer} />
+    //       <Route path="/sell" component={Sell} />
+    //       <Route path="/chat" component={ChatsContainer} />
+    //       <Route path="/notifications" component={NotificationsContainer} />
+    //       <Route path="/categories" component={CategoriesContainer} />
+    //       <Route path="/profile" component={ProfileContainer} />
+    //       <Route path="/help" component={Help} />
+    //       <Route path="/filter" component={Filter} />
+    //     </Switch>
+    //   );
+    // }
+    // return (
+    //   <LoginContainer />
+    // );
     return (
-      <LoginContainer />
+      <Switch>
+        <Route exact path="/" component={HomeContainer} />
+        <Route path="/sell" component={Sell} />
+        <Route path="/chat" component={ChatsContainer} />
+        <Route path="/notifications" component={NotificationsContainer} />
+        <Route path="/categories" component={CategoriesContainer} />
+        <Route path="/profile" component={ProfileContainer} />
+        <Route path="/help" component={Help} />
+        <Route path="/filter" component={Filter} />
+      </Switch>
     );
   }
 }
 
 Mainpage.propTypes = {
-  fetchData: PropTypes.func.isRequired,
+  homeFetchData: PropTypes.func.isRequired,
+  ownuserFetchData: PropTypes.func.isRequired,
+  categoriesFetchData: PropTypes.func.isRequired,
   ownuserIsLoading: PropTypes.bool.isRequired,
   ownuserHasErrored: PropTypes.bool.isRequired,
-  isLogin: PropTypes.bool.isRequired,
+  // isLogin: PropTypes.bool.isRequired,
   categoriesIsLoading: PropTypes.bool.isRequired,
   categoriesHasErrored: PropTypes.bool.isRequired,
 };

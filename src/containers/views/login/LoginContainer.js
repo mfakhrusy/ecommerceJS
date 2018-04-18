@@ -10,10 +10,10 @@ import { categoriesFetchData } from 'actions/views/categoriesActions';
 // });
 
 const mapDispatchToProps = dispatch => ({
-  fetchData: (url) => {
+  ownuserFetchData: (url) => {
     dispatch(ownuserFetchData(url));
   },
-  categoriesfetchData: (url) => {
+  categoriesFetchData: (url) => {
     dispatch(categoriesFetchData(url));
   },
 });

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import DisplayImage from 'components/views/sell/DisplayImage';
 import ViewsContainer from 'containers/views/ViewsContainer';
 import BackButton from 'components/views/BackButton';
+import SellFooter from 'components/views/sell/SellFooter';
 
 class Sell extends React.Component {
   constructor() {
@@ -55,6 +56,7 @@ class Sell extends React.Component {
             // onLoad={(event) => { this.handleLoad(event); }}
           />
           <DisplayImage file={this.state.file} />
+          <SellFooter />
         </React.Fragment>
       </ViewsContainer>
     );

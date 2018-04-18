@@ -12,8 +12,8 @@ class Login extends React.Component {
   }
 
   handleClick() {
-    this.props.fetchData(urls.ownUser.url);
-    this.props.categoriesfetchData(urls.categories.url);
+    this.props.ownuserFetchData(urls.ownUser.url);
+    this.props.categoriesFetchData(urls.categories.url);
   }
 
   render() {
@@ -34,8 +34,8 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  fetchData: PropTypes.func.isRequired,
-  categoriesfetchData: PropTypes.func.isRequired,
+  ownuserFetchData: PropTypes.func.isRequired,
+  categoriesFetchData: PropTypes.func.isRequired,
 };
 
 export default Login;
