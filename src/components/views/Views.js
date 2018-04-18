@@ -62,7 +62,7 @@ Views.defaultProps = {
   className: '',
   nav: <Button icon>menu</Button>,
   title: '',
-  actions: <Button icon>more_vert</Button>,
+  actions: <React.Fragment />, // default props, a little bit of hack
 };
 
 Views.propTypes = {
@@ -72,7 +72,10 @@ Views.propTypes = {
   pathname: PropTypes.string.isRequired,
   nav: PropTypes.element,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  actions: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
+  actions: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)]),
   className: PropTypes.string,
   fixed: PropTypes.bool,
   inset: PropTypes.bool,

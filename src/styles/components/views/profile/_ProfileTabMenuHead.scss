@@ -1,0 +1,14 @@
+.ProfileTabMenuHead {
+  @include display-grid;
+  justify-content: space-between;
+  height: 4rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
