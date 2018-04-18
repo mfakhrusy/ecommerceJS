@@ -1,20 +1,20 @@
 .HomeModalImage {
-  min-height: 100vh;
+  // min-height: 100vh;
   height: 100%;
   width: 100%;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // overflow-y: auto;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 
-.HomeModalImageItem {
-  min-height: 100%;
+.HomeModalImage {
+  // min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  img, source {
+  img {
     width: auto;
     height: auto;
     max-width: 80vw;
