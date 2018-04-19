@@ -9,6 +9,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/59fh6swf3/home-item-baby-compressed-mobile-1.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/gfwr4nzun/home-item-baby-1-thumbnail.jpg"
+    ],
     "description": "Great baby stroller",
     "price": 100000,
     "type": "baby",
@@ -25,6 +28,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/fw9acf773/home-item-book-1-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/bu0mwb6lr/home-item-book-1-thumbnail.jpg"
     ],
     "description": "An antique books!",
     "price": 5000000,
@@ -43,6 +49,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/5yy9jcrvj/home-item-book-2-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/qpz63waan/home-item-book-2-thumbnail.jpg"
+    ],
     "description": "Another antique books!",
     "price": 3000000,
     "type": "book",
@@ -59,6 +68,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/pgswzah3j/home-item-car-1-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/7kvwu4nwv/home-item-car-1-thumbnail.jpg"
     ],
     "description": "Luxury and Marvelous Vintage Car, Sale 50%!!",
     "price": 450000000,
@@ -77,6 +89,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/475aoft33/home-item-electronics-1-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/f0v6fx3wf/home-item-electronics-1-thumbnail.jpg"
+    ],
     "description": "Make your brain smarter with a Smart Phone",
     "price": 2000000,
     "type": "electronics",
@@ -93,6 +108,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/d264yxn0f/home-item-electronics-4-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/jmrao92a7/home-item-electronics-4-thumbnail.jpg"
     ],
     "description": "Phone who doesn't like modernism",
     "price": 4000000,
@@ -111,6 +129,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/6bpnphs4v/home-item-fashion-1-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/twtpnhkfz/home-item-fashion-1-thumbnail.jpg"
+    ],
     "description": "A knitting package for all of your knitting needs. Bonus: Knitting needle!",
     "price": 350000,
     "type": "fashion",
@@ -127,6 +148,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/axlrxut3j/home-item-fashion-3-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/5gbjszwjz/home-item-fashion-3-thumbnail.jpg"
     ],
     "description": "Ready blue blazer size S/M/L/XL/XXL/Costum. For men only.",
     "price": 1500000,
@@ -145,6 +169,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/8t1ewqovz/home-item-free-1-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/7xnb09o67/home-item-free-1-thumbnail.jpg"
+    ],
     "description": "I have too much, like some tons of it. So anyone can have some. Just pm me.",
     "price": 0,
     "type": "free",
@@ -161,6 +188,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/tpxn1ef73/home-item-free-2-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/arqgdpawv/home-item-free-2-thumbnail.jpg"
     ],
     "description": "Need some drums? I'm giving you some, but be careful of radiation. ",
     "price": 0,
@@ -179,6 +209,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/t0eup1u33/home-item-free-3-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/w1e2ojjhr/home-item-free-3-thumbnail.jpg"
+    ],
     "description": "Pick up by yourself. Just giving you the location.",
     "price": 0,
     "type": "free",
@@ -195,6 +228,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/hbav12fz3/home-item-home-1-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/w1e2ojbrz/home-item-home-1-thumbnail.jpg"
     ],
     "description": "Fresh orange, buy per kg.",
     "price": 20000,
@@ -213,6 +249,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/4jwoujyhb/home-item-home-2-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/cjjf8l74f/home-item-home-2-thumbnail.jpg"
+    ],
     "description": "A one kilogram of red apple.",
     "price": 40000,
     "type": "home",
@@ -229,6 +268,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/idl1jljcv/home-item-home-3-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/t7axb2u67/home-item-home-3-thumbnail.jpg"
     ],
     "description": "Used. Not really old. Still good and kicking.",
     "price": 1250000,
@@ -247,6 +289,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/5yy9j9k4v/home-item-leisures-1-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/419z47y0v/home-item-leisures-1-thumbnail.jpg"
+    ],
     "description": "Tired of modern computer? Buy this.",
     "price": 525000,
     "type": "leisures",
@@ -263,6 +308,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/snngitm33/home-item-leisures-2-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/mtlu7smpb/home-item-leisures-2-thumbnail.jpg"
     ],
     "description": "A good and old thing to sew your clothes.",
     "price": 4000000,
@@ -281,6 +329,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/bad63ybcf/home-item-leisures-3-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/o8newig2n/home-item-leisures-3-thumbnail.jpg"
+    ],
     "description": "Brand new soft ball. Sell because I need Hard ball. This one too soft.",
     "price": 1000000,
     "type": "leisures",
@@ -297,6 +348,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/6oh1vl2nz/home-item-leisures-4-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/b4hujub67/home-item-leisures-4-thumbnail.jpg"
     ],
     "description": "Colorful balls for your baby. Can be bought for a package of 100. Each cost 1000",
     "price": 1000000,
@@ -315,6 +369,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/w79e8mh33/home-item-utilities-1-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/a27o19xhr/home-item-utilities-1-thumbnail.jpg"
+    ],
     "description": "5000 per piece, a pack of 15.",
     "price": 75000,
     "type": "utilities",
@@ -332,6 +389,9 @@
     "mobileImageUrl": [
       "https://s25.postimg.cc/idl1jl3xb/home-item-vehicle-1-compressed-mobile.jpg"
     ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/paxlf2tr3/home-item-vehicle-1-thumbnail.jpg"
+    ],
     "description": "I want to buy costum themed bicycle, pls buy this asap.",
     "price": 1500000,
     "type": "vehicle",
@@ -348,6 +408,9 @@
     ],
     "mobileImageUrl": [
       "https://s25.postimg.cc/r8lvu2xun/home-item-vehicle-2-compressed-mobile.jpg"
+    ],
+    "thumbnailUrl": [
+      "https://s25.postimg.cc/oy678v16n/home-item-vehicle-2-thumbnail.jpg"
     ],
     "description": "Costum themed bicycle. Grab it fast!",
     "price": 250000,
