@@ -34,13 +34,13 @@ module.exports = {
           'file-loader',
         ]
       },
-      {
-        test: /\.(svg)$/,
-        exclude: /node_modules/,
-        use: [
-          'file-loader',
-        ]
-      }
+      // {
+      //   test: /\.(svg)$/,
+      //   exclude: /node_modules/,
+      //   use: [
+      //     'file-loader',
+      //   ]
+      // }
     ],
   },
   resolve: {
