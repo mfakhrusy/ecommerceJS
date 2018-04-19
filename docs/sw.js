@@ -1,4 +1,4 @@
-importScripts("precache-manifest.08f8aa667a49f85d28ca18947861828e.js", "https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js");
+importScripts("precache-manifest.2e42d12b32567fcd5cc8b51aea0700cd.js", "https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js");
 
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {

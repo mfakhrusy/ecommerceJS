@@ -33,6 +33,13 @@ module.exports = {
         use: [
           'file-loader',
         ]
+      },
+      {
+        test: /\.(svg)$/,
+        exclude: /node_modules/,
+        use: [
+          'file-loader',
+        ]
       }
     ],
   },
