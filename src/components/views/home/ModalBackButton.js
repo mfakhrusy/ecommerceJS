@@ -13,8 +13,8 @@ class ModalBackButton extends Component {
   handleClick(bool) {
     if (this.props.descriptionIsOpen) {
       this.props.showDescription(bool);
-    } else if (this.props.shareIsOpen) {
-      this.props.showShare(bool);
+    // } else if (this.props.shareIsOpen) {
+    // this.props.showShare(bool);
     }
   }
 
@@ -34,9 +34,9 @@ class ModalBackButton extends Component {
 
 ModalBackButton.propTypes = {
   showDescription: PropTypes.func.isRequired,
-  showShare: PropTypes.func.isRequired,
+  // showShare: PropTypes.func.isRequired,
   descriptionIsOpen: PropTypes.bool.isRequired,
-  shareIsOpen: PropTypes.bool.isRequired,
+  // shareIsOpen: PropTypes.bool.isRequired,
 };
 
 export default ModalBackButton;

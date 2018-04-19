@@ -1,4 +1,11 @@
 .ProfileTabMenu {
   display: flex;
   flex-direction: column;
+
+  > ul {
+    justify-content: center;
+    > li {
+      max-width: 40rem;
+    }
+  }
 }

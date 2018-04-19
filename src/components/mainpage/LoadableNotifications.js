@@ -1,10 +1,11 @@
 import React from 'react';
 import Loadable from 'react-loadable';
+import Loading from 'components/utils/Loading';
 
 const LoadableComponent = Loadable({
   loader: () => import('containers/views/notifications/NotificationsContainer'),
   loading() {
-    return <div>Loading...</div>;
+    return <Loading />;
   },
 });
 

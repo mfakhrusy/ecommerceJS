@@ -21,6 +21,7 @@ class ChatContent extends Component {
     return (
       <TabsContainer
         themed
+        className="ChatContent"
       >
         <Tabs
           inactiveTabClassName="md-text--secondary"
