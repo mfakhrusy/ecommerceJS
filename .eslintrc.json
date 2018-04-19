@@ -8,6 +8,7 @@
       "jsx-a11y",
       "import"
     ],
+    "parser": "babel-eslint",
     "rules": {
       "no-restricted-syntax": 0,
       "function-paren-newline": ["error", "consistent"],

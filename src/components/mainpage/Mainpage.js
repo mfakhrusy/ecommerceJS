@@ -1,3 +1,4 @@
+/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
@@ -6,14 +7,21 @@ import CircularProgress from 'react-md/lib/Progress/CircularProgress';
 // import CategorySelectorContainer from 'containers/views/home/CategorySelectorContainer';
 // import LoginContainer from 'containers/views/login/LoginContainer';
 import HomeContainer from 'containers/views/home/HomeContainer';
-import Sell from 'components/views/sell/Sell';
-import ChatsContainer from 'containers/views/chats/ChatsContainer';
-import NotificationsContainer from 'containers/views/notifications/NotificationsContainer';
-import CategoriesContainer from 'containers/views/categories/CategoriesContainer';
-import ProfileContainer from 'containers/views/profile/ProfileContainer';
-import Help from 'components/views/help/Help';
-import Filter from 'components/views/filter/Filter';
+// import Sell from 'components/views/sell/Sell';
+// import ChatsContainer from 'containers/views/chats/ChatsContainer';
+import LoadableSell from 'components/mainpage/LoadableSell';
+import LoadableChats from 'components/mainpage/LoadableChats';
+import LoadableNotifications from 'components/mainpage/LoadableNotifications';
+import LoadableCategories from 'components/mainpage/LoadableCategories';
+import LoadableProfile from 'components/mainpage/LoadableProfile';
+import LoadableFilter from 'components/mainpage/LoadableFilter';
+// import NotificationsContainer from 'containers/views/notifications/NotificationsContainer';
+// import CategoriesContainer from 'containers/views/categories/CategoriesContainer';
+// import ProfileContainer from 'containers/views/profile/ProfileContainer';
+// import Help from 'components/views/help/Help';
+// import Filter from 'components/views/filter/Filter';
 import urls from 'constants/urls';
+// import Loadable from 'react-loadable';
 
 // for accessibility,
 // see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
@@ -22,6 +30,19 @@ const accessibilityProps = {
   'aria-busy': true,
   'aria-describedby': 'mainpage-loading-progress',
 };
+
+// const LoadableComponent = Loadable({
+//   loader: () => import('components/views/sell/Sell'),
+//   loading() {
+//     return <div>Loading...</div>;
+//   },
+// });
+
+// class LoadableSell extends React.Component {
+//   render() {
+//     return <LoadableComponent />;
+//   }
+// }
 
 class Mainpage extends React.Component {
   componentDidMount() {
@@ -42,7 +63,6 @@ class Mainpage extends React.Component {
           {/* <CategorySelectorContainer /> */}
           <CircularProgress id={accessibilityProps['aria-describedby']} />
         </React.Fragment>
-        // <CircularProgress id={accessibilityProps['aria-describedby']} />
       );
     }
     if (this.props.ownuserHasErrored || this.props.categoriesHasErrored) {
@@ -70,13 +90,19 @@ class Mainpage extends React.Component {
     return (
       <Switch>
         <Route exact path="/" component={HomeContainer} />
-        <Route path="/sell" component={Sell} />
-        <Route path="/chat" component={ChatsContainer} />
-        <Route path="/notifications" component={NotificationsContainer} />
+        {/* <Route path="/sell" component={Sell} /> */}
+        {/* <Route path="/chat" component={ChatsContainer} /> */}
+        {/* <Route path="/notifications" component={NotificationsContainer} />
         <Route path="/categories" component={CategoriesContainer} />
         <Route path="/profile" component={ProfileContainer} />
         <Route path="/help" component={Help} />
-        <Route path="/filter" component={Filter} />
+        <Route path="/filter" component={Filter} /> */}
+        <Route path="/sell" component={LoadableSell} />
+        <Route path="/chat" component={LoadableChats} />
+        <Route path="/notifications" component={LoadableNotifications} />
+        <Route path="/categories" component={LoadableCategories} />
+        <Route path="/profile" component={LoadableProfile} />
+        <Route path="/filter" component={LoadableFilter} />
       </Switch>
     );
   }

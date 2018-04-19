@@ -1,12 +1,13 @@
 {
+  "plugins": [
+    "syntax-dynamic-import",
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ],
   "presets": [
     "react",
     "env",
     "stage-1"
-  ],
-  "plugins": [
-    ["module-resolver", {
-      "root": ["./src"]
-    }]
   ]
 }
