@@ -17,6 +17,7 @@ class Footer extends Component {
               <a
                 href={socialItem.url}
                 target="_blank"
+                rel="noopener"
               >
                 <Button
                   icon
