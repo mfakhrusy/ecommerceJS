@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 module.exports = {
   output: {
@@ -43,6 +44,9 @@ module.exports = {
       template: './public/index.html',
       filename: 'index.html',
       inject: 'body',
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
     }),
     new WorkboxPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, '../src/sw.js'),
