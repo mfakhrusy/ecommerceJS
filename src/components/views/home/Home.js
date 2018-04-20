@@ -19,10 +19,18 @@ const accessibilityProps = {
 };
 
 class Home extends React.Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     contentHeight: 0,
+  //     viewportHeight: 0,
+  //   };
+  // }
   // download chats on home
   componentDidMount() {
     this.props.chatsfetchData(urls.chats.url);
   }
+
   render() {
     let content = null;
 

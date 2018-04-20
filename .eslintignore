@@ -1,2 +1,4 @@
 docs/*
 config/*
+
+src/sw.js

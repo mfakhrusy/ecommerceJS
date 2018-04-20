@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Home from 'components/views/home/Home';
-// import { homeFetchData } from 'actions/views/homeActions';
 import { chatsFetchData } from 'actions/views/chatsActions';
 
 const mapStateToProps = state => ({
