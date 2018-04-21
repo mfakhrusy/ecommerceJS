@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 // import { /* ListItem, */FontIcon } from 'react-md';
-import FontIcon from 'react-md/lib/FontIcons';
+// import FontIcon from 'react-md/lib/FontIcons';
 import ListItem from 'react-md/lib/Lists/ListItem';
 import PropTypes from 'prop-types';
 
@@ -25,7 +25,8 @@ class MenuItem extends React.Component {
     return (
       <ListItem
         className="MenuItem"
-        leftIcon={<FontIcon>{this.props.mdIcon}</FontIcon>}
+        // leftIcon={<FontIcon>{this.props.mdIcon}</FontIcon>}
+        leftIcon={this.props.localMdIcon}
         primaryText={<p>{this.props.label}</p>}
         onClick={this.handleClick}
       />
@@ -35,7 +36,8 @@ class MenuItem extends React.Component {
 
 MenuItem.propTypes = {
   label: PropTypes.string.isRequired,
-  mdIcon: PropTypes.string.isRequired,
+  // mdIcon: PropTypes.string.isRequired,
+  localMdIcon: PropTypes.element.isRequired,
   route: PropTypes.string.isRequired,
   history: PropTypes.object.isRequired,
   onClickBrowse: PropTypes.func.isRequired,

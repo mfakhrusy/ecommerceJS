@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { Button } from 'react-md';
-import Button from 'react-md/lib/Buttons';
+// import Button from 'react-md/lib/Buttons';
+import InsertComment from 'assets/svg/insert_comment.svg';
+import SVGButtonMD from 'components/utils/SVGButtonMD';
 
 class ModalCommentInput extends React.Component {
   constructor() {
@@ -41,7 +43,7 @@ class ModalCommentInput extends React.Component {
           onChange={(event) => { this.updateComment(event); }}
           value={this.state.comment}
         />
-        <Button
+        {/* <Button
           icon
           onClick={() => {
             this.handleClick(
@@ -55,7 +57,23 @@ class ModalCommentInput extends React.Component {
           }}
         >
           insert_comment
-        </Button>
+        </Button> */}
+        <SVGButtonMD
+          // className={menuButtonClassNames}
+          // onClick={() => { this.handleClick(this.props.homeItem); }}
+          onClick={() => {
+            this.handleClick(
+              lastId,
+              homeItem.username,
+              homeItem.createdAt,
+              homeItem.avatarUrl,
+              homeItem.imageUrl,
+              this.state.comment,
+            );
+          }}
+        >
+          <InsertComment height={30} width={30} />
+        </SVGButtonMD>
       </div>
     );
   }

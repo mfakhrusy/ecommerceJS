@@ -1,7 +1,10 @@
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
-// import classNames from 'classnames';
-import Button from 'react-md/lib/Buttons/Button';
+import classNames from 'classnames';
+// import Button from 'react-md/lib/Buttons/Button';
+import Menu from 'assets/svg/menu.svg';
+import SVGButtonMD from 'components/utils/SVGButtonMD';
 
 // const menuIcon = require('assets/icons/ic_menu_black_24px.svg');
 
@@ -18,32 +21,24 @@ class MenuButton extends React.Component {
   }
 
   render() {
-    // const menuButtonClassNames = classNames({
-    //   [this.props.className]: true,
-    // 'md-icon': true,
-    // 'md-btn--icon': true,
-    // 'md-pointer--hover': true,
-    // 'md-inline-block': true,
-    // 'md-btn--toolbar': true,
-    // 'md-toolbar--action-left': true,
-    // });
-    // mdpointer--hover md-inline-block md-btn--toolbar md-toolbar--action-left MenuButton
+    const menuButtonClassNames = classNames({
+      [this.props.className]: true,
+   });
     return (
-      <Button
-        icon
-        className={this.props.className}
-        onClick={this.handleClick}
-      >
-        menu
-      </Button>
-      // <button
-      //   className={menuButtonClassNames}
+      // <Button
+      //   icon
+      //   className={this.props.className}
       //   onClick={this.handleClick}
       // >
-      //   <div className="md-ink-container" />
-      //   <img src={menuIcon} alt="menu" />
-      //   {/* {menuIcon} */}
-      // </button>
+      //   menu
+      // </Button>
+      <SVGButtonMD
+        className={menuButtonClassNames}
+        onClick={this.handleClick}
+      >
+        <Menu height={30} width={30} />
+      </SVGButtonMD>
+
     );
   }
 }

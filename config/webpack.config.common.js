@@ -6,6 +6,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../docs'),
+    // publicPath: path.resolve(__dirname, '../docs'),
   },
   module: {
     rules: [
@@ -33,13 +34,21 @@ module.exports = {
           'file-loader',
         ]
       },
-      // {
-      //   test: /\.(svg)$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     'file-loader',
-      //   ]
-      // }
+      {
+        test: /\.(svg)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true,
+            }
+          },
+        ],
+      }
     ],
   },
   resolve: {

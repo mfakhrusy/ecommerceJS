@@ -25,10 +25,14 @@ button.CategorySelectorItem#category-selector-item {
   align-items: center;
   margin: 0.8rem;
 
-  i {
-    font-size: 4rem;
-    @media screen and (min-width: $md-desktop-min-width) {
-      font-size: 4rem;
-    }
+  path {
+    fill: red !important;
   }
+
+  // i {
+  //   font-size: 4rem;
+  //   @media screen and (min-width: $md-desktop-min-width) {
+  //     font-size: 4rem;
+  //   }
+  // }
 }

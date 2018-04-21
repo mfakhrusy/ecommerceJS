@@ -11,7 +11,7 @@ const MainNavbar = () => (
     fixed
     nav={<MenuButtonContainer className="MenuButton" />}
     title={<SearchContainer />}
-    actions={<FilterButton className="filterButton" />}
+    actions={<FilterButton className="FilterButton" />}
   />
 );
 

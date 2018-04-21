@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import { Button, Avatar } from 'react-md';
 import Avatar from 'react-md/lib/Avatars';
-import Button from 'react-md/lib/Buttons';
+// import Button from 'react-md/lib/Buttons';
 import ModalCloseButtonContainer from 'containers/views/home/ModalCloseButtonContainer';
 import ModalLoveButtonContainer from 'containers/views/home/ModalLoveButtonContainer';
 import ModalInfoPrice from 'components/views/home/ModalInfoPrice';
 import ModalCommentInputContainer from 'containers/views/home/ModalCommentInputContainer';
+import SVGButtonMD from 'components/utils/SVGButtonMD';
+import ChatBubbleOutline from 'assets/svg/chat_bubble_outline.svg';
 
 class HomeModalContentMain extends React.Component {
   render() {
@@ -16,13 +18,21 @@ class HomeModalContentMain extends React.Component {
       <div className="HomeModalContent HomeModalContentMain">
         <ModalCloseButtonContainer />
         <div className="ModalDescriptionButton">
-          <Button
+          {/* <Button
             flat
             iconChildren="chat_bubble_outline"
             onClick={() => { this.props.showDescription(true); }}
           >
             More Info
-          </Button>
+          </Button> */}
+          <SVGButtonMD
+            // className={menuButtonClassNames}
+            // onClick={this.handleClick}
+            onClick={() => { this.props.showDescription(true); }}
+          >
+            <p>More Info</p>
+            <ChatBubbleOutline fill="white" height={30} width={30} />
+          </SVGButtonMD>
         </div>
         {/* <div className="ModalShareButton">
           <Button

@@ -19,7 +19,8 @@ class Sidemenu extends React.Component {
       <MenuItem
         key={item.id}
         label={item.label}
-        mdIcon={item.mdIcon}
+        // mdIcon={item.mdIcon}
+        localMdIcon={item.localMdIcon}
         route={item.route}
         onClickBrowse={this.props.onClickBrowse}
       />

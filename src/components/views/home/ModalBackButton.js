@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { Button } from 'react-md';
-import Button from 'react-md/lib/Buttons';
+// import Button from 'react-md/lib/Buttons';
+import ArrowBack from 'assets/svg/arrow_back.svg';
+import SVGButtonMD from 'components/utils/SVGButtonMD';
 
 class ModalBackButton extends Component {
   constructor() {
@@ -21,12 +23,17 @@ class ModalBackButton extends Component {
   render() {
     return (
       <div className="ModalBackButton">
-        <Button
+        {/* <Button
           icon
           onClick={() => { this.handleClick(false); }}
         >
           arrow_back
-        </Button>
+        </Button> */}
+        <SVGButtonMD
+          onClick={() => { this.handleClick(false); }}
+        >
+          <ArrowBack fill="white" height={30} width={30} />
+        </SVGButtonMD>
       </div>
     );
   }
