@@ -1,0 +1,31 @@
+.CategoryItem {
+  max-width: 15rem;
+  justify-self: center;
+  @media screen and (min-width: 600px) {
+    max-width: 20rem;
+    width: calc(100% - 16px);
+  }
+  @media screen and (min-width: $desktop-min-width) {
+    max-width: 25rem;
+    width: calc(100% - 16px);
+  }
+}
+
+// nested so this rules will be dominant
+.CategoryItemCard {
+  height: 100%;
+  min-height: 11rem;
+  position: relative;
+  @include display-grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  background-color: $md-primary-color;
+
+  // the text above button
+  > div {
+    justify-self: center;
+    align-self: center;
+    padding: 0 1rem;
+    text-align: center;
+  }
+}

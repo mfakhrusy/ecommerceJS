@@ -6,17 +6,9 @@
   min-height: $home-category-selector-height;
   justify-content: space-between;
   width: 100%;
-
-  // @media screen and (min-width: $desktop-min-width) {
-  //   position: fixed;
-  //   // right: 0;
-  //   z-index: 100;
-  //   flex-direction: row;
-  //   // height: 100%;
-  // }
 }
 
-button.CategorySelectorItem#category-selector-item {
+.CategorySelectorItem {
   width: auto;
   height: auto;
   display: flex !important;
@@ -25,14 +17,38 @@ button.CategorySelectorItem#category-selector-item {
   align-items: center;
   margin: 0.8rem;
 
-  path {
-    fill: red !important;
+  // color the svg path and circle
+  // a bit tedious and need to do it manually
+  // I guess I need to find another react svg library
+  &#category-selector-item-dashboard,
+  &#category-selector-item-smartphone,
+  &#category-selector-item-motorcycle,
+  &#category-selector-item-local_mall,
+  &#category-selector-item-child_care,
+  &#category-selector-item-library_books,
+  &#category-selector-item-build {
+    svg {
+      path:last-child {
+        fill: $md-primary-color !important;
+      }
+    }
   }
 
-  // i {
-  //   font-size: 4rem;
-  //   @media screen and (min-width: $md-desktop-min-width) {
-  //     font-size: 4rem;
-  //   }
-  // }
+  &#category-selector-item-directions_car,
+  &#category-selector-item-beach_access,
+  &#category-selector-item-home,
+  &#category-selector-item-card_giftcard {
+    svg {
+      path:first-child {
+        fill: $md-primary-color !important;
+      }
+    }
+  }
+  &#category-selector-item-child_care {
+    svg {
+      circle {
+        fill: $md-primary-color !important;
+      }
+    }
+  }
 }

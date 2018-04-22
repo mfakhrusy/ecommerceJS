@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Cell, Card, Button } from 'react-md';
 import Cell from 'react-md/lib/Grids/Cell';
 import Card from 'react-md/lib/Cards/Card';
-import Button from 'react-md/lib/Buttons';
+import SVGButtonMD from 'components/utils/SVGButtonMD';
 
 class CategoryItem extends React.Component {
   render() {
@@ -18,11 +17,16 @@ class CategoryItem extends React.Component {
           <div>
             {category.label}
           </div>
-          <Button
+          {/* <Button
             icon
           >
             {category.mdIcon}
-          </Button>
+          </Button> */}
+          <SVGButtonMD
+            key={category.id}
+          >
+            {category.localMdIcon}
+          </SVGButtonMD>
         </Card>
       </Cell>
     );

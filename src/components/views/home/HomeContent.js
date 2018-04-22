@@ -1,8 +1,6 @@
-/* eslint-disable react/no-did-mount-set-state, arrow-body-style */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-component';
-// import { Card } from 'react-md';
 import { Card } from 'react-md/lib/Cards';
 import Footer from 'components/views/Footer';
 // import { calcViewportHeight } from 'helpers/calculateDimension';
@@ -93,45 +91,28 @@ class HomeContent extends React.Component {
       <React.Fragment>
         <div
           className="HomeContent"
-          // ref={(contentRef) => { this.contentRef = contentRef; }}
         >
           <Masonry
             className="HomeContentMasonry"
             ref={(contentRef) => { this.contentRef = contentRef; }}
           >
             {slicedHomeItems
-            .map((homeItem /* index, arr */) => {
-              // if (this.state.contentHeight < this.state.viewportHeight) {
-              // let loadNextImage = false;
-              // if (arr.length === 2 && index === 1) {
-              //   loadNextImage = true;
-              // } else if (arr.length === 1) {
-              //   loadNextImage = true;
-              // }
-              return (
-                <Card
-                  key={homeItem.id}
-                  className="HomeContentItem"
-                  onClick={() => this.handleClick(homeItem.id)}
-                  onKeyPress={() => this.handleClick(homeItem.id)}
-                  role="button"
-                  tabIndex="0"
-                >
-                  <img
-                    src={homeItem.thumbnailUrl[0]}
-                    alt={`home-content-${homeItem.id}`}
-                    onLoad={() => { this.handleLoad(true); }}
-                  />
-                  {/* <picture>
-                    <source media="(min-width: 768px)" srcSet={homeItem.imageUrl[0]} />
-                    <source media="(min-width: 320px)" srcSet={homeItem.mobileImageUrl[0]} />
-                    <img src={homeItem.imageUrl[0]} alt={`home-content-${homeItem.id}`} />
-                  </picture> */}
-                </Card>
-              );
-               // }
-                // return '';
-            })}
+            .map(homeItem => (
+              <Card
+                key={homeItem.id}
+                className="HomeContentItem"
+                onClick={() => this.handleClick(homeItem.id)}
+                onKeyPress={() => this.handleClick(homeItem.id)}
+                role="button"
+                tabIndex="0"
+              >
+                <img
+                  src={homeItem.thumbnailUrl[0]}
+                  alt={`home-content-${homeItem.id}`}
+                  onLoad={() => { this.handleLoad(true); }}
+                />
+              </Card>
+            ))}
           </Masonry>
         </div>
         <Footer />

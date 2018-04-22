@@ -63,7 +63,6 @@ class Home extends React.Component {
     return (
       <Paper className="Home">
         {content}
-        {/* <Footer /> */}
         <SidebarContainer />
       </Paper>
     );

@@ -12,7 +12,8 @@
   ". . . . . . ." // empty
   "comment-input comment-input comment-input comment-input . interested-button interested-button";
 
-  // only
+
+
   .ModalDescriptionButton {
     grid-area: button-description;
     display: flex;
@@ -21,25 +22,34 @@
     border-radius: 1rem;
     text-align: center;
     height: 100%;
+    align-self: center;
+    transition: 0.2s ease;
 
     > button {
+      max-width: 30rem;
       display: flex;
-      justify-content: center;
       align-items: center;
-      color: white;
       font-size: 1.6rem;
+      p {
+        color: white;
+        width: 75%;
+      }
+    }
+
+    @media screen and (min-width: $desktop-min-width) {
+      height: 80%;
     }
   }
 
-  .ModalShareButton {
-    grid-area: share-button;
-    display: flex;
-    justify-content: center;
-    max-width: 5rem;
-    button {
-      height: 100%;
-    }
-  }
+  // .ModalShareButton {
+  //   grid-area: share-button;
+  //   display: flex;
+  //   justify-content: center;
+  //   max-width: 5rem;
+  //   button {
+  //     height: 100%;
+  //   }
+  // }
 
   .ModalLoveButton {
     grid-area: love-button;
@@ -47,6 +57,7 @@
     justify-content: center;
     align-items: center;
     max-width: 5rem;
+    align-self: center;
     // max-height: 5rem;
     button {
       display: flex;
@@ -54,9 +65,15 @@
       align-items: center;
       height: auto;
       // color: white;
-      i {
-        font-size: 3rem;
-      }
+      // svg {
+      //   path:last-child {
+      //     // fill: blue !important;
+      //     outline: aquamarine !important;
+      //   }
+      // }
+    }
+    @media screen and (min-width: $desktop-min-width) {
+      height: 80%;
     }
   }
 

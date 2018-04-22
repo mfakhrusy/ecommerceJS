@@ -13,8 +13,7 @@
   }
 
   > div {
-    // background-color: rgba($color: $modal-home-item-color, $alpha: 0.85);
-
+    // take everything but the modal comment input
     &:not(.ModalCommentInput) button {
       width: 100%;
       border-radius: 0;
@@ -24,25 +23,41 @@
   // common item
   .ModalCloseButton {
     grid-area: close-button;
+    align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     width: auto;
+    max-width: 5rem;
+    justify-self: center;
+    @media screen and (min-width: $desktop-min-width) {
+      height: 80%;
+    }
+
 
     button {
       display: flex !important;
-      justify-content: center;
+      justify-content: flex-end;
       flex-direction: column;
       align-items: center;
       color: white;
       height: auto;
-      i {
-        font-size: 2.7rem;
-        @media screen and (min-width: $desktop-min-width) {
-          font-size: 4rem;
-        }
+    }
+  }
+
+  .ModalDescriptionButton,
+  .ModalLoveButton,
+  .ModalCloseButton,
+  .ModalBackButton {
+    transition: 0.2s ease;
+    @media screen and (min-width: $desktop-min-width) {
+      &:hover {
+        background-color: $md-grey-600;
+        transition: 0.2s ease-out;
       }
     }
   }
+
+
 }

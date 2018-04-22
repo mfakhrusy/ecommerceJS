@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CategoryContentContainer from 'containers/views/categories/CategoryContentContainer';
 import BackButton from 'components/views/BackButton';
 import ViewsContainer from 'containers/views/ViewsContainer';
+import categories from 'assets/js/categories';
 
 class Categories extends React.Component {
   render() {
@@ -14,14 +15,14 @@ class Categories extends React.Component {
         className="Categories"
         nav={<BackButton />}
       >
-        <CategoryContentContainer categories={this.props.categories} />
+        <CategoryContentContainer categories={categories} />
       </ViewsContainer>
     );
   }
 }
 
 Categories.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   location: PropTypes.object.isRequired,
 };
 

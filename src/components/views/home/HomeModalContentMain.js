@@ -26,12 +26,12 @@ class HomeModalContentMain extends React.Component {
             More Info
           </Button> */}
           <SVGButtonMD
-            // className={menuButtonClassNames}
-            // onClick={this.handleClick}
             onClick={() => { this.props.showDescription(true); }}
           >
-            <p>More Info</p>
-            <ChatBubbleOutline fill="white" height={30} width={30} />
+            <React.Fragment>
+              <p>More Info</p>
+              <ChatBubbleOutline fill="white" height={30} width={30} />
+            </React.Fragment>
           </SVGButtonMD>
         </div>
         {/* <div className="ModalShareButton">

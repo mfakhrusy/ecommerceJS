@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-// const SVGButtonMD = ({ children, className, onClick }) => (
 class SVGButtonMD extends React.Component {
   render() {
-    const { className, onClick, children } = this.props;
+    const {
+      className,
+      onClick,
+      children,
+      id,
+    } = this.props;
     const buttonClassNames = classNames(
       ...className.split(' '),
       {
@@ -15,6 +19,7 @@ class SVGButtonMD extends React.Component {
     return (
       <button
         className={buttonClassNames}
+        id={id}
         onClick={onClick}
       >
         {children}
@@ -24,7 +29,8 @@ class SVGButtonMD extends React.Component {
 }
 
 SVGButtonMD.defaultProps = {
-  className: 'SVGButtonMD',
+  className: '',
+  id: '',
   onClick: () => {},
 };
 
@@ -32,6 +38,7 @@ SVGButtonMD.propTypes = {
   className: PropTypes.string,
   children: PropTypes.element.isRequired,
   onClick: PropTypes.func,
+  id: PropTypes.string,
 };
 
 export default SVGButtonMD;

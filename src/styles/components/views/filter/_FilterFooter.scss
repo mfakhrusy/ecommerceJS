@@ -17,10 +17,12 @@
 
   > button {
     border: 0.1rem solid $md-grey-500;
+    
     @media screen and (min-width: 600px) {
       height: 5rem;
       width: 15rem;
     }
+
     &:first-child {
       background-color: white;
     }

@@ -39,6 +39,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 5rem;
+    justify-self: start;
+    align-self: center;
+    @media screen and (min-width: $desktop-min-width) {
+      height: 80%;
+    }
     button {
       display: flex !important;
       flex-direction: column;
@@ -46,11 +52,6 @@
       align-items: center;
       color: white;
       height: auto;
-      i {
-        @media screen and (min-width: $desktop-min-width) {
-          font-size: 4rem;
-        }
-      }
     }
   }
 

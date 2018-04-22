@@ -1,12 +1,9 @@
-/* eslint-disable arrow-body-style */
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Button } from 'react-md';
-// import Button from 'react-md/lib/Buttons';
 import Favorite from 'assets/svg/favorite.svg';
+import FavoriteBorder from 'assets/svg/favorite_border.svg';
 import SVGButtonMD from 'components/utils/SVGButtonMD';
 
-// const ModalLoveButton = ({ homeItem, addFavoriteItem }) => {
 class ModalLoveButton extends React.Component {
   constructor(props) {
     super(props);
@@ -30,20 +27,18 @@ class ModalLoveButton extends React.Component {
   }
 
   render() {
+    // change icon depending on the state
+    const icon = this.state.isLoved ? (
+      <Favorite fill="#ff0000" height={30} width={30} />
+    ) : (
+      <FavoriteBorder fill="#ffffff" height={30} width={30} />
+    );
     return (
       <div className="ModalLoveButton">
-        {/* <Button
-          icon
-          secondary={this.state.isLoved}
-          onClick={() => { this.handleClick(this.props.homeItem); }}
-        >
-        favorite
-        </Button> */}
         <SVGButtonMD
-          // className={menuButtonClassNames}
           onClick={() => { this.handleClick(this.props.homeItem); }}
         >
-          <Favorite fill="white" height={30} width={30} />
+          {icon}
         </SVGButtonMD>
       </div>
     );

@@ -3,14 +3,14 @@ import { withRouter } from 'react-router-dom';
 import Mainpage from 'components/mainpage/Mainpage';
 import { homeFetchData } from 'actions/views/homeActions';
 import { ownuserFetchData } from 'actions/views/loginActions';
-import { categoriesFetchData } from 'actions/views/categoriesActions';
+// import { categoriesFetchData } from 'actions/views/categoriesActions';
 
 const mapStateToProps = state => ({
   ownuserHasErrored: state.ownuserHasErrored,
   ownuserIsLoading: state.ownuserIsLoading,
   isLogin: state.isLogin,
-  categoriesHasErrored: state.categoriesHasErrored,
-  categoriesIsLoading: state.categoriesIsLoading,
+  // categoriesHasErrored: state.categoriesHasErrored,
+  // categoriesIsLoading: state.categoriesIsLoading,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -20,9 +20,9 @@ const mapDispatchToProps = dispatch => ({
   ownuserFetchData: (url) => {
     dispatch(ownuserFetchData(url));
   },
-  categoriesFetchData: (url) => {
-    dispatch(categoriesFetchData(url));
-  },
+  // categoriesFetchData: (url) => {
+  //   dispatch(categoriesFetchData(url));
+  // },
 });
 
 // withRouter -> so the router will work under redux
