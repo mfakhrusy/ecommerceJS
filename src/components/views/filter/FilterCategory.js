@@ -1,17 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import {
-//   Button,
-//   DialogContainer,
-//   List,
-//   ListItem,
-//   Card,
-//   CardTitle,
-// } from 'react-md';
 import { Card, CardTitle } from 'react-md/lib/Cards';
 import Button from 'react-md/lib/Buttons';
 import DialogContainer from 'react-md/lib/Dialogs/DialogContainer';
 import { List, ListItem } from 'react-md/lib/Lists';
+import categories from 'assets/js/categories';
 
 class FilterCategory extends React.Component {
   constructor() {
@@ -64,7 +57,7 @@ class FilterCategory extends React.Component {
           title="Select Category"
         >
           <List onClick={this.hideCategoryDialog}>
-            {this.props.categories.map(category => (
+            {categories.map(category => (
               <ListItem
                 key={category.id}
                 primaryText={category.label}
@@ -80,7 +73,7 @@ class FilterCategory extends React.Component {
 
 FilterCategory.propTypes = {
   // FilterCategory: PropTypes.string.isRequired,
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   setFilterCategory: PropTypes.func.isRequired,
 };
 
